@@ -3,19 +3,18 @@
 # I. Bienvenida
 Bienvenido a tu capacitación de **QA Automation** que consta de 6 semanas de entrenamiento: 2 de pre-entrenamiento en Python y 4 de capacitación en Automatización.
 
-[Liga Acceso Telegram grupal](https://t.me/+Wcl-Dz0_eXIwMGQx) 
+[Liga Acceso Telegram grupal](https://t.me/+zBBTmUwC0T44MWFh) 
 Importante unirse ya que toda la comunicación del curso se lleva por este medio.
 
-Calendario QA Automation Bloque 3<br>
-<img width="482" alt="Calendario QA Automation Bloque 3" src="https://user-images.githubusercontent.com/94467952/214098120-f987f276-1685-405e-858b-d48c79873833.png">
-
+Calendario QA Automation Bloque 4<br>
+<img width="482" alt="Calendario QA Automation Bloque 4" src="https://user-images.githubusercontent.com/94467952/226645074-152a8635-cb57-49cc-a947-fa5b0db0a905.png">
 
 # II. Información general del entrenamiento
 El objetivo de esta etapa es brindarte la oportunidad de actualizar tus conocimientos y habilidades en desarrollo de la mano de los ingenieros de Wizeline. El entrenamiento consta de los siguientes elementos: 
 
 **Sesiones en Vivo** 
-- Son clases presenciales que imparten ingenieros de Wizeline, las sesiones tienen una duración de 2 horas.
-- Lunes y Martes: 9am y 2pm en oficinas de Wizeline - [Liga zoom](https://wizeline.zoom.us/j/84175058495) en caso que no puedan presentarse.
+- Son clases presenciales que imparten ingenieros de Wizeline..
+- Lunes y Martes: 9am y 6pm en oficinas de Wizeline - [Liga zoom](https://wizeline.zoom.us/j/82408972052) en caso que no puedan presentarse.
 
 - En las sesiones en línea, es **obligatorio** tener la cámara prendida.
 - Debes asisitir a mínimo 8 sesiones presenciales para tener derecho a presentar tu Proyecto Final
