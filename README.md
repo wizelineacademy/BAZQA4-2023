@@ -22,7 +22,7 @@ El objetivo de esta etapa es brindarte la oportunidad de actualizar tus conocimi
 
 **Mentorías Grupales**
 - Son sesiones de mentoría en sitio que se llevan a cabo después de las sesiones en vivo para reforzar conocimientos y aclarar dudas. 
-- Lunes y martes:9am y 6pm en oficinas de Wizeline
+- Lunes y martes: 9am y 6pm en oficinas de Wizeline
 
 **Mentorías On Demand**
 - Son sesiones en donde podrás interactuar con ingenieros de Wizeline para resolver dudas que tengas sobre los temas cubiertos en las sesiones en vivo, el material de autoestudio o sobre el proyecto final. Las mentorías tienen una duración de 1 hora, son en línea y son bajo demanda. Más abajo están las instrucciones y ligas para solicitar una sesión.
