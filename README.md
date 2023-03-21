@@ -78,30 +78,6 @@ Para aprobar el curso tendrás que desarrollar un proyecto final en el cual refo
 
 Para la revisión de tu Capstone Project se te asignó un mentor quien te dará retroalimentación por medio de comentarios en tu repositorio. Si tienes dudas o quieres revisar más a fondo, puedes agendar una mentoría 1:1.
 
-# V. Agenda tu mentoria 📆
-Si deseas tener una mentoria personalizada en línea con alguno de los mentores, adicional a las de tu proyecto final, sigue estas instrucciones:
-
-Selecciona la liga de abajo de cualquiera de los mentores, te abrirá su calendario con la disponibilidad por día y horarios. Elige el que mejor se acomode a tu necesidad.
-
-Recuerda llenar el [Formato de Retroalimentación](https://forms.gle/tGKFdRVTbh9GAMMLA) al final de tu mentoría.
-
-
-| ID Empleado | Nombre                              | Mentor (Github)               | Mentor (Calendly)
-| ----------: | :---------------------------------- | :-------------------------- | :--------------------------
-| 945028       | LEOPOLDO PRADO PEREZ                | [Raúl Moctezuma](https://github.com/raulmoctezuma)|[Raúl Moctezuma](https://calendly.com/raulmoctezuma)|
-| 1068555     | JORGE LUIS CORRO ROJAS        | [Raúl Moctezuma](https://github.com/raulmoctezuma)|[Raúl Moctezuma](https://calendly.com/raulmoctezuma)|
-| 1065127       | CARLOS ALBERTO CORTES SANCHEZ              | [Narda Ballesteros](https://github.com/Aixel17)|[Narda Ballesteros](https://calendly.com/nardaballesteros/baz-mentoria-1-1?month=2023-01)|
-| 64564       | ALAN ALEXIS DOMINGUEZ PEREZ            | [Narda Ballesteros](https://github.com/Aixel17)|[Narda Ballesteros](https://calendly.com/nardaballesteros/baz-mentoria-1-1?month=2023-01)|
-| 1058635       | YOCELIN VAZQUEZ CARRILLO                   | [Fernando Badilla](https://github.com/fdiazw)|[Fernando Badilla](https://calendly.com/fdiazw/1h)|(https://calendly.com/fdiazw/1h) 
-| 1070069     | JOSE DAVID BARRITA LOPEZ                | [Fernando Badilla](https://github.com/fdiazw)|[Fernando Badilla](https://calendly.com/fdiazw/1h)|
-| 961188       | CLAUDIA NOHEMI MIRANDA VILDOZOLA            | [Luca Bacasehua](https://github.com/lucabamoW)|[Luca Bacasehua](https://calendly.com/luca-bacasehua/baz-mentoria-1-1 ) 
-| 1060529      | ALFREDO CAJICA MARTINEZ              | [Luca Bacasehua](https://github.com/lucabamoW)|[Luca Bacasehua](https://calendly.com/luca-bacasehua/baz-mentoria-1-1 ) 
-| 1031636      | ALIN PAOLA MEJIA SIERRA              | [Luca Bacasehua](https://github.com/lucabamoW)|[Luca Bacasehua](https://calendly.com/luca-bacasehua/baz-mentoria-1-1 ) 
-| 762778      | ALEJANDRA BETZABE LOPEZ HERNANDEZ             | [Luca Bacasehua](https://github.com/lucabamoW)|[Luca Bacasehua](https://calendly.com/luca-bacasehua/baz-mentoria-1-1 ) 
-| 948248      | MARIA DEL ROSARIO GERON GARCIA              | [Luca Bacasehua](https://github.com/lucabamoW)|[Luca Bacasehua](https://calendly.com/luca-bacasehua/baz-mentoria-1-1 ) 
-
-
-
 
 # VI. PROYECTO BAZ SUPERAPP / BANCA DIGITAL (Asignado por Líder de Gremio)
 
