@@ -81,7 +81,7 @@ Para la revisión de tu Capstone Project se te asignó un mentor quien te dará 
 
 # VI. Agenda tu mentoría
 
-# VI. Contacto Wizeline DSA
+# VII. Contacto Wizeline DSA
 Si tienes alguna duda sobre el programa, logística, accesos, etc., por favor contacta al equipo de Wizeline DSA
 
 :email: Email: [baz-dsa@wizeline.com](baz-dsa@wizeline.com)
