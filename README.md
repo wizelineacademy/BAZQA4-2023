@@ -63,12 +63,12 @@ Los temas están divididos en 6 semanas, 4 sesiones por semana.
 
     
 
-## 📺 Grabaciones sesiones y Presentaciones
+# IV. 📺 Grabaciones sesiones y Presentaciones
 
 En [esta liga](/Grabaciones%20y%20Presentaciones.md) encontrarás todas las grabaciones y presentaciones del curso.
 
 
-# IV. Proyecto Final (Capstone Project)
+# V. Proyecto Final (Capstone Project)
 **Objetivo**
 Para aprobar el curso tendrás que desarrollar un proyecto final en el cual reforzarás y aplicarás los conocimientos que vas adquiriendo.
 - Para poder presentar tu proyecto final, debes contar con un **mínimo de 6 mentorías on-demand**.
@@ -76,16 +76,12 @@ Para aprobar el curso tendrás que desarrollar un proyecto final en el cual refo
 
 [Aquí](https://github.com/wizelineacademy/BAZQA-AUTOMATION-2023/blob/main/Capstone%20Project.md) encontrarás las instrucciones para completar tu proyecto final.
 
-Para la revisión de tu Capstone Project se te asignó un mentor quien te dará retroalimentación por medio de comentarios en tu repositorio. Si tienes dudas o quieres revisar más a fondo, puedes agendar una mentoría 1:1.
+Para la revisión de tu Capstone Project se te asignó un mentor quien te dará retroalimentación por medio de comentarios en tu repositorio. Si tienes dudas o quieres revisar más a fondo, puedes agendar una mentoría 1:1. Recuerda registrar tus entregables en este [formulario](https://forms.gle/fhWpxsnszAmgjKTr9)
 
 
-# VI. PROYECTO BAZ SUPERAPP / BANCA DIGITAL (Asignado por Líder de Gremio)
+# VI. Agenda tu mentoría
 
-- **BAZ SUPERAPP**: 
-- **BANCA DIGITAL**: Siguen con sus actividades habituales asignadas por su líder de gremio
-
-
-# VII. Contacto Wizeline DSA
+# VI. Contacto Wizeline DSA
 Si tienes alguna duda sobre el programa, logística, accesos, etc., por favor contacta al equipo de Wizeline DSA
 
 :email: Email: [baz-dsa@wizeline.com](baz-dsa@wizeline.com)
