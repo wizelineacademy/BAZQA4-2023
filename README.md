@@ -79,8 +79,25 @@ Para aprobar el curso tendrás que desarrollar un proyecto final en el cual refo
 
 Para la revisión de tu Capstone Project se te asignó un mentor quien te dará retroalimentación por medio de comentarios en tu repositorio. Si tienes dudas o quieres revisar más a fondo, puedes agendar una mentoría 1:1. Recuerda registrar tus entregables en este [formulario](https://forms.gle/fhWpxsnszAmgjKTr9)
 
+# VI. Agenda tu mentoria 📆
+Si deseas tener una mentoria personalizada en línea con alguno de los mentores, adicional a las de tu proyecto final, sigue estas instrucciones:
 
-# VI. Agenda tu mentoría
+Selecciona la liga de abajo de cualquiera de los mentores, te abrirá su calendario con la disponibilidad por día y horarios. Elige el que mejor se acomode a tu necesidad.
+
+Recuerda llenar el [Formato de Retroalimentación](https://forms.gle/rZR42k1wf2Gjwtwe9) al final de tu mentoría.
+
+
+| Mentor               | Mentee                          |  Liga para agendar mentoria                |
+|----------------------|---------------------------------|--------------------------------------------|
+| `Fer Badillo Diaz de Leon`       | - LEOPOLDO PRADO PEREZ   <br/> - JORGE LUIS CORRO ROJAS   | [Liga](https://calendly.com/fdiazw/1h) |
+| `Alejandro Garduño Albores`      | - CARLOS ALBERTO CORTES SANCHEZ <br/> - ALAN ALEXIS DOMINGUEZ PEREZ | [Liga](https://calendly.com/agarduno_wize)
+| `Yanira Lopez Carrillo`       | - YOCELIN VAZQUEZ CARRILLO <br/> - JOSE DAVID BARRITA LOPEZ | [Liga](https://calendly.com/yanira-lopez/mentoria-academy-baz)
+| `Fabian Portillo Gonzalez`       | -CLAUDIA NOHEMI MIRANDA VILDOZOLA | [Liga](https://calendly.com/fabian-portillo/baz-mentoria) |
+| `Naza Casasola Angeles`      | - ALFREDO CAJICA MARTINEZ | [Liga](https://calendly.com/nazareno-casasola) |
+| `Herminio Cota Perea`      |  - ALIN PAOLA MEJIA SIERRA  | [Liga]()
+| `Moises Rivas Navarro`  | - ALEJANDRA BETZABE LOPEZ HERNANDEZ | [Liga](https://calendly.com/moises-rivas-1)
+| `Narda Ballesteros Reyes`    | - MARIA DEL ROSARIO GERON GARCIA   | [Liga](https://calendly.com/nardaballesteros) |
+
 
 # VII. Contacto Wizeline DSA
 Si tienes alguna duda sobre el programa, logística, accesos, etc., por favor contacta al equipo de Wizeline DSA
