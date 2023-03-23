@@ -7,8 +7,7 @@ Bienvenido a tu capacitación de **QA Automation** que consta de 6 semanas de en
 Importante unirse ya que toda la comunicación del curso se lleva por este medio.
 
 Calendario QA Automation Bloque 4<br>
-<img width="479" alt="Screen Shot 2023-03-22 at 14 37 30" src="https://user-images.githubusercontent.com/114529977/227032156-f2e335eb-7010-4829-b88a-bbd077dbaafd.png">
-
+<img width="479" alt="Calendario QA Automation Bloque 4" src="https://user-images.githubusercontent.com/94467952/227385518-8bc64927-a899-4cab-9151-cf0aeecfe8f3.png">
 
 # II. Información general del entrenamiento
 El objetivo de esta etapa es brindarte la oportunidad de actualizar tus conocimientos y habilidades en desarrollo de la mano de los ingenieros de Wizeline. El entrenamiento consta de los siguientes elementos: 
@@ -34,7 +33,7 @@ El objetivo de esta etapa es brindarte la oportunidad de actualizar tus conocimi
 **Proyecto Final Wizeline (Capstone Project)**
 - Es un reto creado para poner en práctica los conocimientos adquiridos durante el entrenamiento. 
 
-# III. Curricula del entrenamiento
+# III. Currícula del entrenamiento
 Los temas están divididos en 6 semanas, 4 sesiones por semana. 
 
 ## :bookmark_tabs: Sesiones
