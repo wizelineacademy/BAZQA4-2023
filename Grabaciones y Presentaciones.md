@@ -30,7 +30,7 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 
 # Semana 4
 - [Lunes 17 Abr - POO]()
-- 📺 [Grabación Lunes 10 Abr]()
+- 📺 [Grabación Lunes 17 Abr]()
 - [Martes 18 Abr - Pycharm / ]()
 [Martes 18 Abr - Appium teórico]()
 - 📺 [Grabación Martes 18 Abr]()
