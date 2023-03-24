@@ -2,6 +2,46 @@
 Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cada sesión.
 
 # PRE-ENTRENAMIENTO
-# Semana 1 - Python
-- [Martes 21 Mar - Repaso Git/Python ](https://drive.google.com/drive/folders/1qufftpFHWR9dnJPXnrHeJzbAAu_VUn71?usp=sharing)
-- 📺 [Grabación Martes 21 Mar]()
+# Semana 1
+- [Martes 21 Mar - Repaso Git / ](https://drive.google.com/file/d/1LFfFCUCwrpAxaOd_zwrA-drxBfKSmoRR/view?usp=sharing)
+[Martes 21 Mar - Repaso Python](https://drive.google.com/file/d/1uJfcz-2SN_VtICfiBf5HClRRbJaGo8L3/view?usp=sharing)
+- 📺 [Grabación Martes 21 Mar GIT](https://drive.google.com/file/d/1ayUroCHIQnTmAyoHwmvlYUiVEPLJyqKY/view?usp=share_link)
+- [Martes 21 Mar - Repaso Pycharm ](https://drive.google.com/file/d/1GSnFgpJZrkxG4dtBWCKZdkvesEIbcRGl/view?usp=sharing)
+- 📺 [Grabación Martes 21 Mar Pycharm](https://drive.google.com/file/d/1wnJqUf6OSkAVk8OuzdRFwWrDeDCG0Qs0/view?usp=sharing)
+
+# Semana 2
+- [Lunes 27 Mar - Repaso Python]()
+- 📺 [Grabación Lunes 27 Mar]()
+- Martes 28 Mar - Configuración de dispositivos externos
+- 📺 [Grabación Martes 28 Mar]()
+
+# ENTRENAMIENTO QA
+# Semana Santa 
+- [Lunes 3 Abr - Automatización en equipos ágiles]()
+- 📺 [Grabación Lunes 3 Abr]()
+- [Martes 4 Abr - Automatización en equipos ágiles]()
+- 📺 [Grabación Martes 4 Abr]()
+
+# Semana 3
+- [Lunes 10 Abr - TDD/BDD]()
+- 📺 [Grabación Lunes 10 Abr]()
+- [Martes 11 Abr - API Testing]()
+- 📺 [Grabación Martes 11 Abr]()
+
+# Semana 4
+- [Lunes 17 Abr - POO]()
+- 📺 [Grabación Lunes 10 Abr]()
+- [Martes 18 Abr - Pycharm / ]()
+[Martes 11 Abr - Appium teórico]()
+- 📺 [Grabación Martes 11 Abr]()
+
+# Semana 5
+- [Lunes 24 Abr - Front End Python ]()
+- 📺 [Grabación Lunes 10 Abr]()
+- [Martes 25 Abr - Front End Python / ]()
+[Martes 25 Abr - Automatización mobile]()
+- 📺 [Grabación Martes 11 Abr]()
+
+# Semana 6
+- [Martes 2 May - Automatización mobile]()
+- 📺 [Grabación Martes 2 May]()
