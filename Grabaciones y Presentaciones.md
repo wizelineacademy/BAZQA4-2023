@@ -32,15 +32,15 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 - [Lunes 17 Abr - POO]()
 - 📺 [Grabación Lunes 10 Abr]()
 - [Martes 18 Abr - Pycharm / ]()
-[Martes 11 Abr - Appium teórico]()
-- 📺 [Grabación Martes 11 Abr]()
+[Martes 18 Abr - Appium teórico]()
+- 📺 [Grabación Martes 18 Abr]()
 
 # Semana 5
 - [Lunes 24 Abr - Front End Python ]()
-- 📺 [Grabación Lunes 10 Abr]()
+- 📺 [Grabación Lunes 24 Abr]()
 - [Martes 25 Abr - Front End Python / ]()
 [Martes 25 Abr - Automatización mobile]()
-- 📺 [Grabación Martes 11 Abr]()
+- 📺 [Grabación Martes 25 Abr]()
 
 # Semana 6
 - [Martes 2 May - Automatización mobile]()
