@@ -38,29 +38,35 @@ Los temas están divididos en 6 semanas, 4 sesiones por semana.
 
 ## :bookmark_tabs: Sesiones
 
-### Propedéutico 
+### Pre-entrenamiento 
+## Semana 1
+  1. Git
+  2. Fundamentos de Python
+  3. Pycharm
+  
+## Semana 2
+  1. Configuración de dispositivos externos
+  
+### Entrenamiento
+## Semana Santa
+  1. Automatización en equipos ágiles
+  
+## Semana 3
+   1. TDD/BDD
+   2. API Testing
+   3. API Testing Workshop
 
-  1. [Onboarding - Git](https://drive.google.com/file/d/1aOBS3WBkb2Wu83OD96jQzCdB3SSTYeCY/view?usp=sharing)
-  2. [Fundamentals](https://drive.google.com/file/d/1Q8hn5TgSPkDJTGx0fINUHXM6Pcxy-2lF/view?usp=sharing)
-  3. [Ejercicios - Dia 1](https://drive.google.com/file/d/1Bzir7iAddCS2s4qgdcHtrkIuqkezElG2/view?usp=share_link)
-  4. [Ejercicios resueltos - Dia 1](https://drive.google.com/file/d/1cyadZzhDXFM9rnqbm-3i31obsd0EJWHC/view?usp=share_link)
-  5. [Code challenge]()
-  6. [Pytest]()
-
-### Semana 1
-   1. [Automatización en equipos ágiles]()
-   2. [TDD/Bdd]()
-   3. [API Testing]()
-   
-
-### Semana 2 
-   1. [Appium]()
-   2. [Front End Python (Principios + POM)](https://github.com/wizelineacademy/BAZQA-AUTOMATION-2023/tree/main/semana2-sesion2)
+## Semana 4
+   1. POO
+   2. Pycharm
+   3. Appium teórico 
  
-
-### Semana 3
-   1. [Pycharm]()
-
+## Semana 5
+   1. Front End Python
+   2. Automatización mobile
+   
+## Semana 6
+   1. Automatización mobile   
     
 
 # IV. 📺 Grabaciones sesiones y Presentaciones
