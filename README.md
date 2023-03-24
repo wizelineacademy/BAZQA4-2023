@@ -38,34 +38,34 @@ Los temas están divididos en 6 semanas, 4 sesiones por semana.
 
 ## :bookmark_tabs: Sesiones
 
-### Pre-entrenamiento 
-## Semana 1
+## Pre-entrenamiento 
+### Semana 1
   1. Git
   2. Fundamentos de Python
   3. Pycharm
   
-## Semana 2
+### Semana 2
   1. Configuración de dispositivos externos
   
-### Entrenamiento
-## Semana Santa
+## Entrenamiento
+### Semana Santa
   1. Automatización en equipos ágiles
   
-## Semana 3
+### Semana 3
    1. TDD/BDD
    2. API Testing
    3. API Testing Workshop
 
-## Semana 4
+### Semana 4
    1. POO
    2. Pycharm
    3. Appium teórico 
  
-## Semana 5
+### Semana 5
    1. Front End Python
    2. Automatización mobile
    
-## Semana 6
+### Semana 6
    1. Automatización mobile   
     
 
