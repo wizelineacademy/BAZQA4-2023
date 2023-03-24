@@ -92,7 +92,7 @@ Para publicar tu trabajo, deberás seguir estos pasos:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── API <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── APPIUM <br>
 
-[Llenar este formato](https://forms.gle/fhWpxsnszAmgjKTr9)
+[Llenar este form](https://forms.gle/fhWpxsnszAmgjKTr9)
 - Mantenerte al pendiente de la retroalimentación.
 - Generar los cambios conforme a los comentarios de tu mentor.
 
