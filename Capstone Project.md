@@ -8,8 +8,6 @@ Usted es un Ingeniero de Calidad de Software en BAZ y acaba de ser asignado a un
 
 **Proyecto de Appium**: Un framework que ejecutará una series de escenarios de automatización en móvil sobre la aplicación de  saucedemo. 
 
-**Proyecto de Python**: TBD
-
 
 **La elección del software a utilizarse será:**
 - Python
@@ -18,16 +16,13 @@ Usted es un Ingeniero de Calidad de Software en BAZ y acaba de ser asignado a un
 - Behave
 
 **Las fecha de entrega son las siguientes:**
-- **Proyecto de API**: Primer entregable - 17 de Febrero
-- **Proyecto de POM en Python**: Segundo entregable - 24 de Febrero
-- **Proyecto de Appium**: Tercer entregable - 2 Marzo
-
-
+- **Proyecto de API**: Primer entregable - 14 de Abril
+- **Proyecto de Appium**: Tercer entregable - 5 de Mayo
 
 # Proyecto de API
 El objetivo de este proyecto es poder construir colecciones de Postman, y ordenar adecuadamente las solicitudes “requests” de manera que sigan una serie de acciones que hagan sentido al usuario final. Al evaluar la respuesta de una API permite enfocarse en más puntos que conforman el cuerpo de la respuesta.
 
-**Fecha de entrega: 17 de Febrero de 2023**
+**Fecha de entrega: 14 de Abril 2023**
 
 **Para este proyecto es importante que se apoye de la documentación disponible en pokemon API para poder realizar lo siguiente:**
 - Elija su pokemon favorito (almacenar esta información en un archivo de variables de ambiente) y buscar la información sobre sus movimientos.
@@ -47,13 +42,11 @@ El objetivo de este proyecto es poder construir colecciones de Postman, y ordena
 **Envío para revisión:** 
 Los entregables de este proyecto son la colección generada por Postman en formato .json, al igual que un archivo para las variables de ambiente, igual en formato .json.
 
-Envío para revisión: 17 de Febrero
-
 
 # Proyecto de Appium
 El propósito de este proyecto es construir un framework de automatización desde 0 siguiendo lo aprendido en la ruta de autoestudio de Python proporcionada al inicio de este módulo, así como también poner el conocimiento adquirido en las sesiones en vivo, con instructores presenciales, así como el apoyo de sus mentores. 
 
-**Fecha de entrega: 02 de Marzo del 2022**
+**Fecha de entrega: 5 de Mayo del 2023**
 
 Se sugiere al estudiante familiarizarse con la aplicación saucedemo de manera que pueda replicar los casos de prueba a mano antes de proceder a automatizarlos. 
 
@@ -99,7 +92,7 @@ Para publicar tu trabajo, deberás seguir estos pasos:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── API <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── APPIUM <br>
 
-[Llenar este formato](https://forms.gle/Eq3NFcA1xusAgqfX8)
+[Llenar este formato](https://forms.gle/fhWpxsnszAmgjKTr9)
 - Mantenerte al pendiente de la retroalimentación.
 - Generar los cambios conforme a los comentarios de tu mentor.
 
