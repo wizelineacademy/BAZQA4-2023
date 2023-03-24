@@ -12,7 +12,7 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 # Semana 2
 - [Lunes 27 Mar - Repaso Python]()
 - 📺 [Grabación Lunes 27 Mar]()
-- Martes 28 Mar - Configuración de dispositivos externos
+- [Martes 28 Mar - Configuración de dispositivos externos]()
 - 📺 [Grabación Martes 28 Mar]()
 
 # ENTRENAMIENTO QA
