@@ -1,2 +1,0 @@
-bob@example.com
-10203040

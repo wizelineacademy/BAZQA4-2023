@@ -1,9 +1,0 @@
-[pytest]
-env =
-    USERNAME=correo@correo.com
-    PASSWORD=contraseña
-
-
-
-
-
