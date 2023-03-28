@@ -10,7 +10,7 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 - 📺 [Grabación Martes 21 Mar Pycharm](https://drive.google.com/file/d/1wnJqUf6OSkAVk8OuzdRFwWrDeDCG0Qs0/view?usp=sharing)
 
 # Semana 2
-- [Lunes 27 Mar - Repaso Python - Ejercicios OP](https://drive.google.com/file/d/1rSXjHE49QUm3KXNtXhjMA1qyXPS3hNjC/view?usp=sharing - 
+- [Lunes 27 Mar - Repaso Python - Ejercicios OP](https://drive.google.com/file/d/1rSXjHE49QUm3KXNtXhjMA1qyXPS3hNjC/view?usp=sharing) 
 - [Lunes 27 Mar - Repaso Python - Project Code Challenge](https://drive.google.com/file/d/1SOIXdP1Gi6nhycTLmh692hyDD03aP3tn/view?usp=sharing) 
 - 📺 [Grabación Lunes 27 Mar]()
 - [Martes 28 Mar - Configuración de dispositivos externos]()
