@@ -39,6 +39,8 @@ Los temas están divididos en 6 semanas, 4 sesiones por semana.
 ## :bookmark_tabs: Sesiones
 
 ## Pre-entrenamiento 
+
+
 ### Semana 1
   1. Git
   2. Fundamentos de Python
