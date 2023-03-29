@@ -42,12 +42,14 @@ Los temas están divididos en 6 semanas, 4 sesiones por semana.
 
 
 ### Semana 1
-  1. Git
-  2. Fundamentos de Python
-  3. Pycharm
+  1. [Git](https://drive.google.com/file/d/1LFfFCUCwrpAxaOd_zwrA-drxBfKSmoRR/view?usp=sharing)
+  2. [Fundamentos de Python](https://drive.google.com/file/d/1uJfcz-2SN_VtICfiBf5HClRRbJaGo8L3/view?usp=sharing) 
+  3. [Pycharm](https://drive.google.com/file/d/1GSnFgpJZrkxG4dtBWCKZdkvesEIbcRGl/view?usp=sharing)
   
 ### Semana 2
-  1. Configuración de dispositivos externos
+  1. [Ejercicio 1](https://drive.google.com/file/d/18ZsZkaJ88YtyQogHCfImLd0R8IbKTSDP/view?usp=sharing)
+  2. [Ejercicio 2](https://drive.google.com/file/d/1Em6yqs5-RvByFZWFQe913KR1EnCy7TXB/view?usp=sharing)
+  
   
 ## Entrenamiento
 ### Semana Santa
@@ -64,7 +66,7 @@ Los temas están divididos en 6 semanas, 4 sesiones por semana.
    3. Appium teórico 
  
 ### Semana 5
-   1. Front End Python
+   1. [Front End Python](https://github.com/wizelineacademy/BAZQA-AUTOMATION-2023/tree/main/semana2-sesion2) 
    2. Automatización mobile
    
 ### Semana 6
