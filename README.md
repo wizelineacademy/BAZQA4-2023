@@ -18,14 +18,14 @@ El objetivo de esta etapa es brindarte la oportunidad de actualizar tus conocimi
 
 - En las sesiones en línea, es **obligatorio** tener la cámara prendida.
 - Debes asisitir a mínimo 8 sesiones presenciales para tener derecho a presentar tu Proyecto Final
-- - En caso de no poder asistir a alguna sesión presencial y/o virtual, debes informarnos por Telegram y vía correo electrónico a Contacto DSA: baz-dsa@wizeline.com, con copia a Mercedes Vargas: mevargas@gesech.com y a tu líder de gremio. 
+- En caso de no poder asistir a alguna sesión presencial y/o virtual, debes informarnos por Telegram y vía correo electrónico a Contacto DSA: baz-dsa@wizeline.com, con copia a Mercedes Vargas: mevargas@gesech.com y a tu líder de gremio. 
 
 **Mentorías Grupales**
 - Son sesiones de mentoría en sitio que se llevan a cabo después de las sesiones en vivo para reforzar conocimientos y aclarar dudas. 
 - Lunes y martes: 9am y 6pm en oficinas de Wizeline
 
 **Mentorías On Demand**
-- Son sesiones en donde podrás interactuar con ingenieros de Wizeline para resolver dudas que tengas sobre los temas cubiertos en las sesiones en vivo, el material de autoestudio o sobre el proyecto final. Las mentorías tienen una duración de 1 hora, son en línea y son bajo demanda. Más abajo están las instrucciones y ligas para solicitar una sesión.
+- Son sesiones en donde puedes interactuar con ingenieros de Wizeline para resolver dudas que tengas sobre los temas cubiertos en las sesiones en vivo, el material de autoestudio o sobre el proyecto final. Las mentorías tienen una duración de 1 hora, son en línea y son bajo demanda. Más abajo están las instrucciones y ligas para solicitar una sesión.
 
 **Ruta de Autoaprendizaje**
 - Es una recopilación de recursos (artículos, videos, audios) que ponemos a tu disposición para que complementes tu aprendizaje.
@@ -34,7 +34,7 @@ El objetivo de esta etapa es brindarte la oportunidad de actualizar tus conocimi
 - Es un reto creado para poner en práctica los conocimientos adquiridos durante el entrenamiento. 
 
 # III. Currícula del entrenamiento
-Los temas están divididos en 6 semanas, 4 sesiones por semana. 
+Los temas están divididos en 6 semanas, 2 sesiones intensivas por semana. 
 
 ## :bookmark_tabs: Sesiones
 
@@ -80,9 +80,9 @@ En [esta liga](/Grabaciones%20y%20Presentaciones.md) encontrarás todas las grab
 
 # V. Proyecto Final (Capstone Project)
 **Objetivo**
-Para aprobar el curso tendrás que desarrollar un proyecto final en el cual reforzarás y aplicarás los conocimientos que vas adquiriendo.
+Para aprobar el curso desarrollarás un proyecto final en el cual reforzarás y aplicarás los conocimientos que vas adquiriendo.
 - Para poder presentar tu proyecto final, debes contar con un **mínimo de 6 mentorías on-demand**.
-- Se tomará en cuenta tu participación en sesiones presenciales y virtuales.
+- Tu participación en sesiones presenciales se toma en cuenta.
 
 [Aquí](https://github.com/wizelineacademy/BAZQA4-2023/blob/main/Capstone%20Project.md) encontrarás las instrucciones para completar tu proyecto final.
 
