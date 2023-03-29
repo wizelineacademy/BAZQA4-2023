@@ -86,7 +86,7 @@ Para aprobar el curso desarrollarás un proyecto final en el cual reforzarás y 
 
 [Aquí](https://github.com/wizelineacademy/BAZQA4-2023/blob/main/Capstone%20Project.md) encontrarás las instrucciones para completar tu proyecto final.
 
-Para la revisión de tu Capstone Project se te asignó un mentor quien te dará retroalimentación por medio de comentarios en tu repositorio. Si tienes dudas o quieres revisar más a fondo, puedes agendar una mentoría 1:1. Recuerda registrar tus entregables en este [formulario](https://forms.gle/fhWpxsnszAmgjKTr9)
+Para la revisión de tu Capstone Project se te asignó un mentor quien te dará retroalimentación por medio de comentarios en tu repositorio. Si tienes dudas o quieres revisar más a fondo, puedes agendar una mentoría 1:1. Recuerda registrar cada uno de tus entregables en este [formulario](https://forms.gle/fhWpxsnszAmgjKTr9)
 
 # VI. Agenda tu mentoria 📆
 Si deseas tener una mentoria personalizada en línea con alguno de los mentores, adicional a las de tu proyecto final, sigue estas instrucciones:
