@@ -14,7 +14,7 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 - [Lunes 27 Mar - Repaso Python - Project Code Challenge](https://drive.google.com/file/d/1MDn69hKvkGYwEVoyZkNIfUcj5Y13V0lr/view?usp=sharing) 
 - 📺 [Grabación Lunes 27 Mar](https://drive.google.com/file/d/1iVptn_nd20_5EyzsV6Tg9iZR3HnWRDBo/view?usp=sharing)
 - [Martes 28 Mar - Configuración de dispositivos externos]()
-- 📺 [Grabación Martes 28 Mar]()
+- 📺 [Grabación Martes 28 Mar](https://drive.google.com/file/d/1a8Yanmq3EK71Kh0jBHc46lAIFAk8O4pt/view?usp=sharing)
 
 # ENTRENAMIENTO QA
 # Semana Santa 
