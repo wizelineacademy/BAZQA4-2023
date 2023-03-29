@@ -49,7 +49,7 @@ Los temas están divididos en 6 semanas, 2 sesiones intensivas por semana.
 ### Semana 2
   1. [Ejercicio 1](https://drive.google.com/file/d/18ZsZkaJ88YtyQogHCfImLd0R8IbKTSDP/view?usp=sharing)
   2. [Ejercicio 2](https://drive.google.com/file/d/1Em6yqs5-RvByFZWFQe913KR1EnCy7TXB/view?usp=sharing)
-  3. (Ejercicio 3[(https://quizlet.com/376208745/python-flash-cards/)
+  3. [Ejercicio 3](https://quizlet.com/376208745/python-flash-cards/)
   
   
 ## Entrenamiento
