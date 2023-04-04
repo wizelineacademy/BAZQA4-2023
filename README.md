@@ -104,7 +104,7 @@ Recuerda llenar el [Formato de Retroalimentación](https://forms.gle/rZR42k1wf2G
 | `Yanira Lopez Carrillo`       | - YOCELIN VAZQUEZ CARRILLO <br/> - JOSE DAVID BARRITA LOPEZ | [Liga](https://calendly.com/yanira-lopez/mentoria-academy-baz)
 | `Fabian Portillo Gonzalez`       | -CLAUDIA NOHEMI MIRANDA VILDOZOLA | [Liga](https://calendly.com/fabian-portillo/baz-mentoria) |
 | `Naza Casasola Angeles`      | - ALFREDO CAJICA MARTINEZ | [Liga](https://calendly.com/nazareno-casasola) |
-| `Herminio Cota Perea`      |  - ALIN PAOLA MEJIA SIERRA  | [Liga]()
+| `Herminio Cota Perea`      |  - ALIN PAOLA MEJIA SIERRA  | [Liga]( https://calendly.com/herminio-cota-23)
 | `Moises Rivas Navarro`  | - ALEJANDRA BETZABE LOPEZ HERNANDEZ | [Liga](https://calendly.com/moises-rivas-1)
 | `Narda Ballesteros Reyes`    | - MARIA DEL ROSARIO GERON GARCIA   | [Liga](https://calendly.com/nardaballesteros) |
 
