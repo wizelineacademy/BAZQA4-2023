@@ -18,7 +18,7 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 
 # ENTRENAMIENTO QA
 # Semana Santa 
-- [Lunes 3 Abr - Automatización en equipos ágiles](https://drive.google.com/file/d/1e6nTtTQg77_cAOSCyaM9Yj1T3nLjnktJ/view?usp=sharing)
+- [Lunes 3 Abr - Automatización en equipos ágiles](https://drive.google.com/file/d/1lZEO_u9M_ctLzMKkED32M3FFttN8YoUL/view?usp=sharing)
 - 📺 [Grabación Lunes 3 Abr]()
 - 📺 [Grabación Martes 4 Abr]()
 
