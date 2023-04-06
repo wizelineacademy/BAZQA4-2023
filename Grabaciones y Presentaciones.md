@@ -20,7 +20,7 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 # Semana Santa 
 - [Lunes 3 Abr - Automatización en equipos ágiles](https://drive.google.com/file/d/1lZEO_u9M_ctLzMKkED32M3FFttN8YoUL/view?usp=sharing)
 - 📺 [Grabación Lunes 3 Abr](https://drive.google.com/file/d/1QGVCspm5uWsQEuj9iu_PDP1w7K1PZERM/view?usp=sharing)
-- 📺 [Grabación Martes 4 Abr]()
+- 📺 [Grabación Martes 4 Abr](https://drive.google.com/file/d/1SUX3qNccSAHcioFaw1r3bMfXpAMOZXbu/view?usp=sharing)
 
 # Semana 3
 - [Lunes 10 Abr - TDD/BDD]()
