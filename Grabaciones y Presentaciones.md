@@ -24,7 +24,7 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 
 # Semana 3
 - [Lunes 10 Abr - TDD/BDD](https://drive.google.com/file/d/129F9hUAJ_n21pv4FCKNOGzf9sJ0xG_Q3/view?usp=sharing)
-- 📺 [Grabación Lunes 10 Abr]()
+- 📺 [Grabación Lunes 10 Abr](https://drive.google.com/file/d/12JOUnkYVpYK5leEX3XKaczsNoIX0ZFeM/view?usp=sharing)
 - [Martes 11 Abr - API Testing](https://drive.google.com/file/d/1OjNNXBmvWcuXMU3zw26_rVxhG5OlnWLT/view?usp=sharing)
 - 📺 [Grabación Martes 11 Abr]()
 
