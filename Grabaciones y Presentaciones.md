@@ -26,7 +26,7 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 - [Lunes 10 Abr - TDD/BDD](https://drive.google.com/file/d/129F9hUAJ_n21pv4FCKNOGzf9sJ0xG_Q3/view?usp=sharing)
 - 📺 [Grabación Lunes 10 Abr](https://drive.google.com/file/d/12JOUnkYVpYK5leEX3XKaczsNoIX0ZFeM/view?usp=sharing)
 - [Martes 11 Abr - API Testing](https://drive.google.com/file/d/1OjNNXBmvWcuXMU3zw26_rVxhG5OlnWLT/view?usp=sharing)
-- 📺 [Grabación Martes 11 Abr]()
+- 📺 [Grabación Martes 11 Abr](https://drive.google.com/file/d/1frxhkgIvZ4EfkrlHSCzHA_bu4ZL0wBkW/view?usp=sharing)
 
 # Semana 4
 - [Lunes 17 Abr - POO]()
