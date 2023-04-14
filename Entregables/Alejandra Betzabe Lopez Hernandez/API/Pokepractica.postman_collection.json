@@ -1,0 +1,755 @@
+{
+	"info": {
+		"_postman_id": "028356b0-88b6-4674-8b6e-ae27755929de",
+		"name": "Pokepractica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19508679"
+	},
+	"item": [
+		{
+			"name": "Escenarios_Negativos",
+			"item": [
+				{
+					"name": "Buscar pokemon inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Pokemon Inexistente\r",
+									"pm.test(\"Validación de código 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Descripción pokemon no encontrado\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Sin respuesta\", function () {\r",
+									"    pm.response.to.not.have.jsonBody;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//Declara un pokemon inexistente\r",
+									"pm.environment.set(\"nombre_pokemon_inexistente\", \"digimon\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlpokemon}}/pokemon/{{nombre_pokemon_inexistente}}",
+							"host": [
+								"{{urlpokemon}}"
+							],
+							"path": [
+								"pokemon",
+								"{{nombre_pokemon_inexistente}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Petición mal formada",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validación código 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validación código de error\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"No devuelve jsonBody\", function () {\r",
+									"    pm.response.to.not.have.jsonBody;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//Declara un pokemon inexistente\r",
+									"pm.environment.set(\"pokemon\", \"pikachu\");\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "123456",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Contet-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlpokemon}}/pokemon/{{pokemon}}",
+							"host": [
+								"{{urlpokemon}}"
+							],
+							"path": [
+								"pokemon",
+								"{{pokemon}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar pokemon sin informar el nombre",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Pokemon Inexistente\r",
+									"pm.test(\"Validación código 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Descripción pokemon no encontrado\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Sin respuesta\", function () {\r",
+									"    pm.response.to.not.have.jsonBody;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//Declara un pokemon inexistente\r",
+									"pm.environment.unset(\"nombre_pokemon_inexistente\");\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlpokemon}}/pokemon/{{nombre_pokemon_inexistente}}",
+							"host": [
+								"{{urlpokemon}}"
+							],
+							"path": [
+								"pokemon",
+								"{{nombre_pokemon_inexistente}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar movimiento pokemon inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validación de código 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Nombre código elemento no encontrado\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"No se informa el campo movimiento en la consulta\" , function(){\r",
+									" pm.environment.unset(\"movimiento_inexistente\");\r",
+									" pm.response.to.have.status(404);\r",
+									" pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Sin respuesta\", function () {\r",
+									"    pm.response.to.not.have.jsonBody;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Movimiento inexistente\r",
+									"pm.environment.set(\"movimiento_inexistente\", \"bomba_de_vapor\");\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlpokemon}}/move/{{movimiento_inexistente}}",
+							"host": [
+								"{{urlpokemon}}"
+							],
+							"path": [
+								"move",
+								"{{movimiento_inexistente}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar movimiento sin informar el nombre",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Nombre código elemento no encontrado\", function () {\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"No devuelve jsonBody\", function () {\r",
+									"    pm.response.to.not.have.jsonBody;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Movimiento inexistente\r",
+									"pm.environment.unset(\"movimiento_inexistente\");\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlpokemon}}/move/{{movimiento_inexistente}}",
+							"host": [
+								"{{urlpokemon}}"
+							],
+							"path": [
+								"move",
+								"{{movimiento_inexistente}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Escenarios_Positivos",
+			"item": [
+				{
+					"name": "Busqueda de todos los pokemon con paginación",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.unset(\"offset\");\r",
+									"pm.environment.unset(\"limit\");\r",
+									"pm.environment.set(\"offset\", \"offset=90\");\r",
+									"pm.environment.set(\"limit\", \"limit=90\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Valida tiempo de respuesta\r",
+									"pm.test(\"Tiempo de respuesta menor a  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"//Valida código de éxito 200\r",
+									"pm.test(\"Valida código de éxito 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"//Valida Content-Type\r",
+									"pm.test(\"Content-Type está presente\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"//Valida Response \r",
+									"pm.test(\"Response válido y devuelve un json\", function () {\r",
+									"    pm.response.to.be.ok;\r",
+									"     pm.response.to.be.withBody;\r",
+									"     pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"//Valida esquema\r",
+									"const  schema = {\r",
+									"    \"results\" : {\"type\" : \"array\",\r",
+									"    \"items\":{\r",
+									"        \"type\" : \"object\",\r",
+									"        \"properties\" : {\r",
+									"            \"name\" : {\"type\" : \"string\"},\r",
+									"            \"url\" : {\"type\" : \"string\"}\r",
+									"        }\r",
+									"    }}\r",
+									"}\r",
+									"const myResponse = pm.response.json;\r",
+									"pm.test(\"Validación de esquema\",()=>{\r",
+									"    pm.expect(tv4.validate(myResponse.results, schema));\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlpokemon}}/pokemon/?{{offset}}&{{limit}}",
+							"host": [
+								"{{urlpokemon}}"
+							],
+							"path": [
+								"pokemon",
+								""
+							],
+							"query": [
+								{
+									"key": "{{offset}}",
+									"value": null
+								},
+								{
+									"key": "{{limit}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar pokemon por nombre",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Crear la variable del nombre de pokemon para la consulta, se obtienen a partir del primer request Busqueda de todos los pokemon con paginación , Response: atributo \"name\"\r",
+									"pm.environment.unset(\"primer_movimiento\");\r",
+									"pm.environment.unset(\"url_movimiento_pokemon\");\r",
+									"pm.environment.set(\"nombre_pokemon\", \"cubone\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"let myResponse = pm.response.json();\r",
+									"\r",
+									"//Validar tiempo de respuesta\r",
+									"pm.test(\"Tiempo de respuesta menor a  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"\r",
+									"//Valida código de éxito 200\r",
+									"pm.test(\"Valida código de éxito 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Valida Content-Type\r",
+									"pm.test(\"Content-Type está presente\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"//Valida Response \r",
+									"pm.test(\"Response válido y devuelve un json\", function () {\r",
+									"    pm.response.to.be.ok;\r",
+									"     pm.response.to.be.withBody;\r",
+									"     pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"//Validar esquema de movimiento\r",
+									"const  schema = {\r",
+									"    \"move\" : {\"type\" : \"array\",\r",
+									"    \"items\":{\r",
+									"        \"type\" : \"object\",\r",
+									"        \"properties\" : {\r",
+									"            \"name\" : {\"type\" : \"string\"},\r",
+									"            \"url\" : {\"type\" : \"string\"}\r",
+									"        }\r",
+									"    }}\r",
+									"}\r",
+									"pm.test(\"Validación de esquema\",()=>{\r",
+									"    console.log(myResponse.moves[0].move)\r",
+									"    pm.expect(tv4.validate(myResponse.moves[0].move, schema))\r",
+									"});\r",
+									"\r",
+									"\r",
+									"// Guardar el nombre del primer movimiento como variable de ambiente\r",
+									"pm.environment.set(\"primer_movimiento\", myResponse.moves[0].move.name);\r",
+									"\r",
+									"// Guardar la url del primer movimiento como variable de ambiente\r",
+									"pm.environment.set(\"url_movimiento_pokemon\", myResponse.moves[0].move.url)\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlpokemon}}/pokemon/{{nombre_pokemon}}",
+							"host": [
+								"{{urlpokemon}}"
+							],
+							"path": [
+								"pokemon",
+								"{{nombre_pokemon}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda de pokemon por id",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Crear la variable del id de pokemon para la consulta, se obtienen a partir del primer request Busqueda de todos los pokemon con paginación , Response: atributo \"url\" tomar el id de la url\r",
+									"pm.environment.unset(\"primer_movimiento\");\r",
+									"pm.environment.unset(\"url_movimiento_pokemon\");\r",
+									"pm.environment.set(\"id_pokemon\", 104);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let myResponse = pm.response.json();\r",
+									"\r",
+									"//Validar tiempo de respuesta\r",
+									"pm.test(\"Tiempo de respuesta menor a  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"\r",
+									"//Valida código de éxito 200\r",
+									"pm.test(\"Valida código de éxito 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Valida Content-Type\r",
+									"pm.test(\"Content-Type esta presente\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"//Valida Response \r",
+									"pm.test(\"Response válido y devuelve un json\", function () {\r",
+									"    pm.response.to.be.ok;\r",
+									"     pm.response.to.be.withBody;\r",
+									"     pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"//Validar esquema de movimiento\r",
+									"const  schema = {\r",
+									"    \"move\" : {\"type\" : \"array\",\r",
+									"    \"items\":{\r",
+									"        \"type\" : \"object\",\r",
+									"        \"properties\" : {\r",
+									"            \"name\" : {\"type\" : \"string\"},\r",
+									"            \"url\" : {\"type\" : \"string\"}\r",
+									"        }\r",
+									"    }}\r",
+									"}\r",
+									"pm.test(\"Validación de esquema\",()=>{\r",
+									"    console.log(myResponse.moves[0].move)\r",
+									"    pm.expect(tv4.validate(myResponse.moves[0].move, schema))\r",
+									"});\r",
+									"\r",
+									"\r",
+									"// Guardar el nombre del primer movimiento como variable de ambiente\r",
+									"pm.environment.set(\"primer_movimiento\", myResponse.moves[0].move.name);\r",
+									"\r",
+									"// Guardar la url del primer movimiento como variable de ambiente\r",
+									"pm.environment.set(\"url_movimiento_pokemon\", myResponse.moves[0].move.url)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlpokemon}}/pokemon/{{id_pokemon}}",
+							"host": [
+								"{{urlpokemon}}"
+							],
+							"path": [
+								"pokemon",
+								"{{id_pokemon}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar cualquier movimiento de los pokemon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"//Valida tiempo de respuesta\r",
+									"pm.test(\"Tiempo de respuesta menor a  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"\r",
+									"//Valida código de éxito 200\r",
+									"pm.test(\"Valida código de éxito 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Valida Content-Type\r",
+									"pm.test(\"Content-Type está presente\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"//Valida Response \r",
+									"pm.test(\"Response válido y devuelve un json\", function () {\r",
+									"    pm.response.to.be.ok;\r",
+									"     pm.response.to.be.withBody;\r",
+									"     pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"//Valida tipo de dato accuracy\r",
+									"pm.test(\"Valida el tipo de dato del atributo accuracy\", ()=> {\r",
+									"    pm.expect(responseJson).to.be.an(\"object\");\r",
+									"    pm.expect(responseJson.accuracy).to.be.a(\"number\");    \r",
+									"});\r",
+									"\r",
+									"//Valida el nombre del movimiento\r",
+									"\r",
+									"pm.test(\"Valida el nombre del movimiento\", function(){ \r",
+									"    console.log(\"Nombre del movimiento de response: \" + responseJson.name) \r",
+									"    console.log(\"Nombre del primer movimiento guardado en la variable: \" + pm.environment.get(\"primer_movimiento\"))\r",
+									"    pm.expect(responseJson.name).to.eql(pm.environment.get(\"primer_movimiento\"))  \r",
+									"})\r",
+									"\r",
+									" //Validar que dentro de la sección \"learned_by_pokemon\" se muestre el nombre del pokemon favorito seleccionado\r",
+									" pm.test(\"Valida el nombre del Pokemon en learned_by_Pokemon\", ()=>{\r",
+									"     pm.expect(responseJson.learned_by_pokemon).to.be.an(\"array\");\r",
+									"     const movimientos = responseJson.learned_by_pokemon.find(m => m.name === pm.environment.get(\"nombre_pokemon\"));\r",
+									"     pm.expect(movimientos).to.be.an(\"object\", \"No se encontró el nombre en learned_by_pokemon\");\r",
+									" })"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//Busqueda de cualquier movimiento\r",
+									"\r",
+									"pm.environment.unset(\"movimiento\");\r",
+									"pm.environment.set(\"movimiento\", \"mega-punch\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlpokemon}}/move/{{movimiento}}",
+							"host": [
+								"{{urlpokemon}}"
+							],
+							"path": [
+								"move",
+								"{{movimiento}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar el primer movimiento pokemon por URL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();\r",
+									"\r",
+									"//Valida tiempo de respuesta\r",
+									"pm.test(\"Tiempo de respuesta menor a  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"\r",
+									"//Valida código de éxito 200\r",
+									"pm.test(\"Valida código de éxito 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Valida Content-Type\r",
+									"pm.test(\"Content-Type está presente\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"//Valida Response \r",
+									"pm.test(\"Response válido y devuelve un json\", function () {\r",
+									"    pm.response.to.be.ok;\r",
+									"     pm.response.to.be.withBody;\r",
+									"     pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"//Valida tipo de dato accuracy\r",
+									"pm.test(\"Valida el tipo de dato del atributo accuracy\", ()=> {\r",
+									"    pm.expect(responseJson).to.be.an(\"object\");\r",
+									"    pm.expect(responseJson.accuracy).to.be.a(\"number\");    \r",
+									"});\r",
+									"\r",
+									"//Valida el nombre del movimiento\r",
+									"\r",
+									"pm.test(\"Valida el nombre del movimiento\", function(){ \r",
+									"    console.log(\"Nombre del movimiento de response: \" + responseJson.name) \r",
+									"    console.log(\"Nombre del primer movimiento guardado en la variable: \" + pm.environment.get(\"primer_movimiento\"))\r",
+									"    pm.expect(responseJson.name).to.eql(pm.environment.get(\"primer_movimiento\"))  \r",
+									"})\r",
+									"\r",
+									" //Validar que dentro de la sección \"learned_by_pokemon\" se muestre el nombre del pokemon favorito seleccionado\r",
+									" pm.test(\"Valida el nombre del Pokemon en learned_by_Pokemon\", ()=>{\r",
+									"     pm.expect(responseJson.learned_by_pokemon).to.be.an(\"array\");\r",
+									"     const movimientos = responseJson.learned_by_pokemon.find(m => m.name === pm.environment.get(\"nombre_pokemon\"));\r",
+									"     pm.expect(movimientos).to.be.an(\"object\", \"No se encontró el nombre en learned_by_pokemon\");\r",
+									" })"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.get(\"primer_movimiento\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_movimiento_pokemon}}",
+							"host": [
+								"{{url_movimiento_pokemon}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
