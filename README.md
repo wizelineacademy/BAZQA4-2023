@@ -48,5 +48,3 @@ Talk to me about
 - Celular - [ 5514710922 ]
 
 ---
-
-

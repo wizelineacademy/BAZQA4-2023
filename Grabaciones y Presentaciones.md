@@ -19,14 +19,14 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 # ENTRENAMIENTO QA
 # Semana Santa 
 - [Lunes 3 Abr - Automatización en equipos ágiles](https://drive.google.com/file/d/1lZEO_u9M_ctLzMKkED32M3FFttN8YoUL/view?usp=sharing)
-- 📺 [Grabación Lunes 3 Abr]()
-- 📺 [Grabación Martes 4 Abr]()
+- 📺 [Grabación Lunes 3 Abr](https://drive.google.com/file/d/1QGVCspm5uWsQEuj9iu_PDP1w7K1PZERM/view?usp=sharing)
+- 📺 [Grabación Martes 4 Abr](https://drive.google.com/file/d/1SUX3qNccSAHcioFaw1r3bMfXpAMOZXbu/view?usp=sharing)
 
 # Semana 3
-- [Lunes 10 Abr - TDD/BDD]()
-- 📺 [Grabación Lunes 10 Abr]()
-- [Martes 11 Abr - API Testing]()
-- 📺 [Grabación Martes 11 Abr]()
+- [Lunes 10 Abr - TDD/BDD](https://drive.google.com/file/d/129F9hUAJ_n21pv4FCKNOGzf9sJ0xG_Q3/view?usp=sharing)
+- 📺 [Grabación Lunes 10 Abr](https://drive.google.com/file/d/12JOUnkYVpYK5leEX3XKaczsNoIX0ZFeM/view?usp=sharing)
+- [Martes 11 Abr - API Testing](https://drive.google.com/file/d/1OjNNXBmvWcuXMU3zw26_rVxhG5OlnWLT/view?usp=sharing)
+- 📺 [Grabación Martes 11 Abr](https://drive.google.com/file/d/1frxhkgIvZ4EfkrlHSCzHA_bu4ZL0wBkW/view?usp=sharing)
 
 # Semana 4
 - [Lunes 17 Abr - POO]()
