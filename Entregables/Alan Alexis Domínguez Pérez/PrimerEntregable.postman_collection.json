@@ -1,0 +1,491 @@
+{
+	"info": {
+		"_postman_id": "847aaf85-1ebc-494e-8cf4-c895c7879ebd",
+		"name": "PrimerEntregable",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26897264"
+	},
+	"item": [
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "Fav Pokemon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status( 200 );\r",
+									"    console.log( \"Status Code: \" + pm.response.status );\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than limit\", function() {\r",
+									"    var limit = 700;\r",
+									"    pm.expect(pm.response.responseTime, \"Response time was longer than \" + limit + \" ms.\").to.be.below(limit);\r",
+									"    console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" );\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set( \"PokemonFav\", \"charmander\" );"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlHost}}/v2/pokemon/",
+							"host": [
+								"{{urlHost}}"
+							],
+							"path": [
+								"v2",
+								"pokemon",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Move",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let myResponse = pm.response.json();\r",
+									"let move = myResponse.moves[0].move;\r",
+									"\r",
+									"console.log( myResponse.moves )\r",
+									"//console.log( move.name )\r",
+									"pm.environment.set( \"moveName\", move.name );\r",
+									"pm.environment.set( \"moveURL\", move.url );\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status( 200 );\r",
+									"    console.log( \"Status Code: \" + pm.response.status );\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than limit\", function() {\r",
+									"    var limit = 700;\r",
+									"    pm.expect( pm.response.responseTime, \"Response time was longer than \" + limit + \" ms.\" ).to.be.below( limit );\r",
+									"    console.log( \"Response Time: \" + pm.response.responseTime + \" ms\" );\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validate schema\", () => {\r",
+									"    console.log( \"schema validation \");\r",
+									"    pm.response.to.have.jsonSchema( schema );\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set( \"moveName\", \"\" );",
+									"pm.environment.set( \"moveURL\", \"\" );",
+									"",
+									"const schema = {",
+									"    \"type\": \"object\",",
+									"    \"required\": [",
+									"        \"abilities\",",
+									"        \"base_experience\",",
+									"        \"forms\",",
+									"        \"game_indices\",",
+									"        \"height\",",
+									"        \"held_items\",",
+									"        \"id\",",
+									"        \"is_default\",",
+									"        \"location_area_encounters\",",
+									"        \"moves\",",
+									"        \"name\",",
+									"        \"order\",",
+									"        \"past_types\",",
+									"        \"species\",",
+									"        \"sprites\",",
+									"        \"stats\",",
+									"        \"types\",",
+									"        \"weight\"",
+									"    ],",
+									"    \"properties\": {",
+									"        \"abilities\": {",
+									"            \"type\": \"array\"",
+									"        },",
+									"        \"base_experience\": {",
+									"            \"type\": \"integer\"",
+									"        },",
+									"        \"forms\": {",
+									"            \"type\": \"array\"",
+									"        },",
+									"        \"game_indices\": {",
+									"            \"type\": \"array\"",
+									"        },",
+									"        \"height\": {",
+									"            \"type\": \"integer\"",
+									"        },",
+									"        \"held_items\": {",
+									"            \"type\": \"array\"",
+									"        },",
+									"        \"id\": {",
+									"            \"type\": \"integer\"",
+									"        },",
+									"        \"is_default\": {",
+									"            \"type\": \"boolean\"",
+									"        },",
+									"        \"location_area_encounters\": {",
+									"            \"type\": \"string\"",
+									"        },",
+									"        \"moves\": {",
+									"            \"type\": \"array\"",
+									"        },",
+									"        \"name\": {",
+									"            \"type\": \"string\"",
+									"        },",
+									"        \"order\": {",
+									"            \"type\": \"integer\"",
+									"        },",
+									"        \"past_types\": {",
+									"            \"type\": \"array\"",
+									"        },",
+									"        \"species\": {",
+									"            \"type\": \"object\"",
+									"        },",
+									"        \"sprites\": {",
+									"            \"type\": \"object\"",
+									"        },",
+									"        \"stats\": {",
+									"            \"type\": \"array\"",
+									"        },",
+									"        \"types\": {",
+									"            \"type\": \"array\"",
+									"        },",
+									"        \"weight\": {",
+									"            \"type\": \"integer\"",
+									"        }",
+									"    }",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlHost}}/v2/pokemon/{{PokemonFav}}",
+							"host": [
+								"{{urlHost}}"
+							],
+							"path": [
+								"v2",
+								"pokemon",
+								"{{PokemonFav}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Move Detail by name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status( 200 );\r",
+									"    console.log( \"Status Code: \" + pm.response.status );\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than limit\", function() {\r",
+									"    var limit = 700;\r",
+									"    pm.expect( pm.response.responseTime, \"Response time was longer than \" + limit + \" ms.\" ).to.be.below( limit );\r",
+									"    console.log( \"Response Time: \" + pm.response.responseTime + \" ms\" );\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate movement learned by pokemon\", function() {\r",
+									"    let myResponse = pm.response.json();\r",
+									"    let results = myResponse.learned_by_pokemon;\r",
+									"\r",
+									"    for( let i= 0; i < results.length ; i++ ) {\r",
+									"        if( results[i].name === pm.environment.get( \"PokemonFav\" ) ) {\r",
+									"            console.log( \"Movement learned by: \" + results[i].name );\r",
+									"        }\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlHost}}/v2/move/{{moveName}}",
+							"host": [
+								"{{urlHost}}"
+							],
+							"path": [
+								"v2",
+								"move",
+								"{{moveName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Move Detail by URL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status( 200 );\r",
+									"    console.log( \"Status Code: \" + pm.response.status );\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than limit\", function() {\r",
+									"    var limit = 700;\r",
+									"    pm.expect( pm.response.responseTime, \"Response time was longer than \" + limit + \" ms.\" ).to.be.below( limit );\r",
+									"    console.log( \"Response Time: \" + pm.response.responseTime + \" ms\" );\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate movement learned by pokemon\", function() {\r",
+									"    let myResponse = pm.response.json();\r",
+									"    let results = myResponse.learned_by_pokemon;\r",
+									"\r",
+									"    for( let i= 0; i < results.length ; i++ ) {\r",
+									"        if( results[i].name === pm.environment.get( \"PokemonFav\" ) ) {\r",
+									"            console.log( \"Movement learned by: \" + results[i].name );\r",
+									"        }\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"let url = pm.environment.get(\"moveURL\");",
+									"url.split(\"/\");",
+									"let lastValue = url[url.length -2];",
+									"",
+									"pm.environment.set(\"moveNumber\", lastValue);",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlHost}}/v2/move/{{moveNumber}}",
+							"host": [
+								"{{urlHost}}"
+							],
+							"path": [
+								"v2",
+								"move",
+								"{{moveNumber}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"El codigo es 200\", function(){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Wrong Pokemon",
+			"item": [
+				{
+					"name": "Get non-existent pokemon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"    console.log( \"Status Code: \" + pm.response.code );",
+									"    console.log( \"Pokemon \" + pm.response.status );",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlHost}}/v2/pokemon/gabumon",
+							"host": [
+								"{{urlHost}}"
+							],
+							"path": [
+								"v2",
+								"pokemon",
+								"gabumon"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"El codigo es 404\", function(){",
+							"    pm.response.to.have.status(404);",
+							"});"
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"timevariable = 700;"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"",
+					"",
+					"pm.test(\"Response time is less than 700ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(timevariable);",
+					"});"
+				]
+			}
+		}
+	]
+}
