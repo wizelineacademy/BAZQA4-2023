@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "f5992f20-8c52-428f-ae0e-421b12730d93",
+		"name": "Pokedex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8274375"
+	},
+	"item": [
+		{
+			"name": "Positivos",
+			"item": [
+				{
+					"name": "pokemon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlBase}}/pokemon/{{nombre}}",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"pokemon",
+								"{{nombre}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movimientos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response time is less than 700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"El movimiento pertenece a blastoide \", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.environment.get(\"nombre\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlBase}}/move/{{primerMov}}",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"move",
+								"{{primerMov}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movimiento",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response time is less than 700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"El movimiento pertenece a blastoide \", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.environment.get(\"nombre\"));\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"move\":{\r",
+									"        \"name\": \"blastoise\",\r",
+									"        \"url\": \"https://pokeapi.co/api/v2/pokemon/9/\"\r",
+									"    }\r",
+									"}\r",
+									"pm.test('Schema validation', () => {\r",
+									"  pm.response.to.have.jsonSchema (schema);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlBase}}/move/{{nombreMov}}/",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"move",
+								"{{nombreMov}}",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negativos",
+			"item": [
+				{
+					"name": "pokemon inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"nombre\", \"wargreymon\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlBase}}/pokemon/{{nombre}}",
+							"host": [
+								"{{urlBase}}"
+							],
+							"path": [
+								"pokemon",
+								"{{nombre}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
