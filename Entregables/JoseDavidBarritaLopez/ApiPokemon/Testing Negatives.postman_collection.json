@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "e5a30fc1-5ee8-4dc5-82ac-3c2c891dc33c",
+		"name": "Testing Negatives",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26919148"
+	},
+	"item": [
+		{
+			"name": "Consultar Todos los Pokemons",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 10ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(10);",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Error message is correct for resource not found\", function () {",
+							"    pm.response.to.have.body(\"Not Found\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/nofunciona",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"nofunciona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Pokemon Favorito",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 700ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);",
+							"});",
+							"",
+							"",
+							"",
+							"pm.environment.set('move_name_url_wrong', 'https://pokeapi.co/api/v2/move/190222222');",
+							"pm.environment.set('move_name_wrong', 'kamehaaa');",
+							"",
+							"pm.test(\"Error message is correct for resource not found\", function () {",
+							"    pm.response.to.have.body(\"Not Found\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}{{pokemon_chido}}",
+					"host": [
+						"{{URL}}{{pokemon_chido}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Movimiento Por Nombre",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 10ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(10);",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Error message is correct for resource not found\", function () {",
+							"    pm.response.to.have.body(\"Not Found\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_MOVIMIENTOS}}/{{move_name_wrong}}",
+					"host": [
+						"{{URL_MOVIMIENTOS}}"
+					],
+					"path": [
+						"{{move_name_wrong}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Movimiento Por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 10ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(10);",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Error message is correct for resource not found\", function () {",
+							"    pm.response.to.have.body(\"Not Found\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{move_name_url_wrong}}",
+					"host": [
+						"{{move_name_url_wrong}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
