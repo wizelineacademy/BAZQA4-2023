@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "7ef87fda-8643-496f-91a6-6985021c2cbc",
+		"name": "Pokemon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Positive Scenarios",
+			"item": [
+				{
+					"name": "Chosen Pokemon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Test for the first move of the chosen Pokemon\r",
+									"let myResponse = pm.response.json()\r",
+									"pm.environment.set(\"PokeMove\", myResponse.moves[0].move.name)\r",
+									"pm.environment.set(\"urlMove\", myResponse.moves[0].move.url)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pokeAPI}}/pokemon/{{pokeFav}}",
+							"host": [
+								"{{pokeAPI}}"
+							],
+							"path": [
+								"pokemon",
+								"{{pokeFav}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pokemon Movement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//The chosen pokemon is located on Learn_by_Pokemon by name\r",
+									"let myResponse = pm.response.json()\r",
+									"    pm.environment.set(\"moveChosen\", myResponse.learned_by_pokemon[0].name)\r",
+									"    pm.test(\"Charmander is located in the section Learn_by_Pokemon\", function () {\r",
+									"    pm.expect(pm.environment.get(\"moveChosen\")).eql(pm.environment.get(\"pokeFav\"))\r",
+									"});\r",
+									"\r",
+									"//json schema validation to test\r",
+									"pm.test(\"Json schema is valid\"), function(){\r",
+									"    let moves_schema = {        \r",
+									"  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"id\": {\r",
+									"      \"type\": \"integer\"\r",
+									"    },\r",
+									"    \"learned_by_pokemon\": {\r",
+									"      \"type\": \"object\",\r",
+									"      \"properties\": {\r",
+									"        \"name\": {\r",
+									"          \"type\": \"string\"\r",
+									"        },\r",
+									"        \"url\": {\r",
+									"          \"type\": \"string\"\r",
+									"        }\r",
+									"      },\r",
+									"      \"required\": [\r",
+									"        \"name\",\r",
+									"        \"url\"\r",
+									"      ]\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"    \"id\",\r",
+									"    \"learned_by_pokemon\"\r",
+									"]\r",
+									"}\r",
+									"    pm.response.to.have.jsonSchema(moves_schema)\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlMove}}",
+							"host": [
+								"{{urlMove}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pokemon Movement by URL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//The chosen pokemon is located on Learn_by_Pokemon by url\r",
+									"let myResponse = pm.response.json()\r",
+									"pm.environment.set(\"urlChosen\", myResponse.learned_by_pokemon[0].url)\r",
+									"pm.environment.unset(\"PokeMove\")\r",
+									"pm.environment.unset(\"pokeFav\")\r",
+									"pm.environment.unset(\"urlMove\")\r",
+									"pm.environment.unset(\"moveChosen\")\r",
+									"pm.environment.unset(\"urlChosen\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlMove}}",
+							"host": [
+								"{{urlMove}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Test to validate the http code & message",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(successfulCode)",
+							"    pm.response.to.have.status(\"OK\")",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Negative Scenarios",
+			"item": [
+				{
+					"name": "Non-existent Pokemon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pokeAPI}}/pokemon/sonic\n\n",
+							"host": [
+								"{{pokeAPI}}"
+							],
+							"path": [
+								"pokemon",
+								"sonic\n\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pokemon Color",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Test to validate a missing header\r",
+									"pm.test(\"Missing header called Connection\", function () {\r",
+									"    const myHeaders = pm.response.headers\r",
+									"    let authFound = false\r",
+									"    let i = 0\r",
+									"    for(i = 0; i < Object.keys(myHeaders).length; i++) {\r",
+									"        if(myHeaders.idx(i).key === \"Connection\") {\r",
+									"            authFound = true\r",
+									"            break\r",
+									"        }\r",
+									"    }\r",
+									"    pm.expect(authFound).to.be.true\r",
+									"})\r",
+									"\r",
+									"pm.environment.unset(\"pokeAPI\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{pokeAPI}}/pokemon-color/dorado",
+							"host": [
+								"{{pokeAPI}}"
+							],
+							"path": [
+								"pokemon-color",
+								"dorado"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Test to validate the http code & message",
+							"pm.test(\"Status code is 404 Not Found\", function () {",
+							"    pm.response.to.have.status(errorCode);",
+							"    pm.response.to.have.status(\"Not Found\")",
+							"});",
+							"",
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"//Variables to response code ",
+					"tiempoRespuesta = 700;",
+					"",
+					"//Variables to http codes ",
+					"successfulCode = 200;",
+					"errorCode = 404;"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"//Test for response time",
+					"pm.test(\"Response time is less than 700ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(tiempoRespuesta);",
+					"});",
+					""
+				]
+			}
+		}
+	]
+}
