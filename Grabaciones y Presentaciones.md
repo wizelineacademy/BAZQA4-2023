@@ -29,10 +29,10 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 - 📺 [Grabación Martes 11 Abr](https://drive.google.com/file/d/1frxhkgIvZ4EfkrlHSCzHA_bu4ZL0wBkW/view?usp=sharing)
 
 # Semana 4
-- [Lunes 17 Abr - POO]()
-- 📺 [Grabación Lunes 17 Abr]()
-- [Martes 18 Abr - Pycharm / ]()
-[Martes 18 Abr - Appium teórico]()
+- [Lunes 17 Abr - POO](https://drive.google.com/file/d/12pqoXZCoVz5FN4NhgMNI-5qPTbnvzZTg/view?usp=sharing)
+- 📺 [Grabación Lunes 17 Abr](https://drive.google.com/file/d/11lK26R4X2rUKCOYO3935AB5G7lV6vGCR/view?usp=sharing)
+- [Martes 18 Abr - Pycharm](https://drive.google.com/file/d/1L9RlCNZZPrh5p779uyKxYuWAAxppqcAo/view?usp=sharing)
+- [Martes 18 Abr - Appium](https://drive.google.com/file/d/14eowWjq2MgdWogTqCioJj1CVvYaYWlR-/view?usp=sharing)
 - 📺 [Grabación Martes 18 Abr]()
 
 # Semana 5
