@@ -33,7 +33,7 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 - 📺 [Grabación Lunes 17 Abr](https://drive.google.com/file/d/11lK26R4X2rUKCOYO3935AB5G7lV6vGCR/view?usp=sharing)
 - [Martes 18 Abr - Pycharm](https://drive.google.com/file/d/1L9RlCNZZPrh5p779uyKxYuWAAxppqcAo/view?usp=sharing)
 - [Martes 18 Abr - Appium](https://drive.google.com/file/d/14eowWjq2MgdWogTqCioJj1CVvYaYWlR-/view?usp=sharing)
-- 📺 [Grabación Martes 18 Abr]()
+- 📺 [Grabación Martes 18 Abr](https://drive.google.com/file/d/1PTzSJLKojwo-Il52q2M5Kw3POXes5WjO/view?usp=sharing)
 
 # Semana 5
 - [Lunes 24 Abr - Front End Python ]()
