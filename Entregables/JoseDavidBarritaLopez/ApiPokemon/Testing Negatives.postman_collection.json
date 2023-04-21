@@ -29,7 +29,35 @@
 							"pm.test(\"Error message is correct for resource not found\", function () {",
 							"    pm.response.to.have.body(\"Not Found\");",
 							"});",
-							""
+							"",
+							"",
+							"pm.test(\"Exist my Favorite Pokemon\", function () {",
+							"  const myFavoritePokemon = 'charizardlllllllllllll'; ",
+							"  let pokemonFound = false;",
+							"  ",
+							"  for(let i = 0; i < pm.response.json().results.length; i++){ ",
+							"    if(pm.response.json().results[i].name === myFavoritePokemon){ ",
+							"      pm.expect(pm.response.json().results[i].name).to.equal(myFavoritePokemon);",
+							"      pokemonFound = true;",
+							"      break;",
+							"    }",
+							"  }",
+							"",
+							"  if (!pokemonFound) {",
+							"    pm.expect(pm.response.json().results).to.not.be.empty;",
+							"    pm.expect(pm.response.json().results[0].name).to.equal(myFavoritePokemon);",
+							"  }",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set('NamePokemon',\"charizard\");",
+							"myFavoritePokemon = pm.environment.get('NamePokemon')"
 						],
 						"type": "text/javascript"
 					}
@@ -73,6 +101,18 @@
 							"pm.test(\"Error message is correct for resource not found\", function () {",
 							"    pm.response.to.have.body(\"Not Found\");",
 							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Pre-request Script ",
+							"// Heacer el HTTP Request",
+							"// Ejecucion de Pruebas ",
+							""
 						],
 						"type": "text/javascript"
 					}

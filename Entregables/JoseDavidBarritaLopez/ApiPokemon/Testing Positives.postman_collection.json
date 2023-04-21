@@ -19,7 +19,36 @@
 							"",
 							"pm.test(\"Response time is less than 700ms\", function () {",
 							"    pm.expect(pm.response.responseTime).to.be.below(700);",
-							"});"
+							"});",
+							" ",
+							"pm.test(\"Exist my Favorite Pokemon\", function () {",
+							"  const myFavoritePokemon = 'charizard'; ",
+							"  let pokemonFound = false;",
+							"  ",
+							"  for(let i = 0; i < pm.response.json().results.length; i++){ ",
+							"    if(pm.response.json().results[i].name === myFavoritePokemon){ ",
+							"      pm.expect(pm.response.json().results[i].name).to.equal(myFavoritePokemon);",
+							"      pokemonFound = true;",
+							"      break;",
+							"    }",
+							"  }",
+							"",
+							"  if (!pokemonFound) {",
+							"    pm.expect(pm.response.json().results).to.not.be.empty; // add this line to ensure the response is not empty",
+							"    pm.expect(pm.response.json().results[0].name).to.equal(myFavoritePokemon);",
+							"  }",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set('NamePokemon',\"charizard\");",
+							"myFavoritePokemon = pm.environment.get('NamePokemon')"
 						],
 						"type": "text/javascript"
 					}
@@ -57,20 +86,48 @@
 							"const move_name = results.moves[0].move.name;",
 							"",
 							"if(results.moves.length > 1){",
-							"    console.log(\"The Collection is Correct\")",
+							"    console.log(collectionIsCorrect)",
 							"}else{",
-							"    console.log(\"The Collection Has Not Moves\")",
+							"    console.log(collectionIsNotCorrect)",
 							"}",
 							"",
-							"",
-							"pm.test(\"Validate Schema\", function(){",
-							"    pm.expect(results.moves).to.be.an('object');",
-							"   // pm.expect(results.moves[0].move.url).to.be.an('string');",
-							"    //pm.expect(results.moves[0].move.name).to.be.an('string');",
-							"})",
+							"pm.test(\"Validate schema\", () => {",
+							"    pm.response.to.have.jsonSchema(schema);",
+							"});",
 							"",
 							"pm.environment.set('move_name_url', url);",
 							"pm.environment.set('move_name', move_name);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"collectionIsCorrect = \"The Collection is Correct\";",
+							"collectionIsNotCorrect = \"The Collection Has Not Moves\"",
+							"",
+							"schema = {",
+							"    \"type\": \"object\",",
+							"    \"properties\": {",
+							"        \"moves\": { \"type\": \"array\",",
+							"        \"item\": {",
+							"            \"type\" : \"object\", ",
+							"            \"properties\": {",
+							"                \"move\" : {\"type\" : \"object\",",
+							"                    \"properties\": {",
+							"                         \"name\" : {\"type\" : \"string\"},",
+							"                         \"url\":   {\"type\" : \"string\"}",
+							"                        }",
+							"                    } ",
+							"                }  ",
+							"            }",
+							"        }  ",
+							"    }",
+							"};",
+							"",
 							""
 						],
 						"type": "text/javascript"
