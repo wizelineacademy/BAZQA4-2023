@@ -32,7 +32,6 @@
 							"",
 							"",
 							"pm.test(\"Exist my Favorite Pokemon\", function () {",
-							"  const myFavoritePokemon = 'charizardlllllllllllll'; ",
 							"  let pokemonFound = false;",
 							"  ",
 							"  for(let i = 0; i < pm.response.json().results.length; i++){ ",
@@ -56,7 +55,7 @@
 					"listen": "prerequest",
 					"script": {
 						"exec": [
-							"pm.environment.set('NamePokemon',\"charizard\");",
+							"pm.environment.set('NamePokemon',\"charizardllllllll\");",
 							"myFavoritePokemon = pm.environment.get('NamePokemon')"
 						],
 						"type": "text/javascript"
@@ -93,11 +92,6 @@
 							"    pm.expect(pm.response.responseTime).to.be.below(700);",
 							"});",
 							"",
-							"",
-							"",
-							"pm.environment.set('move_name_url_wrong', 'https://pokeapi.co/api/v2/move/190222222');",
-							"pm.environment.set('move_name_wrong', 'kamehaaa');",
-							"",
 							"pm.test(\"Error message is correct for resource not found\", function () {",
 							"    pm.response.to.have.body(\"Not Found\");",
 							"});"
@@ -109,10 +103,8 @@
 					"listen": "prerequest",
 					"script": {
 						"exec": [
-							"// Pre-request Script ",
-							"// Heacer el HTTP Request",
-							"// Ejecucion de Pruebas ",
-							""
+							"pm.environment.set('move_name_url_wrong', 'https://pokeapi.co/api/v2/move/190222222');",
+							"pm.environment.set('move_name_wrong', 'kamehaaa');"
 						],
 						"type": "text/javascript"
 					}
