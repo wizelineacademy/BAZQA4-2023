@@ -21,10 +21,8 @@
 							"    pm.expect(pm.response.responseTime).to.be.below(700);",
 							"});",
 							" ",
-							"pm.test(\"Exist my Favorite Pokemon\", function () {",
-							"  const myFavoritePokemon = 'charizard'; ",
+							"pm.test(\"Exist my Favorite Pokemon\", function () { ",
 							"  let pokemonFound = false;",
-							"  ",
 							"  for(let i = 0; i < pm.response.json().results.length; i++){ ",
 							"    if(pm.response.json().results[i].name === myFavoritePokemon){ ",
 							"      pm.expect(pm.response.json().results[i].name).to.equal(myFavoritePokemon);",
@@ -32,9 +30,8 @@
 							"      break;",
 							"    }",
 							"  }",
-							"",
 							"  if (!pokemonFound) {",
-							"    pm.expect(pm.response.json().results).to.not.be.empty; // add this line to ensure the response is not empty",
+							"    pm.expect(pm.response.json().results).to.not.be.empty; ",
 							"    pm.expect(pm.response.json().results[0].name).to.equal(myFavoritePokemon);",
 							"  }",
 							"});",
@@ -47,6 +44,7 @@
 					"listen": "prerequest",
 					"script": {
 						"exec": [
+							"// Variables desde Pre-request",
 							"pm.environment.set('NamePokemon',\"charizard\");",
 							"myFavoritePokemon = pm.environment.get('NamePokemon')"
 						],
@@ -159,7 +157,9 @@
 							"",
 							"pm.test(\"Response time is less than 700ms\", function () {",
 							"    pm.expect(pm.response.responseTime).to.be.below(700);",
-							"});"
+							"});",
+							"",
+							""
 						],
 						"type": "text/javascript"
 					}
