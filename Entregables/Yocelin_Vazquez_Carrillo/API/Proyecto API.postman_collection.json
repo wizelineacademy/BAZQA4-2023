@@ -47,25 +47,9 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"/*pm.variables.set(\"schema,\r",
-									"{\r",
-									"    \"type\": object,\r",
-									"    \"required\": [\r",
-									"        \"name\",\r",
-									"        \"url\"\r",
-									"    ],\r",
+									"pm.environment.set('url_base_pokemon','https://pokeapi.co/api/v2/pokemon/')\r",
 									"\r",
-									"    \"properties\": {\r",
-									"        \"name\": {\r",
-									"            \"type\": \"string\"\r",
-									"            \r",
-									"        },\r",
-									"    \"url\":{\r",
-									"        \"type\": url\r",
-									"    }\r",
-									"    }\r",
-									"}\r",
-									")*/"
+									"pm.environment.set('pokemon_favorito', 'blastoise')"
 								],
 								"type": "text/javascript"
 							}
@@ -75,9 +59,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}{{consulta_pokemon}}",
+							"raw": "{{url_base_pokemon}}",
 							"host": [
-								"{{url}}{{consulta_pokemon}}"
+								"{{url_base_pokemon}}"
 							]
 						}
 					},
@@ -117,8 +101,22 @@
 									"/*TestCase 4*/\r",
 									"pm.test(\"Validar schema\", function(){ \r",
 									"\r",
-									"    console.log(pm.response.json())\r",
-									"    const moves_schema = {\r",
+									"    console.log(pm.collectionVariables.get('json_schema'))\r",
+									"    pm.response.to.have.jsonSchema(\r",
+									"        pm.collectionVariables.get('json_schema'))\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set('url_base_pokemon','https://pokeapi.co/api/v2/pokemon/') \r",
+									"\r",
+									" moves_schema = {\r",
 									"  \"type\": \"object\",\r",
 									"  \"properties\": {\r",
 									"    \"moves\": {\r",
@@ -154,17 +152,7 @@
 									"    \"moves\"\r",
 									"  ]\r",
 									"}\r",
-									"pm.response.to.have.jsonSchema(moves_schema) \r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [
-									""
+									"pm.collectionVariables.set('json_schema', moves_schema);"
 								],
 								"type": "text/javascript"
 							}
@@ -174,12 +162,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}{{consulta_pokemon}}/{{pokemon_favorito}}",
+							"raw": "{{url_base_pokemon}}{{pokemon_favorito}}",
 							"host": [
-								"{{url}}{{consulta_pokemon}}"
-							],
-							"path": [
-								"{{pokemon_favorito}}"
+								"{{url_base_pokemon}}{{pokemon_favorito}}"
 							]
 						}
 					},
@@ -227,6 +212,8 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
+									" pm.environment.set('url_moves','https://pokeapi.co/api/v2/move/')\r",
+									"\r",
 									""
 								],
 								"type": "text/javascript"
@@ -237,9 +224,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}{{consulta_movimiento}}{{primer_movimiento}}",
+							"raw": "{{url_moves}}{{primer_movimiento}}",
 							"host": [
-								"{{url}}{{consulta_movimiento}}{{primer_movimiento}}"
+								"{{url_moves}}{{primer_movimiento}}"
 							]
 						}
 					},
@@ -278,15 +265,25 @@
 								],
 								"type": "text/javascript"
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									" pm.environment.set('url_moves','https://pokeapi.co/api/v2/move/')\r",
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
 					],
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}{{consulta_movimiento}}{{id_movimiento}}",
+							"raw": "{{url_moves}}{{id_movimiento}}",
 							"host": [
-								"{{url}}{{consulta_movimiento}}{{id_movimiento}}"
+								"{{url_moves}}{{id_movimiento}}"
 							]
 						}
 					},
@@ -306,23 +303,13 @@
 								"exec": [
 									"var response = pm.response.json()\r",
 									"\r",
-									"/*TestCase 1 item.move*/\r",
-									"pm.test(\"Mi pokémon esta dentro de mi respuesta\", ()=>{\r",
-									"    const pokemon  = pm.environment.get(\"pokemon_inexistente\")\r",
-									"    response.results.forEach((item)=>{\r",
-									"        \r",
-									"            pm.expect(pokemon).to.eqls(item.name)           \r",
-									"\r",
-									"    })\r",
-									"});\r",
-									"\r",
-									"/*TestCase 2*/\r",
-									"pm.test(\"Código de estatus 200\", () => {\r",
-									"  pm.expect(pm.response.code).to.eql(500);\r",
+									"pm.test(\"Validar Not found\", () => {\r",
+									"    const expectedStatusCode = 404;\r",
+									"      pm.response.to.not.have.status(expectedStatusCode);\r",
 									"});\r",
 									"\r",
 									"/*TestCase 3*/\r",
-									"pm.test(\"Tiempo de respuesta menor a 10ms\", function () {\r",
+									"pm.test(\"Tiempo de respuesta a 10s\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(10);\r",
 									"});\r",
 									"    console.log(response.results)"
@@ -334,25 +321,9 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"/*pm.variables.set(\"schema,\r",
-									"{\r",
-									"    \"type\": object,\r",
-									"    \"required\": [\r",
-									"        \"name\",\r",
-									"        \"url\"\r",
-									"    ],\r",
-									"\r",
-									"    \"properties\": {\r",
-									"        \"name\": {\r",
-									"            \"type\": \"string\"\r",
-									"            \r",
-									"        },\r",
-									"    \"url\":{\r",
-									"        \"type\": url\r",
-									"    }\r",
-									"    }\r",
-									"}\r",
-									")*/"
+									" pm.environment.set('url','https://pokeapi.co/api/v2/')\r",
+									"setTimeout(function(){}, 10);\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -362,9 +333,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}{{consulta_pokemon}}",
+							"raw": "{{url}}",
 							"host": [
-								"{{url}}{{consulta_pokemon}}"
+								"{{url}}"
 							]
 						}
 					},
@@ -379,77 +350,25 @@
 								"exec": [
 									"var response=pm.response.json() \r",
 									" \r",
-									"\r",
 									" \r",
 									" /*TestCase 1 moves=move*/\r",
 									"pm.test('Validar que el movimiento este presente', function(){ \r",
 									"    pm.environment.set(\"primer_movimiento\", response.moves[0].move.name);\r",
-									"    pm.expect(moves[1].move.name).to.eqls(pm.environment.get(\"primer_movimiento\"))\r",
+									"    pm.expect(response.moves[1].move.name).to.eqls(pm.environment.get(\"primer_movimiento\"))\r",
 									"    \r",
 									"       \r",
 									"}); \r",
-									"\r",
-									"/*\r",
-									"pm.test(\"Códigos de respuesta\", () => {\r",
-									"  pm.expect(pm.response.code).to.be.oneOf([200,201,204]);\r",
-									"  revisar la documentación\r",
-									"});\r",
-									"*/\r",
-									"/*TestCase 2\r",
-									"pm.test(\"Código de estatus 200\", () => {\r",
-									"  pm.expect(pm.response.code).to.eql(200);\r",
-									"});\r",
-									"/*TestCase 3*/\r",
-									"pm.test(\"Tiempo de respuesta mayor a 700ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(20);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Satus code ir 500\", function(){\r",
-									"    pm.response.to.have.status(500);\r",
-									"})\r",
-									"\r",
-									"/*TestCase 4*/\r",
-									"pm.test(\"Validar schema\", function(){ \r",
-									"\r",
-									"    console.log(pm.response.json())\r",
-									"    const moves_schema = {\r",
-									"  \"type\": \"object\",\r",
-									"  \"properties\": {\r",
-									"    \"moves\": {\r",
-									"      \"type\": \"array\",\r",
-									"      \"items\": [\r",
-									"        {\r",
-									"          \"type\": \"object\",\r",
-									"          \"properties\": {\r",
-									"            \"move\": {\r",
-									"              \"type\": \"object\",\r",
-									"              \"properties\": {\r",
-									"                \"name\": {\r",
-									"                  \"type\": \"string\"\r",
-									"                },\r",
-									"                \"url\": {\r",
-									"                  \"type\": \"string\"\r",
-									"                }\r",
-									"              },\r",
-									"              \"required\": [\r",
-									"                \"name\",\r",
-									"                \"url\"\r",
-									"              ]\r",
-									"            }\r",
-									"          },\r",
-									"          \"required\": [\r",
-									"            \"move\"\r",
-									"          ]\r",
-									"        }\r",
-									"      ]\r",
-									"    }\r",
-									"  },\r",
-									"  \"required\": [\r",
-									"    \"yocelin\"\r",
-									"  ]\r",
-									"}\r",
-									"pm.response.to.have.jsonSchema(moves_schema) \r",
-									"});"
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									" pm.environment.set('url','https://pokeapi.co/api/v2/')\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -469,59 +388,17 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Consulta_movimientoNombreN",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"var response = pm.response.json()\r",
-									"\r",
-									"/*setear en la variable el calor del objeto id dentro del response*/\r",
-									"pm.environment.set(\"id_movimiento\", response.id);\r",
-									"\r",
-									"/*TestCase 1 pokemon = pokemons*/\r",
-									"pm.test(\"Mi movimiento esta dentro de mi respuesta\", ()=>{\r",
-									"    const pokemons  = pm.environment.get(\"pokemon_favorito\")\r",
-									"    response.learned_by_pokemon.forEach((item)=>{\r",
-									"        if(pokemon==item.name){\r",
-									"            pm.expect(pokemon).to.eqls(item.name)\r",
-									"            console.log(item)\r",
-									"        }\r",
-									"    })\r",
-									"    \r",
-									"});\r",
-									"\r",
-									"/*TestCase 2\r",
-									"pm.test(\"Código de estatus 200\", () => {\r",
-									"  pm.expect(pm.response.code).to.eql(200);\r",
-									"});\r",
-									"\r",
-									"/*TestCase 3\r",
-									"pm.test(\"Tiempo de respuesta menor a 700ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
-									"});\r",
-									"    console.log(response.results)*/"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{url}}{{consulta_movimiento}}{{primer_movimiento}}",
-							"host": [
-								"{{url}}{{consulta_movimiento}}{{primer_movimiento}}"
-							]
-						}
-					},
-					"response": []
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"value": ""
+		},
+		{
+			"key": "json_schema",
+			"value": ""
 		}
 	]
 }
