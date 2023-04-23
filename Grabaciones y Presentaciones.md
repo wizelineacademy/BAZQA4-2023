@@ -36,12 +36,11 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 - 📺 [Grabación Martes 18 Abr](https://drive.google.com/file/d/1PTzSJLKojwo-Il52q2M5Kw3POXes5WjO/view?usp=sharing)
 
 # Semana 5
-- [Lunes 24 Abr - Front End Python ]()
+- [Lunes 24 Abr - Front End Python](https://drive.google.com/file/d/11Yy1vah3bSxMCZ0KEL3e2ojJE9zUpG1w/view?usp=sharing)
 - 📺 [Grabación Lunes 24 Abr]()
-- [Martes 25 Abr - Front End Python / ]()
-[Martes 25 Abr - Automatización mobile]()
+- [Martes 25 Abr - Automatización mobile Part 1](https://drive.google.com/file/d/1tIIGA-MPXVeeKX00bYIIeKXFiGgc7RgQ/view?usp=sharing)
 - 📺 [Grabación Martes 25 Abr]()
 
 # Semana 6
-- [Martes 2 May - Automatización mobile]()
+- [Martes 2 May - Automatización mobile Part 2](https://drive.google.com/file/d/1tIIGA-MPXVeeKX00bYIIeKXFiGgc7RgQ/view?usp=sharing)
 - 📺 [Grabación Martes 2 May]()
