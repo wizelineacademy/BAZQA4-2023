@@ -100,12 +100,11 @@ Recuerda llenar el [Formato de Retroalimentación](https://forms.gle/rZR42k1wf2G
 | Mentor               | Mentee                          |  Liga para agendar mentoria                |
 |----------------------|---------------------------------|--------------------------------------------|
 | `Fer Badillo Diaz de Leon`       | - LEOPOLDO PRADO PEREZ   <br/> - JORGE LUIS CORRO ROJAS   | [Liga](https://calendly.com/fdiazw/1h) |
-| `Alejandro Garduño Albores`      | -  ALAN ALEXIS DOMINGUEZ PEREZ | [Liga](https://calendly.com/agarduno_wize)
 | `Yanira Lopez Carrillo`       | - YOCELIN VAZQUEZ CARRILLO <br/> - JOSE DAVID BARRITA LOPEZ <br/> - CARLOS ALBERTO CORTES SANCHEZ| [Liga](https://calendly.com/yanira-lopez/mentoria-academy-baz)
 | `Fabian Portillo Gonzalez`       | -CLAUDIA NOHEMI MIRANDA VILDOZOLA | [Liga](https://calendly.com/fabian-portillo/baz-mentoria) |
 | `Naza Casasola Angeles`      | - ALFREDO CAJICA MARTINEZ | [Liga](https://calendly.com/nazareno-casasola) |
 | `Herminio Cota Perea`      |  - ALIN PAOLA MEJIA SIERRA  | [Liga]( https://calendly.com/herminio-cota-23)
-| `Moises Rivas Navarro`  | - ALEJANDRA BETZABE LOPEZ HERNANDEZ | [Liga](https://calendly.com/moises-rivas-1)
+| `Moises Rivas Navarro`  | - ALEJANDRA BETZABE LOPEZ HERNANDEZ <br/> - ALAN ALEXIS DOMINGUEZ PEREZ | [Liga](https://calendly.com/moises-rivas-1)
 | `Narda Ballesteros Reyes`    | - MARIA DEL ROSARIO GERON GARCIA   | [Liga](https://calendly.com/nardaballesteros) |
 
 
