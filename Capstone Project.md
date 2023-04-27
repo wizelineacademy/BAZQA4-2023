@@ -68,7 +68,7 @@ Se sugiere al estudiante familiarizarse con la aplicación [saucedemo](https://g
   - Pantalla_principal_texts.py  
 - Incluir toda la información necesaria (dependencias, configuraciones, notas, etcétera) de manera que cualquier persona pueda leer su archivo readme y pueda ejecutar su proyecto sin ningún problema.
 - Integrar una herramienta que permita generar un reporte.
--Integrar una herramienta que permita generar un reporte.
+- Integrar una herramienta que permita generar un reporte.
 				
 
 **Los casos de prueba a implementar son los siguientes:**
