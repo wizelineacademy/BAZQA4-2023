@@ -45,4 +45,4 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 # Semana 6
 - [Martes 2 May - Automatización mobile:Implementacion de behave 1](https://drive.google.com/file/d/1mFyEveGtx2hir1zn0OIS5XJfHKL5HzV5/view?usp=sharing)
 - [Martes 2 May - Automatización mobile:Implementacion de behave 2](https://drive.google.com/file/d/1DTSFRXmtLV_RjHJRxMOfIFtI_XjzYhc9/view?usp=sharing)
-- 📺 [Grabación Martes 2 May]()
+- 📺 [Grabación Martes 2 May](https://drive.google.com/file/d/1o3QQDE89dhxaa0kALC817CDcGoPPXlNK/view?usp=sharing)
