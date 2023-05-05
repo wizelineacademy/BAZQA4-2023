@@ -1,6 +1,6 @@
 import pytest
-from Screens.Products.Products_Screen import Products_Screen
-from Screens.Login.Login_Screen import Login_Screen
+from Behave.Screens.Products.Products_Screen import Products_Screen
+from Behave.Screens.Login.Login_Screen import Login_Screen
 
 
 @pytest.mark.regression

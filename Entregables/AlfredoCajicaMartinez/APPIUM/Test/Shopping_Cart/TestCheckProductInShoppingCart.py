@@ -1,8 +1,8 @@
 import pytest
-from Screens.Login.Login_Screen import Login_Screen
-from Screens.Common_Elements import Common_Elements
-from Screens.Shopping_Cart.Shopping_Cart import Shopping_Cart
-from Utils.Dictionaries.Products.Products_Info import FIRST_PRODUCT_INFO
+from Behave.Screens.Login.Login_Screen import Login_Screen
+from Behave.Utils.Common_Elements import Common_Elements
+from Behave.Screens.Shopping_Cart.Shopping_Cart_Screen import Shopping_Cart
+from Behave.Utils.Dictionaries.Products.Products_Info import FIRST_PRODUCT_INFO
 
 
 @pytest.mark.regression

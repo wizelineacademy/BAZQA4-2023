@@ -1,4 +1,6 @@
 Appium-Python-Client==2.9.0
+allure-behave==2.8.6
+allure-python-commons==2.8.6
 async-generator==1.10
 attrs==23.1.0
 behave==1.2.6
