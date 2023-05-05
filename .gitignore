@@ -1,0 +1,14 @@
+.idea
+*.log
+*.out
+.DS_Store
+Thumbs.db
+venv/
+.idea/
+*.iml
+pip:
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
