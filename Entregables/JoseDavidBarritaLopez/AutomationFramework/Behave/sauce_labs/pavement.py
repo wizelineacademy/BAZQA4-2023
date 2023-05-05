@@ -5,7 +5,7 @@ import sys
 sys.path.append(os.path.abspath(''))
 
 from paver.easy import sh, task, consume_nargs
-from utilsssss.settings.behave_local_runner import BehaveLocalRunner
+from utils.settings.behave_local_runner import BehaveLocalRunner
 
 
 @task

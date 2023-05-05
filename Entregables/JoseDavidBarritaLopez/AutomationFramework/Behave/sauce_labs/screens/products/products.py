@@ -2,7 +2,7 @@ import time
 
 from selenium.webdriver.common.by import By
 from screens.base_actions import BaseActions
-from utilsssss.dictionaries.client_information import ClientInformation
+from utils.dictionaries.client_information import ClientInformation
 
 
 def sort_prices(prices):
