@@ -1,4 +1,4 @@
-# Prueba de login
+# Prueba de login,detalle de proytecto,ordenamiento de menor a mayor por precio del producto y compra del primer producto
 
 Este proyecto contiene la automatización de casos de prueba del modulo de login,productos,el detalle de productos agregar el producto al carrito y la compra completa.
 Para eso es necesario considerar la instalación de las siguientes herramientas de software.
