@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1b22ea6c-6e31-4b68-a5b5-061f4d077bae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/baz_project_verfinal.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/sauce_app.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/environment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/features/add_a_product_to_the_cart.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/features/checkout.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/features/filter.cart.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/features/login.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/features/product_details.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/2c1f6094-b4df-4dcd-a8f6-7d1e1efbd0a3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/53ee4c6b-2f96-4409-ba0e-5411a539b489-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/60c0bf4c-4094-4961-bf0b-513ab7502e21-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/6c19897a-06db-492f-bfee-db6a31978030-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/8a09d471-13ad-432d-8a41-46d08a0a0efc-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/8bcc63c5-5e11-45c7-b6ca-16b50f39f545-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/8d50ce81-0c25-49c7-b2b1-77d1b44e7ceb-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/a5805f47-a2e3-456e-956b-23e6d3f43175-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/d845992c-37b3-43e5-b895-b3580baecb2f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/e0d5aa5a-edb2-43a2-bb69-af7021cbe1c6-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/reports/android/f31dabee-9877-4fb8-8e3e-46739433b30a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/screens/checkout_screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/screens/log_in_screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/screens/product_detail_screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/screens/productos_screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/screens/tu_carrito_screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/steps/add_a_product_to_the_cart_steps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/steps/checkout_steps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/steps/common_steps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/steps/filter_products_steps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/steps/log_in_steps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/steps/product_detail_steps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/utils/base_actions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/utils/dictionaries/cart_texts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/utils/dictionaries/checkout_texts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/utils/dictionaries/log_in_text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Behave/utils/dictionaries/product_detail_texts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2P1cEI1I0Og4ebp8jaeeE64yTLP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/nightmare/Documents/Practices & Projects/WizelineFork/Entregables/Alan_Alexis_Dominguez_Perez/baz_project_verfinal 2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Users\1031636\Documents\Entregable\Alin Mejia\APPIUM\baz_project_verfinal\Behave\steps" />
+      <recent name="$PROJECT_DIR$/Behave/features" />
+      <recent name="$PROJECT_DIR$/Behave/screens" />
+      <recent name="$PROJECT_DIR$/Behave/steps" />
+      <recent name="$PROJECT_DIR$/Behave" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="login" type="PythonConfigurationType" factoryName="Python">
+      <module name="baz_project_verfinal" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Behave" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="behave" />
+      <option name="PARAMETERS" value="--tags=e2e -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b22ea6c-6e31-4b68-a5b5-061f4d077bae" name="Changes" comment="" />
+      <created>1682627914519</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682627914519</updated>
+    </task>
+    <servers />
+  </component>
+</project>
