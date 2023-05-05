@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "2a859c93-6d82-4bc6-820d-f7a9dc20cd98",
+		"name": "Proyecto API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26636076"
+	},
+	"item": [
+		{
+			"name": "Positivos",
+			"item": [
+				{
+					"name": "Consulta de pokemones",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json()\r",
+									"\r",
+									"/*TestCase 1 falta condicional negativo*/\r",
+									"pm.test(\"Mi pokémon esta dentro de mi respuesta\", ()=>{\r",
+									"    const pokemon  = pm.environment.get(\"pokemon_favorito\")\r",
+									"    response.results.forEach((item)=>{\r",
+									"        if(pokemon==item.name){\r",
+									"            pm.expect(pokemon).to.eqls(item.name)\r",
+									"            console.log(item)\r",
+									"        }\r",
+									"    })\r",
+									"});\r",
+									"\r",
+									"/*TestCase 2*/\r",
+									"pm.test(\"Código de estatus 200\", () => {\r",
+									"  pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"/*TestCase 1*/\r",
+									"pm.test(\"Tiempo de respuesta menor a 700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"    console.log(response.results)"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set('url_base_pokemon','https://pokeapi.co/api/v2/pokemon/')\r",
+									"\r",
+									"pm.environment.set('pokemon_favorito', 'blastoise')"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_base_pokemon}}",
+							"host": [
+								"{{url_base_pokemon}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pokémon favorito",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response=pm.response.json() \r",
+									" \r",
+									" /*TestCase 1*/\r",
+									"pm.test('Validar que el movimiento este presente', function(){ \r",
+									"    pm.expect(response).to.have.property('moves')\r",
+									"    pm.environment.set(\"primer_movimiento\", response.moves[0].move.name);\r",
+									"       \r",
+									"}); \r",
+									"\r",
+									"/*\r",
+									"pm.test(\"Códigos de respuesta\", () => {\r",
+									"  pm.expect(pm.response.code).to.be.oneOf([200,201,204]);\r",
+									"  revisar la documentación\r",
+									"});\r",
+									"*/\r",
+									"/*TestCase 2*/\r",
+									"pm.test(\"Código de estatus 200\", () => {\r",
+									"  pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									"/*TestCase 3*/\r",
+									"pm.test(\"Tiempo de respuesta menor a 700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"\r",
+									"/*TestCase 4*/\r",
+									"pm.test(\"Validar schema\", function(){ \r",
+									"\r",
+									"    console.log(pm.collectionVariables.get('json_schema'))\r",
+									"    pm.response.to.have.jsonSchema(\r",
+									"        pm.collectionVariables.get('json_schema'))\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set('url_base_pokemon','https://pokeapi.co/api/v2/pokemon/') \r",
+									"\r",
+									" moves_schema = {\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"moves\": {\r",
+									"      \"type\": \"array\",\r",
+									"      \"items\": [\r",
+									"        {\r",
+									"          \"type\": \"object\",\r",
+									"          \"properties\": {\r",
+									"            \"move\": {\r",
+									"              \"type\": \"object\",\r",
+									"              \"properties\": {\r",
+									"                \"name\": {\r",
+									"                  \"type\": \"string\"\r",
+									"                },\r",
+									"                \"url\": {\r",
+									"                  \"type\": \"string\"\r",
+									"                }\r",
+									"              },\r",
+									"              \"required\": [\r",
+									"                \"name\",\r",
+									"                \"url\"\r",
+									"              ]\r",
+									"            }\r",
+									"          },\r",
+									"          \"required\": [\r",
+									"            \"move\"\r",
+									"          ]\r",
+									"        }\r",
+									"      ]\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"    \"moves\"\r",
+									"  ]\r",
+									"}\r",
+									"pm.collectionVariables.set('json_schema', moves_schema);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_base_pokemon}}{{pokemon_favorito}}",
+							"host": [
+								"{{url_base_pokemon}}{{pokemon_favorito}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta_movimientoNombre",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json()\r",
+									"\r",
+									"/*setear en la variable el calor del objeto id dentro del response*/\r",
+									"pm.environment.set(\"id_movimiento\", response.id);\r",
+									"\r",
+									"/*TestCase 1 pokemon=pokemons*/\r",
+									"pm.test(\"Que mi pokemon favorito este dentro del objeto learned_by_pokemon\", ()=>{\r",
+									"    const pokemon  = pm.environment.get(\"pokemon_favorito\")\r",
+									"    response.learned_by_pokemon.forEach((item)=>{\r",
+									"        if(pokemon==item.name){\r",
+									"            pm.expect(pokemon).to.eqls(item.name)\r",
+									"            console.log(item)\r",
+									"        }\r",
+									"    })\r",
+									"    \r",
+									"});\r",
+									"\r",
+									"/*TestCase 2*/\r",
+									"pm.test(\"Validar que el response de un estatus 200 OK\", () => {\r",
+									"  pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"/*TestCase 3*/\r",
+									"pm.test(\"Validar que el tiempo de respuesta menor a 700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"    console.log(response.results)"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									" pm.environment.set('url_moves','https://pokeapi.co/api/v2/move/')\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_moves}}{{primer_movimiento}}",
+							"host": [
+								"{{url_moves}}{{primer_movimiento}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta_movimientoID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json()\r",
+									"/*TestCase 1*/\r",
+									"pm.test(\"Mi movimiento esta dentro de mi respuesta\", ()=>{\r",
+									"const pokemon  = pm.environment.get(\"pokemon_favorito\")\r",
+									"\r",
+									"response.learned_by_pokemon.forEach((item)=>{\r",
+									"    if(pokemon==item.name){\r",
+									"        pm.expect(pokemon).to.eqls(item.name)\r",
+									"        console.log(item)\r",
+									"    }\r",
+									"})\r",
+									"\r",
+									"});\r",
+									"\r",
+									"/*TestCase 2*/\r",
+									"pm.test(\"Código de estatus 200\", () => {\r",
+									"  pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									"\r",
+									"/*TestCase 3*/\r",
+									"pm.test(\"Tiempo de respuesta menor a 700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									" pm.environment.set('url_moves','https://pokeapi.co/api/v2/move/')\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_moves}}{{id_movimiento}}",
+							"host": [
+								"{{url_moves}}{{id_movimiento}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negativos",
+			"item": [
+				{
+					"name": "Consulta de pokemonesN",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json()\r",
+									"\r",
+									"pm.test(\"Validar Not found\", () => {\r",
+									"    const expectedStatusCode = 404;\r",
+									"      pm.response.to.not.have.status(expectedStatusCode);\r",
+									"});\r",
+									"\r",
+									"/*TestCase 3*/\r",
+									"pm.test(\"Tiempo de respuesta a 10s\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(10);\r",
+									"});\r",
+									"    console.log(response.results)"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									" pm.environment.set('url','https://pokeapi.co/api/v2/')\r",
+									"setTimeout(function(){}, 10);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pokémon favoritoN",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response=pm.response.json() \r",
+									" \r",
+									" \r",
+									" /*TestCase 1 moves=move*/\r",
+									"pm.test('Validar que el movimiento este presente', function(){ \r",
+									"    pm.environment.set(\"primer_movimiento\", response.moves[0].move.name);\r",
+									"    pm.expect(response.moves[1].move.name).to.eqls(pm.environment.get(\"primer_movimiento\"))\r",
+									"    \r",
+									"       \r",
+									"}); \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									" pm.environment.set('url','https://pokeapi.co/api/v2/')\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{consulta_pokemon}}/{{pokemon_favorito}}",
+							"host": [
+								"{{url}}{{consulta_pokemon}}"
+							],
+							"path": [
+								"{{pokemon_favorito}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"value": ""
+		},
+		{
+			"key": "json_schema",
+			"value": ""
+		}
+	]
+}
