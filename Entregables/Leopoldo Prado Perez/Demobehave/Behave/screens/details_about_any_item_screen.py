@@ -17,4 +17,3 @@ class ProductosScreen(BaseActions):
         self.lbl_productos_name = (
         By.XPATH, '(//android.widget.TextView[@content-desc="test-Titulo de articulo"])[1]')
         self.add_product = (By.XPATH, '(//android.view.ViewGroup[@content-desc="test-AÑADIR A CARRITO"])[2]')
-

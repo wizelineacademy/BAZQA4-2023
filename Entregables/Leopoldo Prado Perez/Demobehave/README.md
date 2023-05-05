@@ -22,7 +22,6 @@
     pip install Appium-Python-Client
 	pip install pytest
 
-
 	No olvidar cambiar la configuración con los siguientes parámetros en edit configuration
 	en el campo Parameters:
 		--tags=e2e
@@ -33,28 +32,42 @@
    		-f
    		pretty
    		features/
+**Utilizar los siguietes parámetros para el run configuration:**
+
+![img_7.png](img_7.png)
 
 
 ## 3.1 Executing the framework
     Para la ejecución de la prueba se debe contar con los siguiente:
+        *adb divices
 		*IDE: PyCharma
 		*Appium Server en ejecución
 		*Appium inspector
 		*Alguna app para control remoto del dispositivo (Vysor, ApoweMirror, etc)
-		Para la Ejecución del la prueba es necesario iniciar el Emulador Android Studio con el dispositivo virtual que utilizaremos.
-
+    
+    Para la Ejecución de las pruebas es necesario iniciar los siguiente: 
 	1. Descargar en el dispositivo el APK sauce_app.apk
 	2. Descargar el proyecto en el equipo a donde se ejecutará 
 	3. Ejecutar la herramienta Appium Server GUI (interfaz entre la APP y el proyecto)
 	3. Ejecutar PyCharm
-	4. Abrir el proyecto, para este caso Demobehave
-	5. Seleccionar runer deseado desde el Run configuration
+    4. Editar el archivo .env como el ejemplo .env_sample de acuerdo a los valores a utilizar, ejemplo:
+        STANDARD_USER=""
+        PASSWORD=""
+	5. Abrir el proyecto, para este caso Demobehave
+	6. Seleccionar runer deseado desde el Run configuration
 		a) all_flow para ejecutar todos los escenarios
 		b) smoke_flow solo para ejecutar los escenarios de smoke
 
-	
+**Nota:** Ejecutar en la terminal el comando adb divices para obtener el nombre del dispositivo físico se utilizá para la ejecución.
+
 # 4 Technology Stack
-    Proyecto APPIUM
+        *IDE: PyCharma
+		*Appium Server
+		*Appium inspector
+        *Vysor
+        *ApoweMirror
+        *Android Studio
+
 # 5 Folder Structure
      Behave/
 	├── APP/
@@ -91,6 +104,11 @@
 # 6 Results
 	Generación de reporte:
 	El framework cuenta con Allure para la obtención del reporte de la ejecución y se obtiene 
-	ejecutando el comando allure serve reports/android, al ejecutar el comando se abrirá una página en explorador 
-	determinado con los reportes 
+	ejecutando el comando .../Behave/allure serve reports/android, al ejecutar el comando se abrirá una página en explorador 
+	determinado con los reportes.
+**Nota:** El comado allure debe correr justo en la carperta Behave del proyecto.
 
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
