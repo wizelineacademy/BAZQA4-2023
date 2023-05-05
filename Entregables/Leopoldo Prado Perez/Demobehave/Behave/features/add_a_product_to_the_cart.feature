@@ -1,6 +1,7 @@
 Feature: ADD_A_PRODUCT_TO_THE_CART
 
     @regresion
+    @smoke
     Scenario: ADD_A_PRODUCT_TO_THE_CART
       Given we are in the "Productos" screen
       When we tap on "Añadir a carrito" from the first item

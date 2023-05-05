@@ -7,7 +7,8 @@ class ProductosScreen(BaseActions):
         super().__init__(context.driver)
         self.lbl_productos = (By.ANDROID_UIAUTOMATOR, '.text("PRODUCTOS")')
         self.btn_first_item = (By.XPATH, "(//*[contains(@content-desc,'test-AÑADIR A CARRITO')])[1]")
-        self.lbl_title_first_item = (By.XPATH, "(//*[contains(@content-desc,'test-Titulo de articulo')])[1]")
+        self.lbl_title_first_item = (By.XPATH, '//android.view.ViewGroup[@content-desc="test-Articulo"])[1]'
+                                               '/android.view.ViewGroup/android.widget.ImageView')
         self.icon_cart = (By.XPATH, '//*[@content-desc="test-Carrito"]')
         self.lbl_car_description = (By.XPATH, "//*[contains(@content-desc,'test-Descipción')]")
         self.lbl_productos_screen = (By.ACCESSIBILITY_ID, 'test-Zona de caída del carrito de compras')

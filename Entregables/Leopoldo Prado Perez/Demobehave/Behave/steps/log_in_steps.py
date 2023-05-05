@@ -1,6 +1,6 @@
 from behave import *
 from screens.log_in_screen import LoginScreen
-from screens.productos_screen import ProductosScreen
+from screens.details_about_any_item_screen import ProductosScreen
 from decouple import config
 
 
