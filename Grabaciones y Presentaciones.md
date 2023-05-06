@@ -29,19 +29,20 @@ Aquí encontrarás todas las grabaciones y presentaciones una vez finalizada cad
 - 📺 [Grabación Martes 11 Abr](https://drive.google.com/file/d/1frxhkgIvZ4EfkrlHSCzHA_bu4ZL0wBkW/view?usp=sharing)
 
 # Semana 4
-- [Lunes 17 Abr - POO]()
-- 📺 [Grabación Lunes 17 Abr]()
-- [Martes 18 Abr - Pycharm / ]()
-[Martes 18 Abr - Appium teórico]()
-- 📺 [Grabación Martes 18 Abr]()
+- [Lunes 17 Abr - POO](https://drive.google.com/file/d/12pqoXZCoVz5FN4NhgMNI-5qPTbnvzZTg/view?usp=sharing)
+- 📺 [Grabación Lunes 17 Abr](https://drive.google.com/file/d/11lK26R4X2rUKCOYO3935AB5G7lV6vGCR/view?usp=sharing)
+- [Martes 18 Abr - Pycharm](https://drive.google.com/file/d/1L9RlCNZZPrh5p779uyKxYuWAAxppqcAo/view?usp=sharing)
+- [Martes 18 Abr - Appium](https://drive.google.com/file/d/14eowWjq2MgdWogTqCioJj1CVvYaYWlR-/view?usp=sharing)
+- 📺 [Grabación Martes 18 Abr](https://drive.google.com/file/d/1PTzSJLKojwo-Il52q2M5Kw3POXes5WjO/view?usp=sharing)
 
 # Semana 5
-- [Lunes 24 Abr - Front End Python ]()
-- 📺 [Grabación Lunes 24 Abr]()
-- [Martes 25 Abr - Front End Python / ]()
-[Martes 25 Abr - Automatización mobile]()
-- 📺 [Grabación Martes 25 Abr]()
+- [Lunes 24 Abr - Front End Python](https://drive.google.com/file/d/11Yy1vah3bSxMCZ0KEL3e2ojJE9zUpG1w/view?usp=sharing)
+- 📺 [Grabación Lunes 24 Abr](https://drive.google.com/file/d/1YThKxJJmDGeRTOQmo8-_psT_SnCHRXz2/view?usp=sharing)
+- [Martes 25 Abr - Automatización mobile Part 1](https://drive.google.com/file/d/1tIIGA-MPXVeeKX00bYIIeKXFiGgc7RgQ/view?usp=sharing)
+- [Martes 25 Abr - Pront-End y Principios de POM Práctica](https://drive.google.com/file/d/1lA8b6Vf95fQY9n7QMup5RcLpuQ4VGaD6/view?usp=sharing)
+- 📺 [Grabación Martes 25 Abr](https://drive.google.com/file/d/1c4ytPeZWFogqOEJZajgb8_x1WQDPql0O/view?usp=sharing)
 
 # Semana 6
-- [Martes 2 May - Automatización mobile]()
-- 📺 [Grabación Martes 2 May]()
+- [Martes 2 May - Automatización mobile:Implementacion de behave 1](https://drive.google.com/file/d/1mFyEveGtx2hir1zn0OIS5XJfHKL5HzV5/view?usp=sharing)
+- [Martes 2 May - Automatización mobile:Implementacion de behave 2](https://drive.google.com/file/d/1DTSFRXmtLV_RjHJRxMOfIFtI_XjzYhc9/view?usp=sharing)
+- 📺 [Grabación Martes 2 May](https://drive.google.com/file/d/1o3QQDE89dhxaa0kALC817CDcGoPPXlNK/view?usp=sharing)

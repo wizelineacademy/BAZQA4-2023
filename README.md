@@ -121,7 +121,6 @@ Correr los test de las colecciones:
  **Then:**  Obtener el json con la información sobre los movimientos de mi Pokémon favorito y se realizan las validaciones de códigos de respuesta (HTTP), el tiempo de respuesta, nombre del movimiento de la sección “learned_by_pokemon”=PASS
 
 
-
 Pycharm
 
 Extraer projecto:
