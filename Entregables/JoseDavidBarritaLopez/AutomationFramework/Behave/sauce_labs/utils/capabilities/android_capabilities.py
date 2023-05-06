@@ -25,7 +25,6 @@ class AndroidCapabilities(BaseCapabilities):
         capabilities = {
             'environment:': self.context.ENVIRONMENT,
             'project': feature,
-            'build': self.build,
             'name': execution_name,
             'deviceName': device_name,
             'platformName': self.platform_name,

@@ -17,7 +17,9 @@ class BaseActions(object):
         return self.driver.find_element(*locator)
 
     def wait_until_element_is_present(self, *locator, seconds):
-        WebDriverWait(self.driver, seconds).until(ec.presence_of_element_located(locator))
+        WebDriverWait(self.driver, seconds).until(
+            ec.presence_of_element_located(locator)
+        )
 
     def get_element_attribute(self, attribute, *locator):
         element = self.get_element(*locator)
@@ -55,13 +57,15 @@ class BaseActions(object):
         element.send_keys(value)
 
     def swipe_down(self, swipes, speed):
-        if self.platform == 'android':
+        if self.platform == "android":
             for i in range(0, swipes):
-                self.driver.find_element(By.ANDROID_UIAUTOMATOR,
-                                         'new UiScrollable(new UiSelector().className('
-                                         '\"android.widget.ScrollView\")) '
-                                         '.scrollForward(' + str(speed) + ')')
-        elif self.platform == 'iOS':
+                self.driver.find_element(
+                    By.ANDROID_UIAUTOMATOR,
+                    "new UiScrollable(new UiSelector().className("
+                    '"android.widget.ScrollView")) '
+                    ".scrollForward(" + str(speed) + ")",
+                )
+        elif self.platform == "iOS":
             pass
 
     def swipe(self, x1, y1, x2, y2):
