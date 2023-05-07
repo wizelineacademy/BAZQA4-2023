@@ -6,12 +6,12 @@ Feature: Product detail
     Then we see Product info screen
 
   @e2e
-  Scenario: See "Nombre" and "Precio" first product info
+  Scenario: See "Nombre", "Descripcion" and "Precio" first product info
     Given we are in Products screen
     When we tap on first product
     Then we see "Camisa Sauce Labs Bolt" name
-    And "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt." description
-    And "15.99" price
+    And we see "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt." description
+    And we see "$15.99" price
 
 
   #Reusuable scenario when we look for specific one

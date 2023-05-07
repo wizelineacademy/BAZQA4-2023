@@ -102,7 +102,7 @@ Para ejecutar los test con Behave se deberá de agregar una configuración de ej
 -f
 allure_behave.formatter::AllureFormatter
 -o
-reports/android
+reports/Android
 -f
 pretty
 features/

@@ -1,3 +1,5 @@
+import time
+
 from behave import *
 from Behave.Screens.Login.Login_Screen import Login_Screen
 from Behave.Screens.Products.Products_Screen import Products_Screen
@@ -24,16 +26,14 @@ def step_impl(context):
     pd.assert_text(FIRST_PRODUCT_INFO.get("name"), *pd.text_product_name)
 
 
-@Then("""'
-Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 
-100% ringspun combed cotton, heather gray with red bolt.' description """)
+@Then('we see "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt." description')
 def step_impl(context):
     pd = Product_Detail_Screen(context)
     # assert para validar descripción del primer producto
     pd.assert_text(FIRST_PRODUCT_INFO.get("description"), *pd.text_product_description)
 
 
-@Then('"15.99" price')
+@Then('we see "$15.99" price')
 def step_impl(context):
     pd = Product_Detail_Screen(context)
     # assert para validar precio del primer producto

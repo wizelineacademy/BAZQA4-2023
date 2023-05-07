@@ -5,9 +5,9 @@ from Behave.Screens.Products.Products_Screen import Products_Screen
 
 
 @pytest.mark.regression
-def test_add_product_to_shopping_cart_in_products_screen(driver):
-    log = Login_Screen(driver)
-    ce = Common_Elements(driver)
+def test_add_product_to_shopping_cart_in_products_screen(context):
+    log = Login_Screen(context)
+    ce = Common_Elements(context)
     log.login()
     ce.add_product_to_shopping_cart()
     # assert que valida el que aparezca el botón remover una vez añadido

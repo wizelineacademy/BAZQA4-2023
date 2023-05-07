@@ -23,10 +23,9 @@ class Products_Screen(Base_Screen):
         prices_list = []
         for i in range(1, 3):
             locator = (By.XPATH, "(//*[contains(@content-desc, 'test-Precio')])" + '[' + str(i) + "]")
-            prices_list.append(self.get_element_attribute('text', *locator))
+            pos = self.get_element_attribute('text', *locator).split('$')
+            prices_list.append(float(pos[1]))
             if i == 1:
                 self.scroll_screen(1, 20)
-                time.sleep(3)
-            print(locator)
-        print("esta es la lista:")
+                time.sleep(1)
         return prices_list

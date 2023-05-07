@@ -1,12 +1,5 @@
 from behave import *
-from Behave.Screens.Login.Login_Screen import Login_Screen
 from Behave.Screens.Products.Products_Screen import Products_Screen
-
-
-#@Given('we are in Products screen')
-#def step_impl(context):
-#    log = Login_Screen(context)
-#    log.login()
 
 
 @When('we tap on filter button')
@@ -22,4 +15,6 @@ def step_impl(context):
 
 @Then('we see products sorted by price low to high')
 def step_impl(context):
-    pass
+    p = Products_Screen(context)
+    prices_list = p.get_products_prices()
+    p.assert_element_greater_than_filter(prices_list)

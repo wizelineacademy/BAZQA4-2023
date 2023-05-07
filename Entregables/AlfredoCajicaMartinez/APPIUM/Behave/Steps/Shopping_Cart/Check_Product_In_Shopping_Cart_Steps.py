@@ -19,7 +19,7 @@ def step_impl(context):
     ce.go_to_shopping_cart()
 
 
-@Then('we see <Producto> listed with <Descripcion>')
+@Then('we see "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt." product description')
 def step_impl(context):
     sc = Shopping_Cart(context)
     # assert para validar nombre y descripción del primer producto agregado
@@ -27,14 +27,14 @@ def step_impl(context):
     sc.assert_text(FIRST_PRODUCT_INFO.get("description"), *sc.text_product_description)
 
 
-@Then('we see <Cantidad>')
+@Then('we see "1" qty')
 def step_impl(context):
     sc = Shopping_Cart(context)
     # assert para validar cantidad del primer producto agregado
     sc.assert_text(FIRST_PRODUCT_INFO.get("qty"), *sc.text_product_qty)
 
 
-@Then('we see <Precio>')
+@Then('we see "$15.99" product price')
 def step_impl(context):
     sc = Shopping_Cart(context)
     # assert para validar precio del primer producto agregado

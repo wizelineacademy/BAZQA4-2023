@@ -6,10 +6,10 @@ from Behave.Utils.Dictionaries.Products.Products_Info import FIRST_PRODUCT_INFO
 
 
 @pytest.mark.regression
-def test_check_product_in_shopping_cart(driver):
-    log = Login_Screen(driver)
-    ce = Common_Elements(driver)
-    sc = Shopping_Cart(driver)
+def test_check_product_in_shopping_cart(context):
+    log = Login_Screen(context)
+    ce = Common_Elements(context)
+    sc = Shopping_Cart(context)
     log.login()
     ce.add_product_to_shopping_cart()
     ce.go_to_shopping_cart()

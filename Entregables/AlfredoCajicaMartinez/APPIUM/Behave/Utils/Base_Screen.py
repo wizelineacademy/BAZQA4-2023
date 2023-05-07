@@ -1,5 +1,4 @@
 import time
-
 from appium.webdriver.common.touch_action import TouchAction
 from appium.webdriver.common.appiumby import AppiumBy as By
 from selenium.common import NoSuchElementException
@@ -16,8 +15,8 @@ class Base_Screen:
     def assert_element_is_shown(self, *locator):
         assert self.element_is_shown(*locator)
 
-    def assert_element_comparison(self, *locator):
-        assert self.element_is_shown(*locator)
+    def assert_element_greater_than_filter(self, prices_list):
+        assert prices_list[0] < prices_list[1]
 
     def get_element(self, *locator):
         return self.driver.find_element(*locator)
@@ -40,8 +39,8 @@ class Base_Screen:
         except NoSuchElementException:
             return False
 
-    def scroll_screen(self, swipes, speed=3):
-        time.sleep(2)
+    def scroll_screen(self, swipes, speed=3, seconds=2):
+        time.sleep(seconds)
         for i in range(0, swipes):
             self.driver.find_element(By.ANDROID_UIAUTOMATOR,
                                      'new UiScrollable(new UiSelector().className('
