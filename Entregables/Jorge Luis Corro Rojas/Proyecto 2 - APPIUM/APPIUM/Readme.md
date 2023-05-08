@@ -187,6 +187,25 @@ allure generate
 
 allure serve allure-report/ -> command to run the Allure server
 ```
+
+## 6.3  Code Evaluation with flake8
+
+flake8 is a python tool that glues together pycodestyle, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
+
+We will use this tool to evaluate our code and try to make it as good as possible...from "Terminal":
+
+To install:
+```bash
+  python -m pip install flake8
+```
+To execute:
+
+```bash
+  flake8
+```
+Once the command is executed from "Terminal" you will be able to see which are the options to be corrected, 
+in case there is no correction, the console will not return any result.
+
 And here ends the project...thanks so much for the shared learning!! :)
 
 # 7. Keep practicing... 🚀
