@@ -12,9 +12,6 @@ class CommonActions(object):
         element_text = self.find_element(*locator).text
         assert element_text == text
 
-    def assert_text(self, value1, value2):
-        assert value1 == value2
-
     def tap_element(self, *locator):
         action = TouchAction(self.driver)
         action.tap(self.find_element(*locator)).perform();

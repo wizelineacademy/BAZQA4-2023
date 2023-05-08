@@ -7,6 +7,9 @@ class Filters(CommonActions):
         super().__init__(context.driver)
 
         self.btn_filter = (By.XPATH, "//*[@content-desc='test-Modal Selector Button']")
-        self.lbl_order = (By.ANDROID_UIAUTOMATOR, '.text("Sort items by...')
-        self.lbl_filter_high_low = (By.ANDROID_UIAUTOMATOR, '.text("Price (high to low)")')
         self.lbl_filter_low_high = (By.ANDROID_UIAUTOMATOR, '.text("Price (low to high)")')
+        self.lbl_name_low = (By.ANDROID_UIAUTOMATOR, '.text("Mameluco Sauce Labs")')
+        self.lbl_price_low = (By.ANDROID_UIAUTOMATOR, '.text("$7.99")')
+        self.lbl_filter_high_low = (By.ANDROID_UIAUTOMATOR, '.text("Price (high to low)")')
+        self.lbl_name_high = (By.ANDROID_UIAUTOMATOR, '.text("Chamarra Sauce Labs")')
+        self.lbl_price_high = (By.ANDROID_UIAUTOMATOR, '.text("$49.99")')

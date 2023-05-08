@@ -9,7 +9,7 @@ def before_scenario(context, scenario):
     desired_caps = {
         'platformName': 'Android',
         'deviceName': 'S20',
-        'app': 'E:/Users/1058635/Documents/Automatización/BAZQA4-2023/Entregables/Yocelin_Vazquez_Carrillo/APPIUM/APP/sauce_app.apk',
+        'app': 'E:/Users/1058635/Documents/Automatización/BAZQA4-2023/Entregables/Yocelin Vazquez Carrillo/APPIUM/APP/sauce_app.apk',
         "appPackage": "com.swaglabsmobileapp",
         "appActivity": ".MainActivity"
     }

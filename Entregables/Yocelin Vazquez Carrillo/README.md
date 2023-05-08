@@ -245,12 +245,12 @@ Seleccionar Run/Debug y Editar configuración
 
 Agregar una nueva configuración
 ![img_2.png](img_2.png)
-Asignar un nombre según la prueba, el modúlo del nombre "behave"
+Asignar un nombrea la etiqueta según la suite de pruebas, el modúlo del nombre "behave"
 asignar los parametros según las pruebas e correr, en este caso 
 regresión o en su defecto smoke, ejemplo:
 
 ```
---tags=regresión
+--tags=regresion
 -f
 allure_behave.formatter::AllureFormatter
 -o
@@ -258,7 +258,7 @@ reports/android
 -f
 pretty
 ```
-
+ 
 ![img_3.png](img_3.png)
 
 Con dicha configuración también deberíamos de ejecutar desde el
@@ -281,6 +281,7 @@ información sensible por lo que se tendrá que crear dicho archivo por cada pro
 reports/
 .env
 ```
+
 ## Autores ✒️
 
 * **Yocelin Vazquez** - *Practicante* 

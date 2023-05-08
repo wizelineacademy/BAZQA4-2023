@@ -1,7 +1,6 @@
 Feature: Log In
 
-    @regresion
-      @smoke
+    @smoke
     Scenario: LOGIN_TO_THE_APP
       Given we are in the "LOGIN" screen
       When we fill the "Usuario" label
