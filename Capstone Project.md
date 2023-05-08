@@ -48,7 +48,7 @@ El propósito de este proyecto es construir un framework de automatización desd
 
 **Fecha de entrega: 5 de Mayo del 2023**
 
-Se sugiere al estudiante familiarizarse con la aplicación saucedemo de manera que pueda replicar los casos de prueba a mano antes de proceder a automatizarlos. 
+Se sugiere al estudiante familiarizarse con la aplicación [saucedemo](https://github.com/saucelabs/sample-app-mobile/releases) de manera que pueda replicar los casos de prueba a mano antes de proceder a automatizarlos. 
 
 **Para que su proyecto de front-end sea aceptado como candidato de envío, debe cumplir con los siguiente requisitos**
 - El proyecto debe iniciarse correctamente a través de los comandos vistos en clase. Esto significa que como resultado debe estar organizado en carpetas, páginas, datos, así como cualquier otra carpeta o archivo necesario para la ejecución y correcto funcionamiento del proyecto.
@@ -67,7 +67,9 @@ Se sugiere al estudiante familiarizarse con la aplicación saucedemo de manera q
   - Pantalla_principal_steps.py
   - Pantalla_principal_texts.py  
 - Incluir toda la información necesaria (dependencias, configuraciones, notas, etcétera) de manera que cualquier persona pueda leer su archivo readme y pueda ejecutar su proyecto sin ningún problema.
-
+- Integrar una herramienta que permita generar un reporte.
+- Integrar una herramienta para análisis de código estático.			
+				
 
 **Los casos de prueba a implementar son los siguientes:**
 
