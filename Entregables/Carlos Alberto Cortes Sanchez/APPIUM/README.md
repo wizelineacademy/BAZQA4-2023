@@ -19,6 +19,9 @@ Entrar a la página oficial https://www.python.org/ y descargar de acuerdo al ti
 Ingresar a la página oficial https://appium.io/downloads.html seleccionar Appium Desktop Apps mismo que direccionará a github para que descargue el ejecutable que corresponda a su sistema operativo.
 Una vez instalado dejar los parametros por default Host y Port y oprimir el botón starServer
 
+## Android Studio
+Ingresar a la página oficial https://developer.android.com/studio?gclid=Cj0KCQjwu-KiBhCsARIsAPztUF1DYiog2Dd5_1GGKDOdCO3NJlHkStwRjJ2hs9-jhxr1-LNkxVrZgL4aAmcPEALw_wcB&gclsrc=aw.ds seleccionar el botón de descarga Android Studio Flamingo
+Una vez instalado configurar las variables de entorno para poder hacer uso del sdk de adb devices
 
 ## Appium inspector
 Para instalar appium inspector es necesario ingresar a la siguiente url https://github.com/appium/appium-inspector/releases mima que direcciona al repositorio que tiene los ejecutables de acuerdo a cada tipo de sistema operativo.   
@@ -38,9 +41,17 @@ Agregar el capabilitie de acuerdo a las caracteriticas de dipositivo agrego imag
 
     }
 ```
+Nota: `platform_version` y `device_name` depende del modelo de dipositivo android a utilizar  
+
 Una vez genrado el capabilitie
 * Guardar el capabilitie
 * Iniciar la sesión
+
+## ¿Como obtener el nombre de dispositivo con ADB?
+Para obtener el nombre del dispositivo se debe ejecutar el comando adb devices con el celular conectado y con el modo desarrollador activado. Debe mostrar el nombre del dispositivo una vez que se ejecute el comando
+como se muestra en la imagen siguiente:
+
+![img_2.png](img/img_2.png)
 
 ## IDE Pycharm Community
 Ingresar a la página oficial https://www.jetbrains.com/es-es/pycharm/ y descargar el
@@ -71,9 +82,10 @@ pip install -r requirements.txt
 
 Para correr el set de pruebas debe tener la siguiente configuración 
 
-* login test que ejecutaría todos los casos de prueba
+* Se creo un una configuracion de ejecucion son el nombre: "Ejecucion" que ejecuta todos los casos de prueba
 
-dentro del campo parameter colocar lo siguiente
+dentro del campo parameter colocar lo siguiente ya que en los feature tiene configurado el tag regression 
+
 * ```bash
   --tags=regression
     -f
@@ -83,8 +95,26 @@ dentro del campo parameter colocar lo siguiente
     -f
     pretty
   ```  
-  Nota: `platform_version` y `device_name` depende del modelo de dipositivo android a utilizar  
-  
+Se accede a esa configuracion desde este menu:
+![img.png](img/img.png)
+
+seccion para agregar los tags y demas datos
+
+![img_1.png](img/img_1.png)
+
+y se debe seleccionar la opcion module name apuntando al directorio behave del proyecto
+
+![img.png](img/confi.png)
+
+![img.png](img/directorio.png)
+
+El working directory debe apuntar al directorio behave del proyecto
+![img.png](img/workin.png)
+
+listo al dar tap en el boton para correr ejecutarias los casos de prueba
+
+## APP a probar
+Se anexo la APP sauce_app.apk en el directorio APPIUM/APP por el tema de versiones diferentes y cambios en selecctores
 
 ### Para pruebas de regresion 
 * Tener una nueva configuración en este caso se nombró regression
@@ -100,16 +130,14 @@ Cada nuevo tag o etiqueta del tipo de prueba se debe colocar en los features esp
 
 Para generar reporte desde cero con Allure, se deben seguir los siguientes pasos y comandos:
 
-* Intallar allure en nuestra terminal de pycharm 
+* Instalar allure en nuestra terminal de pycharm 
 ```bash
     pip install allure-behave
   ```  
+Nota: en caso de que algun paquete no se instale correctamente desde el archivo requirements.txt se pueden instalar como lo hicimos con el comando anterior sustituyendo el nombre del paquete
 * Agregar el paquete allure-behave
-* Posicionarse hasta la carpeta Behave dentro de la terminal y correr los siguientes comandos
+* Posicionarse hasta la carpeta Behave dentro de la terminal y correr los siguiente comando
 ```bash
-  behave #para ver si corren todos los features 
-  
-  behave -f allure_behave.formatter:AllureFormatter -o reports/ features # para generar la carpeta reports y correr las pruebas 
-  
-  allure serve reports/ #para mostrar el reporte
+allure serve reports/android
 ```
+

@@ -1,6 +1,7 @@
 from appium.webdriver.common.appiumby import AppiumBy as By
 
 from utils.Base_actions import BaseActions
+from utils.dictionaries.puchase_confirmation_text import puchase_confirmation
 
 
 class PuchaseConfirmacion(BaseActions):
@@ -8,5 +9,5 @@ class PuchaseConfirmacion(BaseActions):
         super().__init__(context.driver)
         self.message_confirmation = (
             By.ANDROID_UIAUTOMATOR,
-            '.text("GRACIAS POR SU ORDEN")',
+            puchase_confirmation.get("message_confirmation"),
         )

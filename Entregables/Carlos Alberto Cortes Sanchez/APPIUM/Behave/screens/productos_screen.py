@@ -1,6 +1,7 @@
 from appium.webdriver.common.appiumby import AppiumBy as By
 
 from Behave.utils.Base_actions import BaseActions
+from utils.dictionaries.productos_screen_text import product_screen
 
 
 class ProductosScreen(BaseActions):
@@ -26,14 +27,14 @@ class ProductosScreen(BaseActions):
         )
         self.option_lowest_to_highest = (
             By.ANDROID_UIAUTOMATOR,
-            '.text("Price (low to high)")',
+            product_screen.get("option_lowest_to_highest"),
 )
         self.higher_product_price = (
             By.ANDROID_UIAUTOMATOR,
-            '.text("$49.99")',
+            product_screen.get("higher_product_price"),
         )
         self.higher_product_name = (
             By.ANDROID_UIAUTOMATOR,
-            '.text("Chamarra Sauce Labs")',
+            product_screen.get("higher_product_name"),
         )
         self.Producto_1_IMG = (By.XPATH, '(//android.view.ViewGroup[@content-desc="test-Articulo"])[1]')
