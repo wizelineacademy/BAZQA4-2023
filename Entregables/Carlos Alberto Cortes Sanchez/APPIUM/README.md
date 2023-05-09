@@ -96,19 +96,21 @@ dentro del campo parameter colocar lo siguiente ya que en los feature tiene conf
     pretty
   ```  
 Se accede a esa configuracion desde este menu:
+
 ![img.png](img/img.png)
 
-seccion para agregar los tags y demas datos
+En parameters agregar los siguientes tags
 
 ![img_1.png](img/img_1.png)
 
-y se debe seleccionar la opcion module name apuntando al directorio behave del proyecto
+y se debe seleccionar la opcion "module name" apuntando al directorio behave del proyecto
 
 ![img.png](img/confi.png)
 
 ![img.png](img/directorio.png)
 
 El working directory debe apuntar al directorio behave del proyecto
+
 ![img.png](img/workin.png)
 
 listo al dar tap en el boton para correr ejecutarias los casos de prueba
