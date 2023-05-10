@@ -29,8 +29,7 @@ def step_impl(context):
     login_screen.tap_element(*login_screen.btn_login)
 
 
-@Then('we are in the "Productos" screen')
+@Then('we are in the "Productos" screens')
 def step_impl(context):
     productos_screen = ProductosScreen(context)
-    productos_screen.assert_text(
-        *productos_screen.lbl_productos, text="PRODUCTOS")
+    productos_screen.assert_text(*productos_screen.lbl_productos, text="PRODUCTS")

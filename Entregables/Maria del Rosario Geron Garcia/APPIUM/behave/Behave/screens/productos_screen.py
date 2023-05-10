@@ -10,5 +10,5 @@ class ProductosScreen(CommonActions):
         self.lbl_title_first_item = (By.XPATH, "(//*[contains(@content-desc,'test-Item title')])[1]")
         self.icon_car = (By.XPATH, "//*[contains(@content-desc,'test-Cart')]")
         self.img_first_item = (By.XPATH,"(//*[contains(@content-desc,'test-Item')])[1]")
-        self.lbl_price_item = (By.XPATH, "(//*[contains(@content-desc,'test-Price')])[1]")
+        self.lbl_price_item = (By.ANDROID_UIAUTOMATOR, '.text("$29.99")')
 

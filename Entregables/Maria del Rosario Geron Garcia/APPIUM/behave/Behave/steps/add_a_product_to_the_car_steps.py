@@ -18,6 +18,7 @@ def step_impl(context):
     producto_screen = ProductosScreen(context)
     producto_screen.tap_element(*producto_screen.btn_first_item)
     context.first_item_title = producto_screen.get_text_of_element(*producto_screen.lbl_title_first_item)
+    context.price = producto_screen.get_text_of_element(*producto_screen.lbl_price_item)
 
 
 @When('we tap on the card icon')
@@ -30,5 +31,13 @@ def step_impl(context):
 def step_impl(context):
     tu_carrito_screen = TuCarritoScreen(context)
     tu_carrito_screen.assert_text(*tu_carrito_screen.lbl_title_first_item_cart, text=context.first_item_title)
+
+@Then('we validate that the product price is correct into the cart')
+def step_impl(context):
+    tu_carrito_screen = TuCarritoScreen(context)
+    tu_carrito_screen.assert_text(*tu_carrito_screen.lbl_price_firts_item_cart, text=context.price)
+
+
+
 
 

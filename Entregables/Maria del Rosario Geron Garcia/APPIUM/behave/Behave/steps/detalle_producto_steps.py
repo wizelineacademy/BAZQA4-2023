@@ -16,10 +16,16 @@ def step_impl(context):
     producto_screen = ProductosScreen(context)
     producto_screen.tap_element(*producto_screen.img_first_item)
     context.title_item = producto_screen.get_text_of_element(*producto_screen.lbl_title_first_item)
-   # context.price = producto_screen.get_text_of_element(*producto_screen.lbl_price_item)
+    context.price_item = producto_screen.get_text_of_element(*producto_screen.lbl_price_item)
 
 @When('we validate that the product title is correct')
 def step_impl(context):
     detalle_screen = DetalleProducto(context)
     detalle_screen.assert_text(*detalle_screen.lbl_title_item, text=context.title_item)
-   # detalle_screen.assert_text(*detalle_screen.lbl_price, text=context.price)
+
+
+@Then('we validate that the product price is correct')
+def step_impl(context):
+    detalle_screen = DetalleProducto(context)
+    detalle_screen.assert_text(*detalle_screen.lbl_price, text=context.price_item)
+

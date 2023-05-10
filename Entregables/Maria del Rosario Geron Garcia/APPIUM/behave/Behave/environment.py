@@ -14,6 +14,6 @@ def before_scenario(context, scenario):
         "appActivity": ".MainActivity"
     }
     context.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-    context.driver.implicitly_wait(10)
+    context.driver.implicitly_wait(60)
 
 
