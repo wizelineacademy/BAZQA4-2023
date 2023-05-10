@@ -1,0 +1,452 @@
+{
+	"info": {
+		"_postman_id": "e92deb4c-d77b-48af-b9be-77fd4b7b0d92",
+		"name": "Proyecto_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26833257"
+	},
+	"item": [
+		{
+			"name": "positivos",
+			"item": [
+				{
+					"name": "Pokemon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Guardo respuesta de response\r",
+									"let myResponse=pm.response.json()\r",
+									"//Guardo el nombre de mi pokemon que elegi como favorito\r",
+									"pm.environment.set(\"pokemon\", myResponse.name);\r",
+									"//Guardo el nombre del movimiento que indica el api que tiene el pokemon\r",
+									"pm.environment.set(\"name_move\",myResponse.moves[0].move.name)\r",
+									"//Guardo la url del movimiento\r",
+									"pm.environment.set(\"url_move\",myResponse.moves[0].move.url)\r",
+									"\r",
+									"//valido que el api responda con el codigo 200\r",
+									"pm.test(\"El codigo del endpoind es: 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"//Valido que la respuesta del endpoid esta por debajo de los 700ms\r",
+									"pm.test(\"El tiempo de respuesta del endpoind esta por debajo de  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_basePokemon}}charmander",
+							"host": [
+								"{{url_basePokemon}}charmander"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movimiento",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//valido que el api responda con el codigo 200\r",
+									"pm.test(\"El codigo del endpoind es: 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"//Valido que la respuesta del endpoid esta por debajo de los 700ms\r",
+									"pm.test(\"El tiempo de respuesta del endpoind esta por debajo de  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"//Valido que la estructura de la respuesta conicida con el esquema definido\r",
+									"var schema = {\r",
+									"    \"type\": \"object\",\r",
+									"    \"properties\": {\r",
+									"        \"count\": {\r",
+									"            \"type\": \"integer\"\r",
+									"        },\r",
+									"        \"next\": {\r",
+									"            \"type\": \"string\"\r",
+									"        },\r",
+									"        \"previous\": {\r",
+									"            \"type\": \"null\"\r",
+									"        },\r",
+									"        \"results\": {\r",
+									"            \"type\": \"array\",\r",
+									"            \"items\": [\r",
+									"                {\r",
+									"                    \"type\": \"object\",\r",
+									"                    \"properties\": {\r",
+									"                        \"name\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"url\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        }\r",
+									"                    }\r",
+									"                }\r",
+									"            ]\r",
+									"        }\r",
+									"    }\r",
+									"};\r",
+									"pm.test(\"El Schema es valido\", () => {\r",
+									"    pm.response.to.have.jsonSchema(schema)\r",
+									"}) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"urlpokemon\", \"https://pokeapi.co/api/v2/move/\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlpokemon}}",
+							"host": [
+								"{{urlpokemon}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle de movimiento por medio del nombre del movimiento",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Guardo la respuesta del response en variable myResponse\r",
+									"let myResponse=pm.response.json()\r",
+									"\r",
+									"//Valido el nombre movimiento se encuentre en el response\r",
+									"pm.test(\"validar nombre del movimiento OK\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.environment.get(\"name_move\"));\r",
+									"});\r",
+									"\r",
+									"//Funcion que valida si el pokemon esta o no dentro del arrary learned_by_pokemon\r",
+									"for(i=0; i < myResponse.learned_by_pokemon.length;i++){\r",
+									"    if(myResponse.learned_by_pokemon[i].name === pm.environment.get(\"pokemon\")){\r",
+									"pm.test(\"Mi pokemon si se encuentra dentro de learned_by_pokemon \", function () {\r",
+									"});\r",
+									"        break\r",
+									"      }\r",
+									"      else{\r",
+									"pm.test(\"Mi pokemon no esta dentro de learned_by_pokemon\", function () {\r",
+									"});\r",
+									"break \r",
+									"      }\r",
+									"}\r",
+									"\r",
+									"//valido que el api responda con el codigo 200\r",
+									"pm.test(\"El codigo del endpoind es: 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"//Valido que la respuesta del endpoid esta por debajo de los 700ms\r",
+									"pm.test(\"El tiempo de respuesta del endpoind esta por debajo de  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/move/{{name_move}}",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"move",
+								"{{name_move}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle de movimiento por id del movimiento",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Gueardo la respuesta del response en variable myResponse\r",
+									"let myResponse=pm.response.json()\r",
+									"\r",
+									"//Valido el nombre movimiento se encuentre en el response\r",
+									"pm.test(\"validar nombre del movimiento OK\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.environment.get(\"name_move\"));\r",
+									"});\r",
+									"\r",
+									"\r",
+									"for(i=0; i < myResponse.learned_by_pokemon.length;i++){\r",
+									"    if(myResponse.learned_by_pokemon[i].name === pm.environment.get(\"pokemon\")){\r",
+									"//Valido que se encuentre el nombre del pokemon favorito en learned_by_pokemon\r",
+									"pm.test(\"Mi pokemon si se encuentra dentro de learned_by_pokemon \", function () {\r",
+									"});\r",
+									"        break\r",
+									"      }\r",
+									"      else{\r",
+									"pm.test(\"Mi pokemon no esta dentro de learned_by_pokemon\", function () {\r",
+									"});\r",
+									"break \r",
+									"      }\r",
+									"}\r",
+									"\r",
+									"\r",
+									"pm.test(\"El codigo del endpoind es: 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"El tiempo de respuesta del endpoind esta por debajo de  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"urlMovimiento\", \"https://pokeapi.co/api/v2/move/\");\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_move}}",
+							"host": [
+								"{{url_move}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "negativos",
+			"item": [
+				{
+					"name": "Pokemon inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Valido que el codigo de error es 404\r",
+									"pm.test(\"El codigo del endpoind es: 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"//Valido que el tiempo de respuesta esta por debajo de 700ms\r",
+									"pm.test(\"El tiempo de respuesta del endpoind esta por debajo de  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"//Valido la respuesta en el response es \"Not Found\"\r",
+									"pm.test(\"Status is no found\", function () {\r",
+									"    pm.expect(pm.response.status).to.be.eql(\"Not Found\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"pokemon\", \"agumon\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_basePokemon}}{{pokemon}}",
+							"host": [
+								"{{url_basePokemon}}{{pokemon}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movimiento inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Valido que el codigo de error es 404\r",
+									"pm.test(\"El codigo del endpoind es: 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"//Valido que el tiempo de respuesta esta por debajo de 700ms\r",
+									"pm.test(\"El tiempo de respuesta del endpoind esta por debajo de  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"//Valido la respuesta en el response es \"Not Found\"\r",
+									"pm.test(\"Status is no found\", function () {\r",
+									"    pm.expect(pm.response.status).to.be.eql(\"Not Found\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"urlpokemon\", \"https://pokeapi.co/api/v2/move/3212234567\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlpokemon}}",
+							"host": [
+								"{{urlpokemon}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle de movimiento inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Valido que el codigo de error es 404\r",
+									"pm.test(\"El codigo del endpoind es: 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"//Valido que el tiempo de respuesta esta por debajo de 700ms\r",
+									"pm.test(\"El tiempo de respuesta del endpoind esta por debajo de  700ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"//Valido la respuesta en el response es \"Not Found\"\r",
+									"pm.test(\"Status is no found\", function () {\r",
+									"    pm.expect(pm.response.status).to.be.eql(\"Not Found\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"name_move\", \"kame hame ha\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/move/{{name_move}}",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"move",
+								"{{name_move}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
