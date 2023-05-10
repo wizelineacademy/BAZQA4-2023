@@ -24,7 +24,7 @@ Para obtener el device name por medio de adb devices en Android Studio, sigue lo
 2. Abre Android Studio y ve a la pestaña "Terminal" en la parte inferior de la ventana.
 3. Escribe el siguiente comando en la línea de comandos:
 
-adb devices
+`adb devices`
 
 
 4. Presiona Enter para ejecutar el comando. Esto mostrará una lista de todos los dispositivos Android conectados a la computadora.
@@ -33,19 +33,20 @@ adb devices
 
 6. Copia el nombre del dispositivo y utilízalo en tus pruebas o en cualquier otra tarea que necesite el nombre del dispositivo.
 
-Nota: 
+**Nota:** 
 
 *Tu teléfono debe estar habilitado para la opción de programador y en modo depurador como verdadero.**
 
-Lista General de Herramientas que se Usaron el Realizacion del Framework
+### Lista General de Herramientas que se Usaron en la Realización del Framework
 1. Appium Server. 
 2. Appium Inspector. 
 3. Allure. 
 4. PyCharm
 5. ADB Manager
 
-Herramientas: 
-La primera que deberas configurar es: Allure
+### Herramientas:
+
+#### La primera que deberas configurar es: Allure
 
 Para utilizar Allure en cualquier plataforma, necesitarás seguir los pasos adecuados para instalar y configurar el marco de informes. Por ejemplo, para utilizar Allure con Appium en iOS, debes seguir estos pasos:
 
@@ -53,87 +54,91 @@ Instala Homebrew en tu Mac si aún no lo has hecho. Homebrew es un administrador
 
 Usa Homebrew para instalar Node.js en tu Mac:
 
-_brew install node_
+`brew install node`
 
 Instala Allure Framework usando npm:
 
-_npm install -g allure-commandline_
+`npm install -g allure-commandline`
 
-Nota: 
+**Nota:** 
 Allure no solo funciona al ser instalado en Python, ya que no es solo una librería. Allure requiere de un plugin adicional para su funcionamiento, que debe ser instalado previamente. Una vez instalado el plugin correspondiente para la herramienta o framework que estés utilizando en tu proyecto, podrás generar informes atractivos y significativos con Allure.
 
-Una vez finalizada la ejecución de tus pruebas, puedes ejecutar el siguiente comando para generar un informe de Allure:"
+**Una vez finalizada la ejecución de tus pruebas, puedes ejecutar el siguiente comando para generar un informe de Allure:"**
 
-allure serve reports/android
+`allure serve reports/android`
 
-La Otra Herramienta Necesaria es: 
-Appium Server.
+#### La Otra Herramienta Necesaria es: 
+
+##### Appium Server.
 
 Otra herramienta necesaria para el correcto funcionamiento de este proyecto es el Appium Server. Esta herramienta permite la automatización de pruebas en dispositivos móviles y es compatible con una amplia variedad de lenguajes de programación y frameworks de automatización.
 
 Antes de ejecutar cualquier prueba en dispositivos móviles, es necesario tener el Appium Server instalado y configurado correctamente. Es importante seguir las instrucciones de instalación proporcionadas en el sitio web oficial de Appium para asegurarse de que se estén cumpliendo todos los requisitos necesarios.
 
-Nota: 
+**Nota:** 
 
-Válida que tu SDK y JAVA esten configurados co
+_Válida que tu SDK y JAVA esten configurados el JDK y SDK_
 
 Android Developers (https://developer.android.com/studio/releases/platform-tools)
 SDK Platform Tools release notes  |  Android Studio  |  Android Developers
 Android SDK Platform-Tools is a component for the Android SDK
 
-Como última herramienta para poder ejecutar este framework se necesita PyCharm:
+### Como última herramienta para poder ejecutar este framework se necesita PyCharm:
 
-Accede a la página de descargas de PyCharm en el sitio web oficial de JetBrains: https://www.jetbrains.com/pycharm/download/
+1. [ ] Accede a la página de descargas de PyCharm en el sitio web oficial de JetBrains: https://www.jetbrains.com/pycharm/download/
+2. [ ] 
+3. [ ] Selecciona la edición que desees (Community o Professional) y haz clic en "Download" para descargar el archivo de instalación.
+4. [ ] 
+5. [ ] Una vez descargado, abre el archivo de instalación y selecciona el idioma de instalación que prefieras.
+6. [ ] 
+7. [ ] En la siguiente pantalla, acepta los términos de la licencia y haz clic en "Next".
+8. [ ] 
+9. [ ] En la siguiente pantalla, selecciona la ubicación en la que deseas instalar PyCharm y haz clic en "Next".
+10. [ ] 
+11. [ ] En la siguiente pantalla, selecciona las opciones de instalación adicionales que desees y haz clic en "Next".
+12. [ ] 
+13. [ ] En la siguiente pantalla, selecciona el nombre y la ubicación del menú de inicio para el acceso directo a PyCharm.
+14. [ ] 
+15. [ ] En la siguiente pantalla, selecciona si deseas crear un archivo de registro para PyCharm y haz clic en "Install".
+16. [ ] 
+17. [ ] Espera a que se complete la instalación y haz clic en "Finish".
+18. [ ] 
+19. [ ] PyCharm debería estar ahora instalado y listo para su uso. Puedes abrirlo desde el menú de inicio o desde el acceso directo que creaste durante la instalación.
+20. [ ] 
+## Para ejecutar este framework, debes instalar las librerías necesarias utilizando el siguiente comando:
+`pip install -r requirements.txt`
 
-Selecciona la edición que desees (Community o Professional) y haz clic en "Download" para descargar el archivo de instalación.
+## **Arquitectura del Framework**
 
-Una vez descargado, abre el archivo de instalación y selecciona el idioma de instalación que prefieras.
+#### Lenguaje de Programacion: Python
 
-En la siguiente pantalla, acepta los términos de la licencia y haz clic en "Next".
+#### Patrones de Diseño: POM
 
-En la siguiente pantalla, selecciona la ubicación en la que deseas instalar PyCharm y haz clic en "Next".
+#### **Librerias:** 
 
-En la siguiente pantalla, selecciona las opciones de instalación adicionales que desees y haz clic en "Next".
+* 1. BDD (Behavior Driven Development) 
+* 2. Black
+* 3. Selenium
+* 4. attrs
+* 5. zipp
+* 6. typing-extensions
+* 7. requests
+* 8. python-dotenv
+* 9. Appium-Python-Client
+* 10. python-dateutil**
 
-En la siguiente pantalla, selecciona el nombre y la ubicación del menú de inicio para el acceso directo a PyCharm.
+## Estructura General:
 
-En la siguiente pantalla, selecciona si deseas crear un archivo de registro para PyCharm y haz clic en "Install".
-
-Espera a que se complete la instalación y haz clic en "Finish".
-
-PyCharm debería estar ahora instalado y listo para su uso. Puedes abrirlo desde el menú de inicio o desde el acceso directo que creaste durante la instalación.
-
-#### Para ejecutar este framework, debes instalar las librerías necesarias utilizando el siguiente comando:
-pip install -r requirements.txt
-
-Arquitectura del Framework
-
-Lenguaje de Programacion: Python 
-
-Patrones de Diseño: POM
-Librerias: 
-**1. BDD (Behavior Driven Development) 
-2. Black
-3. Selenium
-4. attrs
-5. zipp
-6. typing-extensions
-7. requests
-8. python-dotenv
-9. Appium-Python-Client
-10. python-dateutil**
-
-Estructura General: 
-APPIUM
-    Behave
-        sauce_labs
-         --APP
-         --features
-         --reports
-         --screens
-         --screenshots
-         --steps
-         --utils
+APPIUM<br>
+     Behave<br>
+        sauce_labs<br>
+         --APP<br>
+         --features<br>
+         --reports<br>
+         --screens<br>
+         --screenshots<br>
+         --steps<br>
+         --utils<br>
 
 Para que no te marque error a la hora de la importanción de librerias 
 se debe poner como carpeta raiz a sauce_labs: 
