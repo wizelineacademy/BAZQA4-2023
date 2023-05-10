@@ -1,15 +1,14 @@
 from screens.login_screen import LoginScreen
 from screens.productos_screen import ProductosScreen
 from screens.product_detail_screen import ProductDetail
-from utils.dictionaries.login_text import USUARIOS
 from utils.dictionaries.product_detail_text import DETAIL
-
+from behave import *
 
 @Given('we has loggin the app correctly')
 def step_impl(context):
     login_screen = LoginScreen(context)
-    login_screen.fill_text(*login_screen.txt_username, value=USUARIOS.get("USERNAME"))
-    login_screen.fill_text(*login_screen.txt_password, value=USUARIOS.get("PASSWORD"))
+    login_screen.fill_text(*login_screen.txt_username, value=context.STANDARD_USER)
+    login_screen.fill_text(*login_screen.txt_password, value=context.PASSWORD)
     login_screen.tap_element(*login_screen.btn_login)
     pass
 

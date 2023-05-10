@@ -41,11 +41,25 @@ Agregar el capabilitie de acuerdo a las caracteriticas de dipositivo agrego imag
 
     }
 ```
-Nota: `platform_version` y `device_name` depende del modelo de dipositivo android a utilizar  
+Nota: `platform_version` y `device_name` depende del modelo de dipositivo android a utilizar y en `app` modificar la ruta de la app acorde al path en la que se encuentre el proyecto descargado ya que la ruta que se muestra cambia acorde al dispositivo que se esta usando
+
+## enviroment.py
+
+Se deben configurar de manera similar las capability en el archivo enviroment que es de donde se
+toman las capability y deben corresponder al dispositivo que se esta usando 
+como se explico previamente en la configuracion de Appium inspector.
+
+Nota: `platform_version` y `device_name` depende del modelo de dipositivo android a utilizar y en `app` modificar la ruta de la app acorde al path en la que se encuentre el proyecto descargado ya que la ruta que se muestra cambia acorde al dispositivo que se esta usando
+
+
+
+![img.png](img/enviroment.png)
 
 Una vez genrado el capabilitie
 * Guardar el capabilitie
-* Iniciar la sesión
+* Iniciar el servidor de appium 
+* iniciar el set de pruebas con el boton de RUN
+
 
 ## ¿Como obtener el nombre de dispositivo con ADB?
 Para obtener el nombre del dispositivo se debe ejecutar el comando adb devices con el celular conectado y con el modo desarrollador activado. Debe mostrar el nombre del dispositivo una vez que se ejecute el comando
@@ -115,6 +129,15 @@ El working directory debe apuntar al directorio behave del proyecto
 
 listo al dar tap en el boton para correr ejecutarias los casos de prueba
 
+## En caso de error
+Se debe definir la carpeta Behave como source root dando click derecho en la carpeta
+* posicionarse en Mark Directory as 
+* y dar click en Sources Root
+
+como se muestra en la imagen:
+
+![img.png](img/source root.png)
+
 ## APP a probar
 Se anexo la APP sauce_app.apk en el directorio APPIUM/APP por el tema de versiones diferentes y cambios en selecctores
 
@@ -136,11 +159,27 @@ Para generar reporte desde cero con Allure, se deben seguir los siguientes pasos
 ```bash
     pip install allure-behave
   ```  
+
+### Instalar Scoop de allure
+
+Se necesita instalar el Scoop para poder ejecutar allure se instala con los siguientes comandos
+
+* En mac os x correr el siguiente comando
+```bash
+    brew install allure
+  ```  
+
+* En windows correr el siguiente comando en powershell
+```bash
+    scoop install allure
+  ```  
+
 Nota: en caso de que algun paquete no se instale correctamente desde el archivo requirements.txt se pueden instalar como lo hicimos con el comando anterior sustituyendo el nombre del paquete
 * Agregar el paquete allure-behave
 * Posicionarse hasta la carpeta Behave dentro de la terminal y correr los siguiente comando
 ```bash
 allure serve reports/android
 ```
+
 
 

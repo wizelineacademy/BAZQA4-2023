@@ -5,14 +5,13 @@ from screens.productos_screen import ProductosScreen
 from screens.purchase_confirmation_screen import PuchaseConfirmacion
 from screens.resumen_screen import Resumen
 from utils.dictionaries.checkout_text import FORM, PAGE_TEXTS
-from utils.dictionaries.login_text import USUARIOS
-
+from behave import *
 
 @Given("we has added the first items to the shopping cart")
 def step_impl(context):
     login_screen = LoginScreen(context)
-    login_screen.fill_text(*login_screen.txt_username, value=USUARIOS.get("USERNAME"))
-    login_screen.fill_text(*login_screen.txt_password, value=USUARIOS.get("PASSWORD"))
+    login_screen.fill_text(*login_screen.txt_username, value=context.STANDARD_USER)
+    login_screen.fill_text(*login_screen.txt_password, value=context.PASSWORD)
     login_screen.tap_element(*login_screen.btn_login)
     productosscreen = ProductosScreen(context)
     productosscreen.tap_element(*productosscreen.btn_first_item)

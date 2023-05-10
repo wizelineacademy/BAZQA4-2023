@@ -1,14 +1,13 @@
-from Behave.screens.login_screen import LoginScreen
-from Behave.screens.product_car_screen import ProductCar
-from Behave.screens.productos_screen import ProductosScreen
-from utils.dictionaries.login_text import USUARIOS
-
+from screens.login_screen import LoginScreen
+from screens.product_car_screen import ProductCar
+from screens.productos_screen import ProductosScreen
+from behave import *
 
 @Given('we are in the "Productos" screen')
 def step_impl(context):
     login_screen = LoginScreen(context)
-    login_screen.fill_text(*login_screen.txt_username, value=USUARIOS.get("USERNAME"))
-    login_screen.fill_text(*login_screen.txt_password, value=USUARIOS.get("PASSWORD"))
+    login_screen.fill_text(*login_screen.txt_username, value=context.STANDARD_USER)
+    login_screen.fill_text(*login_screen.txt_password, value=context.PASSWORD)
     login_screen.tap_element(*login_screen.btn_login)
     pass
 
