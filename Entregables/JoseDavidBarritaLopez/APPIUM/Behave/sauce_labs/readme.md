@@ -1,7 +1,9 @@
 # Behave Python 
 
-### Description
-Bienvenido. Para ejecutar este framework, necesitarás varios programas, pero antes debes saber cómo configurar tu teléfono
+## Description
+**Bienvenido. Para ejecutar este framework, necesitarás varios programas, pero antes debes saber cómo configurar tu teléfono**
+
+### Configuración ADB Teléfono:
 
 Para este paso si no deseas instalar Android Studio, puedes instalar solamente ADB. ADB es el acrónimo de Android Debug Bridge y es una herramienta de línea de comandos que te permite comunicarte con un dispositivo Android conectado a través de un cable USB. Puedes descargar ADB como parte del paquete de herramientas de Android SDK desde el sitio web de desarrolladores de Android.
 Para instalar ADB, puedes seguir los siguientes pasos:
