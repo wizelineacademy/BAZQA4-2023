@@ -148,10 +148,35 @@ Download the latest version of PyCharm for Windows, macOS or Linux.<br>
 Para configurar las capabilities, los usuarios pueden ingresarlas o configurarlas en Pycharm. Sin embargo, no se recomienda codificarlas directamente en el código. Para evitar esto, se crearon dos clases de capabilities: una clase base para capabilities genéricas y una clase específica para configuraciones de Android que hereda de la clase base.
 
 Es importante explicar el archivo "environment", que inicializa las capabilities y las pasa al controlador (driver). Para hacer el proceso más reusable y mantenible, se utilizan las claves (keys) como "before_scenario", "before_all", "after_scenario" y "after_all" en el archivo de configuración de Behave. De esta manera, se pueden reutilizar las mismas capabilities para diferentes pruebas y modificarlas si es necesario.
+   
+` def __capabilities_generator__(self, feature, device_name, platform_version, execution_name):
+        capabilities = {
+            'environment:': self.context.ENVIRONMENT,
+            'project': feature,
+            'name': execution_name,
+            'deviceName': device_name,
+            'platformName': self.platform_name,
+            'platformVersion': platform_version,
+            'app': self.app,
+            'appWaitPackage': self.app_wait_package,
+            'appWaitActivity': self.app_wait_activity,
+            'appWaitDuration': 30000,
+            'automationName': self.automation_name,
+            'newCommandTimeout': self.new_command_timeout,
+            'allowTestPackages': True,
+            'autoGrantPermissions' : True
+        }
+        return capabilities `
 
 Para ejecutar las pruebas, se deben ejecutar los archivos de "feature" utilizando Behave. Los archivos de "feature" describen los escenarios y pasos a ejecutar. Para ejecutar todas las pruebas, simplemente se debe ejecutar el siguiente comando en la terminal:
 
 Dentro del archivo environment se encuentra una función que obtiene la ubicación de la aplicación, por lo tanto es necesario validar si ésta tiene el mismo nombre de su apk.
+
+#### Metodo:
+
+`def get_app_location(platform, environment):
+    ANDROID_APP_LOCATION = os.path.dirname(__file__) + "/APP/app-dev-debug.apk"
+    return ANDROID_APP_LOCATION`
 
 ### Ejecución del Proyecto
 `behave` <br>
