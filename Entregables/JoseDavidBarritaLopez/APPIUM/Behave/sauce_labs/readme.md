@@ -110,7 +110,7 @@ Lenguaje de Programacion: Python
 
 Patrones de Diseño: POM
 Librerias: 
-**1. BDD (Behavior Driven Development)
+**1. BDD (Behavior Driven Development) 
 2. Black
 3. Selenium
 4. attrs
@@ -144,3 +144,22 @@ Asegúrate de que la carpeta ahora tenga un icono de fuente raíz azul.
 JetBrains (https://www.jetbrains.com/pycharm/download/)
 Download PyCharm: Python IDE for Professional Developers by JetBrains
 Download the latest version of PyCharm for Windows, macOS or Linux.
+
+Para configurar las capabilities, los usuarios pueden ingresarlas o configurarlas en Pycharm. Sin embargo, no se recomienda codificarlas directamente en el código. Para evitar esto, se crearon dos clases de capabilities: una clase base para capabilities genéricas y una clase específica para configuraciones de Android que hereda de la clase base.
+
+Es importante explicar el archivo "environment", que inicializa las capabilities y las pasa al controlador (driver). Para hacer el proceso más reusable y mantenible, se utilizan las claves (keys) como "before_scenario", "before_all", "after_scenario" y "after_all" en el archivo de configuración de Behave. De esta manera, se pueden reutilizar las mismas capabilities para diferentes pruebas y modificarlas si es necesario.
+
+Para ejecutar las pruebas, se deben ejecutar los archivos de "feature" utilizando Behave. Los archivos de "feature" describen los escenarios y pasos a ejecutar. Para ejecutar todas las pruebas, simplemente se debe ejecutar el siguiente comando en la terminal:
+
+behave
+
+También se pueden ejecutar escenarios específicos utilizando etiquetas o ubicaciones. Por ejemplo, para ejecutar todos los escenarios con la etiqueta "@smoke", se puede utilizar:
+
+behave --tags=@smoke
+
+Para ejecutar solo el escenario "login", se puede utilizar:
+
+behave --tags=@e2e -k -D program=login -D platform=android -D platform_version=11 -D testing_process=serial -D driver_location=local -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/login
+
+ Para el de productos de la siguiente manera: 
+behave --tags=@e2e -k -D program=products -D platform=android -D platform_version=11 -D testing_process=serial -D driver_location=local -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/products
