@@ -140,17 +140,19 @@ APPIUM<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  --steps<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  --utils<br>
 
-**Para que no te marque error a la hora de la importanción de librerias 
-se debe poner como carpeta raiz a sauce_labs: 
-Para incluir las carpetas de sauce_labs como fuente raíz en PyCharm, sigue los siguientes pasos:**
+**Para que no te marque error a la hora de la importanción de librerias <br>
+se debe poner como carpeta raiz a sauce_labs: <br>
+Para incluir las carpetas de sauce_labs como fuente raíz en PyCharm, sigue los siguientes pasos:**<br>
 
-**Abre el proyecto en PyCharm.
-Haz clic derecho en la carpeta "sauce_labs" dentro del proyecto y selecciona "Mark Directory as" > "Sources Root".
-Asegúrate de que la carpeta ahora tenga un icono de fuente raíz azul.**
+**Abre el proyecto en PyCharm.<br>
+Haz clic derecho en la carpeta "sauce_labs" dentro del proyecto y selecciona "Mark Directory as" > "Sources Root".<br>
+Asegúrate de que la carpeta ahora tenga un icono de fuente raíz azul.** <br>
 
-JetBrains (https://www.jetbrains.com/pycharm/download/)
-Download PyCharm: Python IDE for Professional Developers by JetBrains
-Download the latest version of PyCharm for Windows, macOS or Linux.
+JetBrains (https://www.jetbrains.com/pycharm/download/)<br>
+Download PyCharm: Python IDE for Professional Developers by JetBrains<br>
+Download the latest version of PyCharm for Windows, macOS or Linux.<br>
+
+### Capabilities Appium  
 
 Para configurar las capabilities, los usuarios pueden ingresarlas o configurarlas en Pycharm. Sin embargo, no se recomienda codificarlas directamente en el código. Para evitar esto, se crearon dos clases de capabilities: una clase base para capabilities genéricas y una clase específica para configuraciones de Android que hereda de la clase base.
 
@@ -160,6 +162,7 @@ Para ejecutar las pruebas, se deben ejecutar los archivos de "feature" utilizand
 
 Dentro del archivo environment se encuentra una función que obtiene la ubicación de la aplicación, por lo tanto es necesario validar si ésta tiene el mismo nombre de su apk.
 
+### Ejecución del Proyecto
 `behave` <br>
 También se pueden ejecutar escenarios específicos utilizando etiquetas o ubicaciones. Por ejemplo, para ejecutar todos los escenarios con la etiqueta "@smoke", se puede utilizar:<br>
 `behave --tags=@smoke`<br>
