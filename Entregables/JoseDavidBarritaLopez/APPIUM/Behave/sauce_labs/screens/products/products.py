@@ -29,22 +29,9 @@ class ProductsScreen(BaseActions):
         self.prices_products = []
         if self.platform == "android":
             self.title_products = (By.XPATH, '//*[contains(@text,"PRODUCTOS")]')
-            self.first_product = (
+            self.back_to_menu = (
                 By.XPATH,
-                '(//android.view.ViewGroup[@content-desc="test-Articulo"])['
-                "1]/android.view.ViewGroup/android.widget.ImageView",
-            )
-            self.title_first_product = (
-                By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-Descripción"]/android.widget.TextView[1]',
-            )
-            self.body_first_product = (
-                By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-Descripción"]/android.widget.TextView[2]',
-            )
-            self.price_first_product = (
-                By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-Precio"]/android.widget.TextView',
+                '//android.view.ViewGroup[@content-desc="test-REGRESO A MENU"]',
             )
             self.add_cart_first_product = (
                 By.XPATH,
@@ -74,6 +61,10 @@ class ProductsScreen(BaseActions):
                 By.XPATH,
                 '//android.view.ViewGroup[@content-desc="test-CONTINUAR"]',
             )
+            self.finish_button = (
+                By.XPATH,
+                '//android.view.ViewGroup[@content-desc="test-TERMINAR"]',
+            )
             self.message_free_deliver = (
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-CHECKOUT: '
@@ -97,11 +88,14 @@ class ProductsScreen(BaseActions):
                 ".ViewGroup/android.view.ViewGroup["
                 "2]/android.view.ViewGroup/android.widget.TextView[1]",
             )
-            self.finish_button = (
+            self.body_first_product = (
                 By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-TERMINAR"]',
+                '//android.view.ViewGroup[@content-desc="test-Descripción"]/android.widget.TextView[2]',
             )
-
+            self.price_first_product = (
+                By.XPATH,
+                '//android.view.ViewGroup[@content-desc="test-Precio"]/android.widget.TextView',
+            )
             self.checkout_complete_first_message = (
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-CHECKOUT: COMPLETADO!"]/android.view.ViewGroup/android.widget.TextView[1]',
@@ -110,10 +104,14 @@ class ProductsScreen(BaseActions):
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-CHECKOUT: COMPLETADO!"]/android.view.ViewGroup/android.widget.TextView[2]',
             )
-
-            self.back_to_menu = (
+            self.first_product = (
                 By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-REGRESO A MENU"]',
+                '(//android.view.ViewGroup[@content-desc="test-Articulo"])['
+                "1]/android.view.ViewGroup/android.widget.ImageView",
+            )
+            self.title_first_product = (
+                By.XPATH,
+                '//android.view.ViewGroup[@content-desc="test-Descripción"]/android.widget.TextView[1]',
             )
 
     def validate_the_product_details(self):
