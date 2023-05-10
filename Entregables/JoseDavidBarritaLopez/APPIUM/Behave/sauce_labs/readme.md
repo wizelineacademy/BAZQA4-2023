@@ -140,13 +140,13 @@ APPIUM<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  --steps<br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  --utils<br>
 
-Para que no te marque error a la hora de la importanción de librerias 
+**Para que no te marque error a la hora de la importanción de librerias 
 se debe poner como carpeta raiz a sauce_labs: 
-Para incluir las carpetas de sauce_labs como fuente raíz en PyCharm, sigue los siguientes pasos:
+Para incluir las carpetas de sauce_labs como fuente raíz en PyCharm, sigue los siguientes pasos:**
 
-Abre el proyecto en PyCharm.
+**Abre el proyecto en PyCharm.
 Haz clic derecho en la carpeta "sauce_labs" dentro del proyecto y selecciona "Mark Directory as" > "Sources Root".
-Asegúrate de que la carpeta ahora tenga un icono de fuente raíz azul.
+Asegúrate de que la carpeta ahora tenga un icono de fuente raíz azul.**
 
 JetBrains (https://www.jetbrains.com/pycharm/download/)
 Download PyCharm: Python IDE for Professional Developers by JetBrains
@@ -160,15 +160,12 @@ Para ejecutar las pruebas, se deben ejecutar los archivos de "feature" utilizand
 
 Dentro del archivo environment se encuentra una función que obtiene la ubicación de la aplicación, por lo tanto es necesario validar si ésta tiene el mismo nombre de su apk.
 
-behave
-
-También se pueden ejecutar escenarios específicos utilizando etiquetas o ubicaciones. Por ejemplo, para ejecutar todos los escenarios con la etiqueta "@smoke", se puede utilizar:
-
-behave --tags=@smoke
-
-Para ejecutar solo el escenario "login", se puede utilizar:
-
-behave --tags=@e2e -k -D program=login -D platform=android -D platform_version=11 -D testing_process=serial -D driver_location=local -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/login
-
- Para el de productos de la siguiente manera: 
-behave --tags=@e2e -k -D program=products -D platform=android -D platform_version=11 -D testing_process=serial -D driver_location=local -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/products
+`behave` <br>
+También se pueden ejecutar escenarios específicos utilizando etiquetas o ubicaciones. Por ejemplo, para ejecutar todos los escenarios con la etiqueta "@smoke", se puede utilizar:<br>
+`behave --tags=@smoke`<br>
+Para ejecutar solo el escenario "login", se puede utilizar:<br>
+`behave --tags=@e2e -k -D program=login -D platform=android -D platform_version=11 -D testing_process=serial -D driver_location=local -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/login
+`
+<br>
+ Para el de productos de la siguiente manera: <br>
+`behave --tags=@e2e -k -D program=products -D platform=android -D platform_version=11 -D testing_process=serial -D driver_location=local -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/products`
