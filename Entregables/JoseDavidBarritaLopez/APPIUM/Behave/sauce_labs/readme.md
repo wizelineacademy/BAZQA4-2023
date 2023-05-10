@@ -85,24 +85,15 @@ Android SDK Platform-Tools is a component for the Android SDK
 
 ### Como última herramienta para poder ejecutar este framework se necesita PyCharm:
 
-1. [ ] Accede a la página de descargas de PyCharm en el sitio web oficial de JetBrains: https://www.jetbrains.com/pycharm/download/
-2. [ ] 
-3. [ ] Selecciona la edición que desees (Community o Professional) y haz clic en "Download" para descargar el archivo de instalación.
-4. [ ] 
-5. [ ] Una vez descargado, abre el archivo de instalación y selecciona el idioma de instalación que prefieras.
-6. [ ] 
-7. [ ] En la siguiente pantalla, acepta los términos de la licencia y haz clic en "Next".
-8. [ ] 
-9. [ ] En la siguiente pantalla, selecciona la ubicación en la que deseas instalar PyCharm y haz clic en "Next".
-10. [ ] 
+1.  [ ] Accede a la página de descargas de PyCharm en el sitio web oficial de JetBrains: https://www.jetbrains.com/pycharm/download/
+3.  [ ] Selecciona la edición que desees (Community o Professional) y haz clic en "Download" para descargar el archivo de instalación.
+5.  [ ] Una vez descargado, abre el archivo de instalación y selecciona el idioma de instalación que prefieras.
+7.  [ ] En la siguiente pantalla, acepta los términos de la licencia y haz clic en "Next".
+9.  [ ] En la siguiente pantalla, selecciona la ubicación en la que deseas instalar PyCharm y haz clic en "Next".
 11. [ ] En la siguiente pantalla, selecciona las opciones de instalación adicionales que desees y haz clic en "Next".
-12. [ ] 
 13. [ ] En la siguiente pantalla, selecciona el nombre y la ubicación del menú de inicio para el acceso directo a PyCharm.
-14. [ ] 
 15. [ ] En la siguiente pantalla, selecciona si deseas crear un archivo de registro para PyCharm y haz clic en "Install".
-16. [ ] 
 17. [ ] Espera a que se complete la instalación y haz clic en "Finish".
-18. [ ] 
 19. [ ] PyCharm debería estar ahora instalado y listo para su uso. Puedes abrirlo desde el menú de inicio o desde el acceso directo que creaste durante la instalación.
 
 ## Para ejecutar este framework, debes instalar las librerías necesarias utilizando el siguiente comando:
