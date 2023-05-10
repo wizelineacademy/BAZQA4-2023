@@ -2,7 +2,7 @@ Feature: PRODUCT_DETAIL
 
   @regression
   Scenario: FIRST_PRODUCT_DETAIL
-    Given we has loggin the app correctly
+    Given we are in the "Productos" screen
     When we tap on the first product to see the detail
     Then we validate the header is displayed
     And we validate that the product title on the description is correct

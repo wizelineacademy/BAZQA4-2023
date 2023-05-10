@@ -2,8 +2,9 @@ Feature: Make a purchase
 
   @regression
   Scenario: Complete purchase
-    Given we has added the first items to the shopping cart
-    When we tap on the cart option
+    Given we are in the "Productos" screen
+    When we has added the first items to the shopping cart
+    And we tap on the cart option
     And we tap on CHECKOUT
     And We enter customer information
     And we tap the CONTINUAR button

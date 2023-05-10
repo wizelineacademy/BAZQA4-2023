@@ -7,4 +7,4 @@ Feature: Log In
     When we fill the "Usuario" label
     And we fill the "Contraseña" label
     And we tap the "LOGIN" button
-    Then we are in the "Productos" screen
+    Then we has loggin correctly we are in the "Productos" screen

@@ -9,7 +9,6 @@ def step_impl(context):
     login_screen.fill_text(*login_screen.txt_username, value=context.STANDARD_USER)
     login_screen.fill_text(*login_screen.txt_password, value=context.PASSWORD)
     login_screen.tap_element(*login_screen.btn_login)
-    pass
 
 
 @When('we tap on "Añadir a carrito" from the first item')

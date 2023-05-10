@@ -4,12 +4,8 @@ from utils.dictionaries.price_filter_text import PRICE_FILTER
 from behave import *
 
 
-@Given("we select filter icon")
+@When("we select filter icon")
 def step_impl(context):
-    login_screen = LoginScreen(context)
-    login_screen.fill_text(*login_screen.txt_username, value=context.STANDARD_USER)
-    login_screen.fill_text(*login_screen.txt_password, value=context.PASSWORD)
-    login_screen.tap_element(*login_screen.btn_login)
     productscreen = ProductosScreen(context)
     productscreen.tap_element(*productscreen.icon_filter)
 
