@@ -259,3 +259,7 @@ pretty
 features/shopping_cart`
 <br>
 **Esto se puede ejecutar tambien por medio de bash en caso de que no se tenga Pycharm.** 
+
+Para validar tu codigo y formatearlo adecuadamente: 
+Se utiliza: pip install black
+Solo Agrega: Black y tu archivo Que Quieres Configurar. 
