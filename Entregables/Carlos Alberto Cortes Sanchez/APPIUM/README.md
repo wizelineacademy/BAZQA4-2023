@@ -177,5 +177,6 @@ Se necesita instalar el Scoop para poder ejecutar allure, se instala con los sig
     scoop install allure
   ```
 
-
+### Nota 
+Se debe crear el archivo .env y colocar dentro las variables que se encuentran en el archivo .env-sample ya que por seguridad no se comparte el archivo .env
 
