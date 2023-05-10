@@ -158,8 +158,8 @@ Dentro del archivo environment se encuentra una función que obtiene la ubicaci�
 También se pueden ejecutar escenarios específicos utilizando etiquetas o ubicaciones. Por ejemplo, para ejecutar todos los escenarios con la etiqueta "@smoke", se puede utilizar:<br>
 `behave --tags=@smoke`<br>
 Para ejecutar solo el escenario "login", se puede utilizar:<br>
-`behave --tags=@e2e -k -D program=login -D platform=android -D platform_version=11 -D testing_process=serial -D driver_location=local -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/login
+`behave --tags=@regression -k -D program=login -D platform=android -D platform_version=11 -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/login
 `
 <br>
  Para el de productos de la siguiente manera: <br>
-`behave --tags=@e2e -k -D program=products -D platform=android -D platform_version=11 -D testing_process=serial -D driver_location=local -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/products`
+`behave --tags=@regression -k -D program=products -D platform=android -D platform_version=11 -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/products`
