@@ -81,10 +81,18 @@ class ProductsScreen(BaseActions):
                 By.XPATH,
                 '//android.view.ViewGroup[@content-desc="test-Descripción"]//*[1]',
             )
+            self.checkout_complete_first_message = (
+                By.XPATH,
+                '//android.widget.ScrollView[@content-desc="test-CHECKOUT: COMPLETADO!"]//*[1]',
+            )
+            self.checkout_complete_second_message = (
+                By.XPATH,
+                '//android.widget.ScrollView[@content-desc="test-CHECKOUT: COMPLETADO!"]//*[2]',
+            )
             self.message_free_deliver = (
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-CHECKOUT: '
-                'RESUMEN"]/android.view.ViewGroup/android.widget.TextView[4]',
+                'RESUMEN"]//*[4]',
             )
             self.filter_icon = (
                 By.XPATH,
@@ -96,21 +104,13 @@ class ProductsScreen(BaseActions):
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="Selector '
                 'container"]/android.view.ViewGroup/android.view.ViewGroup['
-                "4]/android.view.ViewGroup",
+                "4]//*",
             )
             self.twitter = (
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-PRODUCTOS"]/android.view'
                 ".ViewGroup/android.view.ViewGroup["
                 "2]/android.view.ViewGroup/android.widget.TextView[1]",
-            )
-            self.checkout_complete_first_message = (
-                By.XPATH,
-                '//android.widget.ScrollView[@content-desc="test-CHECKOUT: COMPLETADO!"]/android.view.ViewGroup/android.widget.TextView[1]',
-            )
-            self.checkout_complete_second_message = (
-                By.XPATH,
-                '//android.widget.ScrollView[@content-desc="test-CHECKOUT: COMPLETADO!"]/android.view.ViewGroup/android.widget.TextView[2]',
             )
 
     def validate_the_product_details(self):
