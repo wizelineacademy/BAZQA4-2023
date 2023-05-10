@@ -55,10 +55,10 @@ Nota: `platform_version` y `device_name` depende del modelo de dipositivo androi
 
 ![img.png](img/enviroment.png)
 
-Una vez genrado el capabilitie
+Una vez generado el capabilitie
 * Guardar el capabilitie
 * Iniciar el servidor de appium 
-* iniciar el set de pruebas con el boton de RUN
+* estaras list@ para correr el proyecto
 
 
 ## ¿Como obtener el nombre de dispositivo con ADB?
@@ -98,7 +98,7 @@ Para correr el set de pruebas debe tener la siguiente configuración
 
 * Se creo un una configuracion de ejecucion son el nombre: "Ejecucion" que ejecuta todos los casos de prueba
 
-dentro del campo parameter colocar lo siguiente ya que en los feature tiene configurado el tag regression 
+dentro del campo parameter colocar lo siguiente ya que en los feature tiene configurado el tag regression y los demas tags hacen referencia a la herramienta allure que le indica el formato que debe tomar para visualizar el reporte de la ejecucion
 
 * ```bash
   --tags=regression
@@ -109,6 +109,9 @@ dentro del campo parameter colocar lo siguiente ya que en los feature tiene conf
     -f
     pretty
   ```  
+  
+## ¿Como lo hago?
+
 Se accede a esa configuracion desde este menu:
 
 ![img.png](img/img.png)
@@ -123,7 +126,7 @@ y se debe seleccionar la opcion "module name" apuntando al directorio behave del
 
 ![img.png](img/directorio.png)
 
-El working directory debe apuntar al directorio behave del proyecto
+El working directory debe apuntar al directorio Behave del proyecto
 
 ![img.png](img/workin.png)
 
@@ -139,7 +142,7 @@ como se muestra en la imagen:
 ![img.png](img/source root.png)
 
 ## APP a probar
-Se anexo la APP sauce_app.apk en el directorio APPIUM/APP por el tema de versiones diferentes y cambios en selecctores
+Se anexo la APP sauce_app.apk en el directorio APPIUM/APP para evitar usar una version incompatible con este proyecto
 
 ### Para pruebas de regresion 
 * Tener una nueva configuración en este caso se nombró regression
@@ -147,9 +150,9 @@ Se anexo la APP sauce_app.apk en el directorio APPIUM/APP por el tema de version
 * 
 ### Pruebas de humo
 * Tener una nueva configuración en este caso se nombró smoke
-* Agregar el parametro `--tags=`(nombre del tag para identificar la prueba de regresion) como se muestra en la imagen.
+* Agregar el parametro `--tags=`(nombre del tag para identificar la prueba de smoke)
 
-Cada nuevo tag o etiqueta del tipo de prueba se debe colocar en los features especificamente en la parte superior del escenario(Scenario)
+Cada nuevo tag o etiqueta del tipo de prueba se debe colocar en los features especificamente en la parte superior del escenario
   
 ### Reportes Allure  
 
@@ -162,7 +165,7 @@ Para generar reporte desde cero con Allure, se deben seguir los siguientes pasos
 
 ### Instalar Scoop de allure
 
-Se necesita instalar el Scoop para poder ejecutar allure se instala con los siguientes comandos
+Se necesita instalar el Scoop para poder ejecutar allure, se instala con los siguientes comandos
 
 * En mac os x correr el siguiente comando
 ```bash
@@ -172,14 +175,7 @@ Se necesita instalar el Scoop para poder ejecutar allure se instala con los sigu
 * En windows correr el siguiente comando en powershell
 ```bash
     scoop install allure
-  ```  
-
-Nota: en caso de que algun paquete no se instale correctamente desde el archivo requirements.txt se pueden instalar como lo hicimos con el comando anterior sustituyendo el nombre del paquete
-* Agregar el paquete allure-behave
-* Posicionarse hasta la carpeta Behave dentro de la terminal y correr los siguiente comando
-```bash
-allure serve reports/android
-```
+  ```
 
 
 
