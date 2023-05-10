@@ -155,10 +155,16 @@ que tipo de sesión debe lanzar o el tiempo tiempo de ejecución.
   "appium:appWaitActivity": "com.swaglabsmobileapp.MainActivity"
 }
 ```
+Nota: Dentro del archivo *environment.py* en la función
+*before_scenario* será necesario el cambio de los elementos
+según el nombre del dispositivo y la ruta de la app a testear.
 
-Un vez ingresado los campos requeridos, se guarda la confirguración
-del dispositivo. Para una correcta conexión es importante
-primero iniciar Appium Server y después Appium Inspector. 
+- *deviceName* 
+- *app*
+
+Recomendación - Un vez ingresada la información en las capabilitys 
+y para su correcta conexión es necesario
+primero iniciar Appium Server y posteriormente Appium Inspector. 
 
 ### Instalación de librerías desde archivo requeriments.txt
 
@@ -195,25 +201,33 @@ de nuestra carpetas, archivos y datos.
   - login.feature
 - reports
   - android
-- Screen
+- screen
   - common_actions.py
   - detail_product_screen.py
   - filter_screen.py
   - log_in_screen.py
   - productos_screen.py
   - tu_carrito_screen.py
-- Steps
+- steps
   - add_a_product_to_the_car_steps.py
   - detail_product_steps.py
   - filter_steps.py
   - log_in_steps.py
-- Utils
+- utils
   - Dictionaries
     - login.py
 - .env
 - .gitignore
-- environment.py
-###### Archivo => requeriments.txt 📄
+- environment.py 
+- requeriments.txt 📄
+
+### Source root
+Para identificar el directorio raíz en este caso la carpeta APPIUM
+y Behave como las principales carpetas, damos clic derecho en dichas
+carpetas y seleccionamos la opción de source root.
+
+![img_8.png](img_8.png)
+
 
 ###### "Una vez indentificada la estructura POM, es momento de iniciar la ejecución de nuestros sets de pruebas de regresión y smoke test."
 
@@ -269,9 +283,32 @@ Para la ejecución de reporte al final de nuestro proyecto es
 importante agregar la ruta donde se guardarían los reportes por
 cada ejecución realizada en el archivo environment.py  
 
+La instalación de esta herramienta, se realizo en la instalación
+de las libería en el archivo *requeriments.txt* o bien con el comando
+desde nuestra terminal 
+
+```
+$ npm install -g allure-commandline --save-dev
+```
+
 ![img_5.png](img_5.png)
 ![img_6.png](img_6.png)
 
+### Buenas prácticas integrar herramienta para análisis de código estático.
+Existen diferentes herramientas que nos ayudan a realizar el análisis de
+nuestro código, como actividad son buenas prácticas en el desarrollo, 
+a continuación se describe la herramienta que se utilizo en 
+este proyecto, así como la instalación y detección de errores.
+
+```
+#Instalación
+$ pip install flake8
+
+#Detección de errores
+$ flake8
+```
+Ejemplo:
+![img_7.png](img_7.png)
 ### Excepciones en el archivo .gitignore
 
 .gitignore es un archivo de texto que le dice a Git qué archivos o carpetas ignorar en un proyecto.
@@ -281,6 +318,7 @@ información sensible por lo que se tendrá que crear dicho archivo por cada pro
 reports/
 .env
 ```
+
 
 ## Autores ✒️
 

@@ -1,6 +1,7 @@
 from appium.webdriver.common.appiumby import AppiumBy as By
 from screens.common_actions import CommonActions
 
+
 class TuCarritoScreen(CommonActions):
     def __init__(self, context):
         super().__init__(context.driver)

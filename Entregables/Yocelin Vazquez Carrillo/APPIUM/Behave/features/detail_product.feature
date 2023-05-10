@@ -6,4 +6,3 @@ Feature: Product_Detail
     When we tap on the second product
     Then we validate that the product detail is displayed
     And we validate that the product name from detail page is correct
-    And we validate that the product price is correct

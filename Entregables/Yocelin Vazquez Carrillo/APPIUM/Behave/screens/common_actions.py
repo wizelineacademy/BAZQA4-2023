@@ -1,5 +1,6 @@
 from appium.webdriver.common.touch_action import TouchAction
 
+
 class CommonActions(object):
 
     def __init__(self, driver):
@@ -12,9 +13,13 @@ class CommonActions(object):
         element_text = self.find_element(*locator).text
         assert element_text == text
 
+    def assert_different_text_locator(self, *locator, text):
+        element_text = self.find_element(*locator).text
+        assert element_text != text
+
     def tap_element(self, *locator):
         action = TouchAction(self.driver)
-        action.tap(self.find_element(*locator)).perform();
+        action.tap(self.find_element(*locator)).perform()
 
     def fill_text(self, *locator, text):
         text_field = self.find_element(*locator)
