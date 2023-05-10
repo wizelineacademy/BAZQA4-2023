@@ -65,6 +65,22 @@ class ProductsScreen(BaseActions):
                 By.XPATH,
                 '//android.view.ViewGroup[@content-desc="test-TERMINAR"]',
             )
+            self.body_first_product = (
+                By.XPATH,
+                '//android.view.ViewGroup[@content-desc="test-Descripción"]//*[2]',
+            )
+            self.price_first_product = (
+                By.XPATH,
+                '//android.view.ViewGroup[@content-desc="test-Precio"]//*',
+            )
+            self.first_product = (
+                By.XPATH,
+                '//android.view.ViewGroup[@content-desc="test-Articulo"]//*[1]',
+            )
+            self.title_first_product = (
+                By.XPATH,
+                '//android.view.ViewGroup[@content-desc="test-Descripción"]//*[1]',
+            )
             self.message_free_deliver = (
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-CHECKOUT: '
@@ -88,14 +104,6 @@ class ProductsScreen(BaseActions):
                 ".ViewGroup/android.view.ViewGroup["
                 "2]/android.view.ViewGroup/android.widget.TextView[1]",
             )
-            self.body_first_product = (
-                By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-Descripción"]/android.widget.TextView[2]',
-            )
-            self.price_first_product = (
-                By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-Precio"]/android.widget.TextView',
-            )
             self.checkout_complete_first_message = (
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-CHECKOUT: COMPLETADO!"]/android.view.ViewGroup/android.widget.TextView[1]',
@@ -103,15 +111,6 @@ class ProductsScreen(BaseActions):
             self.checkout_complete_second_message = (
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-CHECKOUT: COMPLETADO!"]/android.view.ViewGroup/android.widget.TextView[2]',
-            )
-            self.first_product = (
-                By.XPATH,
-                '(//android.view.ViewGroup[@content-desc="test-Articulo"])['
-                "1]/android.view.ViewGroup/android.widget.ImageView",
-            )
-            self.title_first_product = (
-                By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-Descripción"]/android.widget.TextView[1]',
             )
 
     def validate_the_product_details(self):
