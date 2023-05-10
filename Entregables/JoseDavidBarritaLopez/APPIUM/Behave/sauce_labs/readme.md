@@ -77,7 +77,7 @@ Antes de ejecutar cualquier prueba en dispositivos móviles, es necesario tener 
 
 **Nota:** 
 
-_Válida que tu SDK y JAVA esten configurados el JDK y SDK_
+_Válida que tu SDK y JAVA esten configurados correctamente
 
 Android Developers (https://developer.android.com/studio/releases/platform-tools)
 SDK Platform Tools release notes  |  Android Studio  |  Android Developers
