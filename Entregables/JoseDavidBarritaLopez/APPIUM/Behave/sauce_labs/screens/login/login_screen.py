@@ -23,7 +23,7 @@ class LoginScreen(BaseActions):
             self.btn_login = (By.XPATH, "//*[contains(@content-desc, 'test-LOGIN')]")
             self.error_message = (
                 By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-Error"]/android.widget.TextViews',
+                '//android.widget.TextView[@content-desc="test-Error"]',
             )
 
     def successful_login(self):

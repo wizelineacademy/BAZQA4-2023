@@ -151,6 +151,8 @@ Es importante explicar el archivo "environment", que inicializa las capabilities
 
 Para ejecutar las pruebas, se deben ejecutar los archivos de "feature" utilizando Behave. Los archivos de "feature" describen los escenarios y pasos a ejecutar. Para ejecutar todas las pruebas, simplemente se debe ejecutar el siguiente comando en la terminal:
 
+Dentro del archivo environment se encuentra una función que obtiene la ubicación de la aplicación, por lo tanto es necesario validar si ésta tiene el mismo nombre de su apk.
+
 behave
 
 También se pueden ejecutar escenarios específicos utilizando etiquetas o ubicaciones. Por ejemplo, para ejecutar todos los escenarios con la etiqueta "@smoke", se puede utilizar:
