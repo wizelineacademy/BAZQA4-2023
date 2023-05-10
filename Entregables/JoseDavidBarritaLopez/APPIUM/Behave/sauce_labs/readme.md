@@ -104,7 +104,7 @@ Android SDK Platform-Tools is a component for the Android SDK
 17. [ ] Espera a que se complete la instalación y haz clic en "Finish".
 18. [ ] 
 19. [ ] PyCharm debería estar ahora instalado y listo para su uso. Puedes abrirlo desde el menú de inicio o desde el acceso directo que creaste durante la instalación.
-20. [ ] 
+
 ## Para ejecutar este framework, debes instalar las librerías necesarias utilizando el siguiente comando:
 `pip install -r requirements.txt`
 
@@ -130,15 +130,15 @@ Android SDK Platform-Tools is a component for the Android SDK
 ## Estructura General:
 
 APPIUM<br>
-     Behave<br>
-        sauce_labs<br>
-         --APP<br>
-         --features<br>
-         --reports<br>
-         --screens<br>
-         --screenshots<br>
-         --steps<br>
-         --utils<br>
+     &nbsp;&nbsp;Behave<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sauce_labs<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  --APP<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --features<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --reports<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  --screens<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  --screenshots<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  --steps<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  --utils<br>
 
 Para que no te marque error a la hora de la importanción de librerias 
 se debe poner como carpeta raiz a sauce_labs: 
