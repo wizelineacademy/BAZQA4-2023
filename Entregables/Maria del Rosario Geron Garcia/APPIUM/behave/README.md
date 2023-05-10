@@ -24,15 +24,15 @@ Una vez instaldo confirmar que se tenga el mismo host y port que en appium serve
 
 Agregar el capabilitie de acuerdo a las caracteriticas de dipositivo agrego imagen de refrencia y el json de ejemplo: 
 
+```bash
 {
-        "platformName": "Android",
-        "appium:platformVersion": "13",
-        "appium:deviceName": "b2q",
-        "appium:app": "e:\\Users\\88433\\Downloads\\appPrueba.apk",
-        "appium:appPackage": "com.saucelabs.mydemoapp.rn",
-        "appium:appActivity": ".MainActivity"
-
-    }
+  "platformName": "Android",
+  "appium:deviceName": "emulator-5554",
+  "appium:app": "E:\\Users\\948248\\Documents\\BAZQA4-2023\\Entregables\\demoBazBehave\\APP\\sauce_app.apk",
+  "appium:appPackage": "com.swaglabsmobileapp",
+  "appium:appActivity": "MainActivity"
+}
+```
 
 Modificar el deviceName, platformName, y app de acuerdo a sus necesidades 
 Una vez genrado el capabilitie
