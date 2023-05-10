@@ -1,6 +1,5 @@
 import allure
 import os
-import pavement
 import shutil
 from datetime import datetime
 
@@ -90,4 +89,6 @@ def after_scenario(context, scenario):
 
 
 def after_all(context):
-    pavement.generate_allure_report(context.PLATFORM)
+    # pavement.generate_allure_report(context.PLATFORM)
+    pass
+
