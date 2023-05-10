@@ -1,4 +1,4 @@
-Feature: Products
+Feature: Shopping_cart
   As a shopper
   I want to be able to choose a product
   So that I can add it to my cart and purchase it

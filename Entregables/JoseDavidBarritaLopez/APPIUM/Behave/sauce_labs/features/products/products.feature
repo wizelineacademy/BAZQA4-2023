@@ -5,20 +5,21 @@ Feature: Products
 
   Background:
   Given the user insert credentials to be able access to the homepage screen
- @e2e @smoke
-  Scenario: Validate product details after search
+
+  @regression @smoke
+   Scenario: Validate product details after search
         Given Clik on a product
         Then Validate the product details
 
-@e2e @regression
- Scenario: Add a Product to the Cart
+  @regression
+    Scenario: Add a Product to the Cart
         Given Clik on a product
         When click on Add to Car Button
         And click on Icon Car
         Then Validate the attributes in the car
 
-@e2e @sanity
-Scenario: Filter Products by Price Range
-        Given click on Icon Filter
-        When click on sort the price (low to high)
-        Then Validate the filter is applied
+  @regression @sanity
+    Scenario: Filter Products by Price Range
+          Given click on Icon Filter
+          When click on sort the price (low to high)
+          Then Validate the filter is applied

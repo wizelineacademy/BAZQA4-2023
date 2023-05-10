@@ -48,17 +48,15 @@ class ProductsScreen(BaseActions):
             )
             self.add_cart_first_product = (
                 By.XPATH,
-                '(//android.view.ViewGroup[@content-desc="test-AÑADIR A CARRITO"])[1]',
+                '(//android.view.ViewGroup[@content-desc="test-AÑADIR A CARRITO"])',
             )
             self.icon_car = (
                 By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-Carrito"]/android.view.ViewGroup'
-                "/android.widget.ImageView",
+                '//android.view.ViewGroup[@content-desc="test-Carrito"]',
             )
-
             self.checkout_button = (
                 By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-CHECKOUT"]/android.widget.TextView',
+                '//android.view.ViewGroup[@content-desc="test-CHECKOUT"]',
             )
             self.field_name = (
                 By.XPATH,
@@ -115,7 +113,7 @@ class ProductsScreen(BaseActions):
 
             self.back_to_menu = (
                 By.XPATH,
-                '//android.view.ViewGroup[@content-desc="test-REGRESO A MENU"]/android.widget.TextView',
+                '//android.view.ViewGroup[@content-desc="test-REGRESO A MENU"]',
             )
 
     def validate_the_product_details(self):

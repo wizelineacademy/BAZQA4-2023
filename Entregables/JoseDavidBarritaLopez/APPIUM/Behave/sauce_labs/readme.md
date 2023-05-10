@@ -181,10 +181,81 @@ Dentro del archivo environment se encuentra una función que obtiene la ubicaci�
 ### Ejecución del Proyecto
 `behave` <br>
 También se pueden ejecutar escenarios específicos utilizando etiquetas o ubicaciones. Por ejemplo, para ejecutar todos los escenarios con la etiqueta "@smoke", se puede utilizar:<br>
-`behave --tags=@smoke`<br>
+`behave --tags=@smoke, @sanity, @regression`<br>
 Para ejecutar solo el escenario "login", se puede utilizar:<br>
-`behave --tags=@regression -k -D program=login -D platform=android -D platform_version=11 -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/login
+`--tags=@smoke
+-k
+-D
+program=login
+-D
+platform=android
+-D
+platform_version=13
+-D
+testing_process=serial
+-D
+driver_location=local
+-D
+device_name=emulator-5554
+-D
+environment=dev
+-f
+allure_behave.formatter::AllureFormatter
+-o
+reports/android
+-f
+pretty
+features/login
 `
 <br>
  Para el de productos de la siguiente manera: <br>
-`behave --tags=@regression -k -D program=products -D platform=android -D platform_version=11 -D device_name=ZT32288SQP -D environment=dev -f allure_behave.formatter::AllureFormatter -o reports/android -f pretty features/products`
+`--tags=@smoke
+-k
+-D
+program=products
+-D
+platform=android
+-D
+platform_version=13
+-D
+testing_process=serial
+-D
+driver_location=local
+-D
+device_name=emulator-5554
+-D
+environment=dev
+-f
+allure_behave.formatter::AllureFormatter
+-o
+reports/android
+-f
+pretty
+features/products`
+<br>
+Esta es para Shopping Cart
+`--tags=@regression
+-k
+-D
+program=shopping_cart
+-D
+platform=android
+-D
+platform_version=13
+-D
+testing_process=serial
+-D
+driver_location=local
+-D
+device_name=emulator-5554
+-D
+environment=dev
+-f
+allure_behave.formatter::AllureFormatter
+-o
+reports/android
+-f
+pretty
+features/shopping_cart`
+<br>
+**Esto se puede ejecutar tambien por medio de bash en caso de que no se tenga Pycharm.** 
