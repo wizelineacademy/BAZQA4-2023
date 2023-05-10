@@ -89,6 +89,11 @@ class ProductsScreen(BaseActions):
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-CHECKOUT: COMPLETADO!"]//*[2]',
             )
+            self.order_high_to_low = (
+                By.XPATH,
+                '//android.widget.ScrollView[@content-desc="Selector '
+                'container"]//*[4]'
+            )
             self.message_free_deliver = (
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-CHECKOUT: '
@@ -97,20 +102,12 @@ class ProductsScreen(BaseActions):
             self.filter_icon = (
                 By.XPATH,
                 '//android.view.ViewGroup[@content-desc="test-Modal Selector '
-                'Button"]/android.view.ViewGroup/android.view.ViewGroup/android.widget'
-                ".ImageView",
-            )
-            self.order_high_to_low = (
-                By.XPATH,
-                '//android.widget.ScrollView[@content-desc="Selector '
-                'container"]/android.view.ViewGroup/android.view.ViewGroup['
-                "4]//*",
+                'Button"]//*'
             )
             self.twitter = (
                 By.XPATH,
                 '//android.widget.ScrollView[@content-desc="test-PRODUCTOS"]/android.view'
-                ".ViewGroup/android.view.ViewGroup["
-                "2]/android.view.ViewGroup/android.widget.TextView[1]",
+                ".ViewGroup/android.view.ViewGroup[2]//*"
             )
 
     def validate_the_product_details(self):
