@@ -16,13 +16,13 @@ Usted es un Ingeniero de Calidad de Software en BAZ y acaba de ser asignado a un
 - Behave
 
 **Las fecha de entrega son las siguientes:**
-- **Proyecto de API**: Primer entregable - 14 de Abril
-- **Proyecto de Appium**: Tercer entregable - 5 de Mayo
+- **Proyecto de API**: Primer entregable - 9 de junio
+- **Proyecto de Appium**: Tercer entregable - 30 de junio
 
 # Proyecto de API
 El objetivo de este proyecto es poder construir colecciones de Postman, y ordenar adecuadamente las solicitudes “requests” de manera que sigan una serie de acciones que hagan sentido al usuario final. Al evaluar la respuesta de una API permite enfocarse en más puntos que conforman el cuerpo de la respuesta.
 
-**Fecha de entrega: 14 de Abril 2023**
+**Fecha de entrega: 9 de junio 2023**
 
 **Para este proyecto es importante que se apoye de la documentación disponible en pokemon API para poder realizar lo siguiente:**
 - Elija su pokemon favorito (almacenar esta información en un archivo de variables de ambiente) y buscar la información sobre sus movimientos.
@@ -46,7 +46,7 @@ Los entregables de este proyecto son la colección generada por Postman en forma
 # Proyecto de Appium
 El propósito de este proyecto es construir un framework de automatización desde 0 siguiendo lo aprendido en la ruta de autoestudio de Python proporcionada al inicio de este módulo, así como también poner el conocimiento adquirido en las sesiones en vivo, con instructores presenciales, así como el apoyo de sus mentores. 
 
-**Fecha de entrega: 5 de Mayo del 2023**
+**Fecha de entrega: 30 de junio 2023**
 
 Se sugiere al estudiante familiarizarse con la aplicación [saucedemo](https://github.com/saucelabs/sample-app-mobile/releases) de manera que pueda replicar los casos de prueba a mano antes de proceder a automatizarlos. 
 
